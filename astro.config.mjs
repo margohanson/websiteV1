@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://margohanson.github.io/websiteV1/',
+  site: 'http://www.arianemader.com',
   integrations: [
     tailwind(),
     sitemap(),
