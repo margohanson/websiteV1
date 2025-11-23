@@ -2,8 +2,6 @@
 import { getCollection } from "astro:content";
 const { showAll = true, limit = 6 } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
-
 const allStaff = await getCollection("staff", ({ data }) =>
   import.meta.env.PROD ? !data.draft : true
 );
@@ -26,7 +24,7 @@ const staffMembers = allStaff
           <!-- Foto (4:3) -->
           <div class="relative w-full pb-[100%]">
             <img
-              src={staff.data.image.startsWith('/') && !staff.data.image.startsWith('//') ? `${base}${staff.data.image.slice(1)}` : staff.data.image}
+              src={staff.data.image}
               alt={staff.data.name}
               class="absolute inset-0 w-full h-full object-cover object-center"
             />

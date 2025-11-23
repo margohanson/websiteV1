@@ -11,17 +11,11 @@ export interface Props {
 }
 
 const { title, image, href, className = "", imageLayout = 'top' } = Astro.props;
-const base = import.meta.env.BASE_URL;
-
-// Prepend base to relative URLs (starting with /)
-const finalHref = href && href.startsWith('/') && !href.startsWith('//') ? `${base}${href.slice(1)}` : href;
-const finalImageSrc = image?.src && image.src.startsWith('/') && !image.src.startsWith('//') ? `${base}${image.src.slice(1)}` : image?.src;
-
 const Element = href ? "a" : "div";
 ---
 
 <Element
-  href={finalHref}
+  href={href}
   aria-label={href ? title : undefined}
   class:list={[
     'card group overflow-hidden',
@@ -29,13 +23,13 @@ const Element = href ? "a" : "div";
     className
   ]}
 >
-  {image && finalImageSrc && (
+  {image && (
     <div class:list={[
       'overflow-hidden',
       { 'absolute inset-0': imageLayout === 'background' }
     ]}>
       <img
-        src={finalImageSrc}
+        src={image.src}
         alt={image.alt}
         class:list={[
           "w-full object-cover object-center transition-transform duration-300 group-hover:scale-105",
