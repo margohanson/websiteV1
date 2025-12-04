@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHeader from "../components/Sections/PageHeader.astro";
 import StaffList from "../components/Sections/StaffList.astro";
+import { Carousel } from 'webcoreui/astro'
 ---
 
 <BaseLayout
@@ -15,7 +16,28 @@ import StaffList from "../components/Sections/StaffList.astro";
   />
   
   <!-- Staff List -->
-  <StaffList />
+  <!-- <StaffList /> -->
+
+<Carousel items={3}>
+    <li class="w-100%">
+      <div class="bg-white p-8 rounded-lg shadow-sm">
+          <h3 class="text-xl font-bold mb-3">Sunday Morning</h3>
+          <div class="mb-4">
+            <p class="text-2xl font-bold text-primary-600 mb-2">8:00 AM</p>
+            <p class="text-gray-600">Traditional Service</p>
+            <p class="italic text-gray-500 mt-2">In-person & Livestream</p>
+          </div>
+          
+          <div>
+            <p class="text-2xl font-bold text-primary-600 mb-2">10:30 AM</p>
+            <p class="text-gray-600">Contemporary Service with Children's Ministry</p>
+            <p class="italic text-gray-500 mt-2">In-person only</p>
+          </div>
+        </div>   
+    </li>
+    <li class="w-100%">2</li>
+    <li class="w-100%">3</li>
+</Carousel>
   
   <!-- Contact Staff CTA -->
   <section class="py-16 bg-gray-50">
