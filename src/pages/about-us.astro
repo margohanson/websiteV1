@@ -1,35 +1,61 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageHeader from "../components/Sections/PageHeader.astro";
+import PageHeaderNoPicture from "../components/Sections/PageHeaderNoPicture.astro";
 import StaffList from "../components/Sections/StaffList.astro";
 ---
 
 <BaseLayout
-  title="About Us - Church Name"
-  description="Learn about our church's history, mission, values, and the people who make our community special."
+  title="About Ariane Mader"
+  description="Meet Ariane Mader, coach and counsellor specialising in habits, stress, and executive functioning. Practical, structured, and neurodivergent-aware."
 >
-  <PageHeader 
-    title="About Us" 
-    subtitle="Our History, Mission, and Values"
-    backgroundImage="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1920&h=600&fit=crop&crop=center"
+  <PageHeaderNoPicture 
+    title="Hi, I’m Ariane." 
+    subtitle="Coach, counsellor, and scientist at heart."
   />
   
-  <!-- Mission & Vision -->
+  
+  <!-- About Ariane/Me -->
+  <!--
   <section class="py-16">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
           <p class="text-xl text-gray-700 mb-8">
-            To know Christ and to make Him known through worship, discipleship, fellowship, and service.
+            I grew up in Germany and spent my entire adult life abroad, studying and working in science. I’m currently completing my PhD in chemistry, and for many years I thought research would be my long-term path.<br>
+            But something else kept pulling me: <b>helping people one-on-one</b>.</br>
+            Strangers opened up to me easily, friends regularly asked me to help them think through challenges, and I found myself far more energised by these conversations than by any experiment. So I decided to take that seriously.<br>
+            I completed a two-year <a href="https://www.counselling.nl/en/trainings/coaching-and-counselling-english-year-2/"><u>Coaching & Counselling programme</u></a> and additional training as a <a href="https://devertrouwenspersoon.nl/opleiding/basisopleiding-vertrouwenspersoon/"><u>Confidential Advisor</u></a>. I have now been coaching individuals for three years.
           </p>
           
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">A mix of analytical and creative</h2>
           <p class="text-xl text-gray-700 mb-8">
-            To be a vibrant, growing community of believers who are transformed by the Gospel and transforming our community with the love of Christ.
+            My scientific background means I think analytically, logically, and structured — but I’m also highly creative, love crafting and reading fiction, and enjoy helping people see problems from new angles.<br>
+            In sessions, this shows up as:
+            <ul>
+              <li>clear structure</li>
+              <li>practical tools</li>
+              <li>creative solutions</li>
+              <li>experiments you can try in real life</li>
+              <li>honest conversations</li>
+            </ul>
           </p>
+
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">My personal journey (and why I care about this work)</h2>
+          <p class="text-xl text-gray-700 mb-8">
+            I also have <b>ADHD</b>, which I was diagnosed with as an adult. Like many neurodivergent people, I learned how to function academically only once I had enough external structure — and when I started my PhD and all that structure disappeared, I struggled intensely with procrastination and overwhelm.<br>
+            Learning how my own brain works, building new systems, and understanding my needs has been a big part of my personal journey. This experience deeply influences how I support clients: with <b>empathy, realism, and zero judgement.</b>
+          </p>
+
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">How people often describe me</h2>
+          <p class="text-xl text-gray-700 mb-8">
+           Calm. Grounded. Direct. Non-judgemental.<br>
+           A combination of <b>warm support</b> and <b>straightforward honesty</b>.</br>
+           I love helping people understand themselves better and develop the confidence and tools to navigate life — in a way that <i>actually fits them</i>. 
+          </p>
+
         </div>
         
+        <div class="max-w-4xl mx-auto prose prose-lg">
         <div>
           <img 
             src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center" 
@@ -40,8 +66,10 @@ import StaffList from "../components/Sections/StaffList.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- Core Values -->
+  <!--
   <section class="py-16 bg-gray-50">
     <div class="container">
       <div class="text-center mb-12">
@@ -126,8 +154,10 @@ import StaffList from "../components/Sections/StaffList.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- Church History -->
+  <!--
   <section class="py-16">
     <div class="container">
       <div class="text-center mb-12">
@@ -200,8 +230,10 @@ import StaffList from "../components/Sections/StaffList.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- Leadership Team Preview -->
+  <!--
   <section class="py-16 bg-gray-50">
     <div class="container">
       <div class="text-center mb-12">
@@ -210,10 +242,10 @@ import StaffList from "../components/Sections/StaffList.astro";
           Our dedicated staff and leadership team serve our congregation with passion and commitment
         </p>
       </div>
-      
+      -->
       <!-- Show limited staff preview -->
+      <!--
       <StaffList showAll={false} limit={3} />
-      
       <div class="mt-12 text-center">
         <a 
           href="/staff" 
@@ -224,52 +256,77 @@ import StaffList from "../components/Sections/StaffList.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- Statement of Faith -->
-  <section class="py-16">
+  <section class="py-16 bg-white">
     <div class="container">
+      <!--
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">What We Believe</h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
           Our church adheres to these fundamental Christian beliefs
         </p>
       </div>
-      
+      -->
+
       <div class="max-w-4xl mx-auto prose prose-lg">
-        <h3>The Bible</h3>
+
         <p>
-          We believe the Bible is God's Word, inspired by the Holy Spirit, without error in the original manuscripts, and the final authority for all Christian faith and life.
+            I grew up in Germany and spent my entire adult life abroad, studying and working in science. I’m currently completing my PhD in chemistry, and for many years I thought research would be my long-term path.<br>
+            But something else kept pulling me: <b>helping people one-on-one</b>.</br>
+            Strangers opened up to me easily, friends regularly asked me to help them think through challenges, and I found myself far more energised by these conversations than by any experiment. So I decided to take that seriously.<br>
+            I completed a two-year <a href="https://www.counselling.nl/en/trainings/coaching-and-counselling-english-year-2/"><u>Coaching & Counselling programme</u></a> and additional training as a <a href="https://devertrouwenspersoon.nl/opleiding/basisopleiding-vertrouwenspersoon/"><u>Confidential Advisor</u></a>. I have now been coaching individuals for three years.
         </p>
         
-        <h3>God</h3>
+        <h3 class="blueFont">A mix of analytical and creative</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p>
+              My scientific background means I think analytically, logically, and structured — but I’m also highly creative, love crafting and reading fiction, and enjoy helping people see problems from new angles.<br>
+              In sessions, this shows up as:
+
+              <ul>
+                <li style="color: #009C75;"><span style="color: #000">clear structure</span></li>
+                <li style="color: #009C75;"><span style="color: #000">practical tools</span></li>
+                <li style="color: #009C75;"><span style="color: #000">creative solutions</span></li>
+                <li style="color: #009C75;"><span style="color: #000">experiments you can try in real life</span></li>
+                <li style="color: #009C75;"><span style="color: #000">honest conversations</span></li>
+              </ul>
+            </p>
+          </div>
+        
+          <div>
+            <img 
+              float: right;
+              margin: 0 20px 20px 0;
+              src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center" 
+              alt="Worship at our church" 
+              class="rounded-lg shadow-lg object-cover w-quarter h-quarter"
+            />
+          </div>
+        </div>
+
+        <h3 class="blueFont">My personal journey (and why I care about this work)</h3>
         <p>
-          We believe in one God who exists eternally in three persons: Father, Son, and Holy Spirit. Each person is fully God, yet there is one God.
+          I also have <b>ADHD</b>, which I was diagnosed with as an adult. Like many neurodivergent people, I learned how to function academically only once I had enough external structure — and when I started my PhD and all that structure disappeared, I struggled intensely with procrastination and overwhelm.<br>
+          Learning how my own brain works, building new systems, and understanding my needs has been a big part of my personal journey. This experience deeply influences how I support clients: with <b>empathy, realism, and zero judgement.</b>
+        </p>
+
+        <h3 class="blueFont">How people often describe me</h3>
+        <p>
+          Calm. Grounded. Direct. Non-judgemental.<br>
+          A combination of <b>warm support</b> and <b>straightforward honesty</b>.</br>
+          I love helping people understand themselves better and develop the confidence and tools to navigate life — in a way that <i>actually fits them</i>. 
         </p>
         
-        <h3>Jesus Christ</h3>
-        <p>
-          We believe Jesus Christ is fully God and fully human. He was born of a virgin, lived a sinless life, died on the cross as the substitute for sinners, rose bodily from the grave, and ascended to heaven where He now serves as our High Priest and Advocate.
-        </p>
-        
-        <h3>Holy Spirit</h3>
-        <p>
-          We believe the Holy Spirit convicts the world of sin, regenerates believers, indwells them, and empowers them for godly living and service.
-        </p>
-        
-        <h3>Salvation</h3>
-        <p>
-          We believe salvation is by grace alone, through faith alone, in Christ alone. Good works are the necessary fruit of true faith but are not the basis of our right standing before God.
-        </p>
-        
-        <h3>The Church</h3>
-        <p>
-          We believe the church is the body of Christ, consisting of all true believers. Its mission is to worship God, build up believers in their faith, and share the gospel with the world.
-        </p>
-        
+        <!--       
         <h3>The Future</h3>
         <p>
           We believe in the personal, visible return of Jesus Christ, the resurrection of the dead, the final judgment, and the eternal state of blessing for the righteous and punishment for the unrighteous.
         </p>
+        -->
       </div>
     </div>
   </section>

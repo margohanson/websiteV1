@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.greyFont {
+   color: #C8CED7;
+}
+
+.blueFont {
+   color: #193472;
+}
+
+.greenBrightFont {
+   color: #39D7AC;
+}
+
+.greenDarkFont {
+   color: #009C75;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
