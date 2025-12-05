@@ -30,7 +30,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-bold text-gray-900;
+    @apply font-[Cambria] font-bold text-gray-900;
   }
 
   h1 {
