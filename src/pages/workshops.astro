@@ -1,0 +1,166 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeader from "../components/Sections/PageHeader.astro";
+import StaffList from "../components/Sections/StaffList.astro";
+import { Carousel } from 'webcoreui/astro'
+---
+
+<BaseLayout
+  title="Workshops"
+  description="Meet our dedicated church staff and leadership team who serve our congregation with passion and commitment."
+>
+  <PageHeader 
+    title="Workshops" 
+    subtitle="Tailored to your Organisation or Group"
+    backgroundImage="/uploads/page-header-bg.webp"
+  />
+  
+  
+  <!-- About Me/Ariane -->
+   <!-- add diversity and inclusion and intercultural communication in future-->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <!--
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What We Believe</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Our church adheres to these fundamental Christian beliefs
+        </p>
+      </div>
+      -->
+
+      <div class="max-w-4xl mx-auto prose prose-lg">
+
+        <p>
+            I offer workshops for universities, teams, and organisations on a range of topics related to <b>productivity, executive functioning, stress management, and change</b>.
+            All workshops are <b>designed collaboratively</b> so they fully match the needs of your audience.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="blueFont">Example Workshop Themes</h3>
+            <p>
+              <ul>
+                <li>Managing stress and overwhelm</li>
+                <li>Breaking procrastination</li>
+                <li>Habit change that lasts</li>
+                <li>Introduction to the change cycle</li>
+                <li>Career clarity sessions (e.g., Ikigai-based workshop)</li>
+                <li>Creating inclusive learning or working environments</li>
+                <li>Talks on patterns, mindset, and practical change</li>
+              </ul>
+            </p>
+          </div>
+        
+          <div>
+            <h3 class="blueFont">Formats can range from:</h3>
+            <ul>
+              <li>interactive workshops</li>
+              <li>practical methodology sessions</li>
+              <li>talks or short introductions</li>
+              <li>longer series of sessions</li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+<section id="faq" class="py-16 bg-white">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h3 class="blueFont">Testimonials</h2>
+    </div>
+  <Carousel items={3}>
+     <li class="w-100%">
+      <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+            <div class="mb-4">
+              <p class="text-gray-600">
+                ?
+              </p>
+            </div>
+            <h3 class="text-xl text-center font-bold mb-3">"I", 26?, German</h3>
+          </div>   
+     </li>
+     
+     <li class="w-100%">
+        <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+            <div class="mb-4">
+              <p class="text-gray-600">
+                Working with Ariane has been a genuinely valuable experience.<br>
+                I started coaching without a clear end goal, but Ariane helped me untangle my thoughts and identify what I actually wanted to work on. From there, she guided me in building a few keystone habits that created space for creativity, brought more structure to my days, and helped me spend my time in ways that felt genuinely satisfying.<br>
+                She has a calm, perceptive way of noticing patterns, asking the right questions, and gently steering you toward more helpful approaches — all without judgement. Our sessions were collaborative and grounded, and over time, we built a personalised toolkit I now use to support both my creative work and my ADHD.<br>
+                We made mind maps, created matrixes and dopamine menus, talked about habit loops, and examined resistance in a way that felt grounded and doable. We also explored rituals, and experimented with small but effective routines. I began setting achievable writing goals — like 15-minute sprints with a coffee reward — and found myself not just getting more done, but actually enjoying the process again.<br>
+                We also looked at the mental health side of things: working through anxiety, tackling negative self-talk, and using visualisation exercises to find more calm when things felt overwhelming.<br>
+                One small but incredibly helpful detail: she took notes during our sessions. That meant I could stay present in the moment, even when my thoughts were jumping around, and still walk away with a clear summary and practical next steps.<br>
+                What I’m taking away now is a more compassionate, practical way of supporting myself — and a set of tools I know I can come back to whenever I need a reset.<br>
+                I’d definitely recommend working with Ariane if you’re looking for thoughtful, grounded support in making real, sustainable change.<br>
+              </p>
+            </div>
+            <h3 class="text-xl text-center font-bold mb-3">"L", 35, British</h3>
+         </div>   
+      </li>
+
+      <li class="w-100%">
+        <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+            <div class="mb-4">
+              <p class="text-gray-600">
+                The coach taught me about some interesting and useful tools which I was not aware of to help me work with my ADHD traits and my perfectionist nature. Our conversations were always interesting and insightful and I felt comfortable having these conversations with her. The coach was very understanding, supportive and helped me in different ways. I always knew what to expect.<br>
+                The coach used tangible tools which we worked together on to help support certain struggles I was having.<br>
+                I have learnt some great tools from the coach which I will take forward as I continue to work on this. It was also extremely beneficial for me to have someone to talk to who understands, and who has a lot of knowledge of different tools which can benefit an ADHD brain. 
+              </p>
+            </div>
+            <h3 class="text-xl text-center font-bold mb-3">"C", 35, British</h3>
+          </div>   
+      </li>
+
+      <li class="w-100%">
+        <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+            <div class="mb-4">
+              <p class="text-gray-600">
+                ?
+              </p>
+            </div>
+            <h3 class="text-xl text-center font-bold mb-3">"M", 3?, Croatian</h3>
+          </div>   
+     </li>
+      
+  </Carousel>
+</section>
+
+  <!-- Pricing -->
+   <!-- add diversity and inclusion and intercultural communication in future-->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h3 class="blueFont">Pricing</h3>
+        <p>
+            Pricing depends on the format, scope, group size, and preparation time. Please contact me to discuss your needs.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a 
+            href="/contact" 
+            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          >
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+   <!-- add diversity and inclusion and intercultural communication in future-->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h3 class="blueFont">Organizations I have worked with</h3>
+        <p>
+            <i>Coming soon.</i>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

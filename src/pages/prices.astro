@@ -5,16 +5,51 @@ import Button from "../components/UI/Button.astro";
 ---
 
 <BaseLayout
-  title="I'm New - Church Name"
+  title="Prices"
   description="Everything you need to know about visiting our church for the first time. Find service times, what to expect, and how to get connected."
 >
   <PageHeader 
-    title="I'm New Here" 
-    subtitle="Welcome! We're glad you're considering a visit."
+    title="Prices" 
     backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=600&fit=crop&crop=center"
   />
   
   <!-- What to Expect -->
+  <section class="py-16">
+    <div class="container">
+     
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="text-center p-6">
+          <h3 class="text-xl font-bold mb-3">Coaching for Individuals</h3>
+          <p class="text-gray-700">
+            <b>60 minutes — 85€</b><br>
+            Standard coaching session.<br>
+            <br>
+            <b>90 minutes — 115€</b><br>
+            Deep-dive or methodology session (e.g., Ikigai, structured career exploration, or sessions that benefit from more time).<br>
+            <br>
+            <h3 class="text-xl font-bold mb-3">Discounts</h3>
+            <ul>
+              <li><b>Students:</b> 20%</li>
+              <li><b>Referral:</b> 20€ off your next session for both</li>
+            </ul>
+          </p>
+        </div>
+        
+        <div class="text-center p-6">
+          <h3 class="text-xl font-bold mb-3">Organisations and Companies</h3>
+          <p class="text-gray-700">
+            Individual coaching for organisations starts at: <b>130€ per hour (excl. VAT).</b><br>
+            Pricing of workshops and training depends on depends on format, scope, preparation, and group size.<br>
+            Please contact me to discuss your needs.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <!--
   <section class="py-16">
     <div class="container">
       <div class="text-center mb-12">
@@ -63,8 +98,10 @@ import Button from "../components/UI/Button.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- What to Wear -->
+  <!--
   <section class="py-16 bg-gray-50">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -88,8 +125,10 @@ import Button from "../components/UI/Button.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- Service Times -->
+  <!--
   <section class="py-16">
     <div class="container">
       <div class="text-center mb-12">
@@ -132,8 +171,10 @@ import Button from "../components/UI/Button.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- For Kids -->
+  <!--
   <section id="kids" class="py-16 bg-gray-50">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -189,8 +230,10 @@ import Button from "../components/UI/Button.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- Location & Directions -->
+  <!--
   <section id="location" class="py-16">
     <div class="container">
       <div class="text-center mb-12">
@@ -203,7 +246,9 @@ import Button from "../components/UI/Button.astro";
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <div class="bg-gray-200 rounded-lg overflow-hidden h-96">
+            -->
             <!-- Placeholder for Google Maps iframe -->
+            <!--
             <div class="w-full h-full flex items-center justify-center bg-gray-300">
               <p class="text-gray-600 text-center p-4">
                 Google Maps embed would go here<br>
@@ -244,8 +289,10 @@ import Button from "../components/UI/Button.astro";
       </div>
     </div>
   </section>
+  -->
   
   <!-- FAQ Section -->
+  <!--
   <section id="faq" class="py-16 bg-gray-50">
   <div class="container">
     <div class="text-center mb-12">
@@ -320,8 +367,10 @@ import Button from "../components/UI/Button.astro";
     </div>
   </div>
 </section>
+-->
   
   <!-- Plan Your Visit CTA -->
+  <!--
   <section id="volunteer" class="py-20 bg-cover bg-center text-white"
     style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/uploads/visit-us.webp"
   >
@@ -344,4 +393,5 @@ import Button from "../components/UI/Button.astro";
       </div>
     </div>
   </section>
+  -->
 </BaseLayout>

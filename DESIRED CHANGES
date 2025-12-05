@@ -7,3 +7,5 @@ Change the tab image (icon in head, once svg file)
 Hero header not so dark
 Testimonials: if height is set, then width should adjust to fit (now lots of empty text, also only get full width if not enough breaks)
 Contact page: put email sign in same line as email, get it in green
+
+I changed the favicon but don't see it online? Should change the tab
