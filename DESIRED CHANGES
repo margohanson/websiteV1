@@ -1,11 +1,14 @@
-Change bullet points to actually be green, my fix did not work
+Change bullet points to actually be green, my fix did not work (color: #009C75)
 Less space between bullet points
-Make Hero-bg image reduced height
-Make testimonial box larger
-Make Typical Coaching Trajectory a numbered List
-Change the tab image (icon in head, once svg file)
-Hero header not so dark
-Testimonials: if height is set, then width should adjust to fit (now lots of empty text, also only get full width if not enough breaks)
+Make Hero-bg image (home page) reduced height and not go as dark
 Contact page: put email sign in same line as email, get it in green
+Change highlighted page you are on to green instead of blue (color: #009C75)
+Add metatexts and keywords
+If we want to complicate things.. Can we somehow figure out how to make the webpage in English and German? Optional
 
-I changed the favicon but don't see it online? Should change the tab
+Testimonials on Coaching page:
+One testimonial is clearly too long. Can we add [...] to be expanded? or read more.
+Make largest testimonial box not go as wide with text (maybe 75% of page?)
+Testimonials: if height is set, then width should adjust to fit (now lots of empty text, also only get full width if not enough breaks)
+
+Think about what image would be nice for each page (workspace with clean desk and laptop, warm portrait forabout me, maube someone reading or writing notes at table, could also be image of notebook, graphic representing structure, walking path (progress), group in meeting or workshop setting, illustration of brainstorming, uni classroom or office environment, planner or calender, plant on a desk or mug with soft background)

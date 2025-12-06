@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHeaderNoPicture from "../components/Sections/PageHeaderNoPicture.astro";
+import StaffList from "../components/Sections/StaffList.astro";
+---
+
+<BaseLayout
+  title="About Ariane Mader"
+  description="Meet Ariane Mader, coach and counsellor specialising in habits, stress, and executive functioning. Practical, structured, and neurodivergent-aware."
+>
+  <PageHeaderNoPicture 
+    title="Privacy, Terms, and Conditions" 
+  />
+  
+  
+  <!-- About Me/Ariane -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <!--
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">What We Believe</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Our church adheres to these fundamental Christian beliefs
+        </p>
+      </div>
+      -->
+
+      <div class="max-w-4xl mx-auto prose prose-lg">
+
+        <p>
+            I grew up in Germany and spent my entire adult life abroad, studying and working in science. I’m currently completing my PhD in chemistry, and for many years I thought research would be my long-term path.<br>
+            But something else kept pulling me: <b>helping people one-on-one</b>.</br>
+            Strangers opened up to me easily, friends regularly asked me to help them think through challenges, and I found myself far more energised by these conversations than by any experiment. So I decided to take that seriously.<br>
+            I completed a two-year <a href="https://www.counselling.nl/en/trainings/coaching-and-counselling-english-year-2/"><u>Coaching & Counselling programme</u></a> and additional training as a <a href="https://devertrouwenspersoon.nl/opleiding/basisopleiding-vertrouwenspersoon/"><u>Confidential Advisor</u></a>. I have now been coaching individuals for three years.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="blueFont">A mix of analytical and creative</h3>
+            <p>
+              My scientific background means I think analytically, logically, and structured — but I’m also highly creative, love crafting and reading fiction, and enjoy helping people see problems from new angles.<br>
+              In sessions, this shows up as:
+
+              <ul>
+                <li style="color: #009C75;"><span style="color: #000">clear structure</span></li>
+                <li style="color: #009C75;"><span style="color: #000">practical tools</span></li>
+                <li style="color: #009C75;"><span style="color: #000">creative solutions</span></li>
+                <li style="color: #009C75;"><span style="color: #000">experiments you can try in real life</span></li>
+                <li style="color: #009C75;"><span style="color: #000">honest conversations</span></li>
+              </ul>
+            </p>
+          </div>
+
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
