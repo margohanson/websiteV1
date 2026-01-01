@@ -10,7 +10,8 @@ import Button from "../components/UI/Button.astro";
 >
   <PageHeader 
     title="Prices" 
-    backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=600&fit=crop&crop=center"
+    backgroundImage="/uploads/prices-header.jpg"
+    overlayOpacity={0.2}
   />
   
   <!-- What to Expect -->
@@ -19,28 +20,34 @@ import Button from "../components/UI/Button.astro";
      
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="text-center p-6">
-          <h3 class="text-xl font-bold mb-3">Coaching for Individuals</h3>
+          <h3 class="text-xl font-bold blueFont mb-3">Coaching for Individuals</h3>
           <p class="text-gray-700">
             <b>60 minutes — 85€</b><br>
             Standard coaching session.<br>
             <br>
             <b>90 minutes — 115€</b><br>
-            Deep-dive or methodology session (e.g., Ikigai, structured career exploration, or sessions that benefit from more time).<br>
+            Deep-dive or methodology session (e.g. Ikigai, Logic Levels).<br>
             <br>
-            <h3 class="text-xl font-bold mb-3">Discounts</h3>
+            <br>
+            <h3 class="text-xl font-bold blueFont mb-3">Discounts</h3>
             <ul>
-              <li><b>Students:</b> 20%</li>
+              <li><b>Students or Unemployed:</b> 20%</li>
               <li><b>Referral:</b> 20€ off your next session for both</li>
             </ul>
           </p>
         </div>
         
         <div class="text-center p-6">
-          <h3 class="text-xl font-bold mb-3">Organisations and Companies</h3>
+          <h3 class="text-xl font-bold blueFont mb-3">Organisations and Companies</h3>
           <p class="text-gray-700">
             Individual coaching for organisations starts at: <b>130€ per hour (excl. VAT).</b><br>
             Pricing of workshops and training depends on depends on format, scope, preparation, and group size.<br>
-            Please reach out to discuss your needs.
+            Please <a
+              href="/contact"
+              class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
+            >
+              reach out
+            </a> to discuss your needs.
           </p>
         </div>
         

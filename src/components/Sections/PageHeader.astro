@@ -2,20 +2,32 @@
 export interface Props {
   title: string;
   subtitle?: string;
-  backgroundImage?: string;
+  backgroundImage: string;
+  overlayOpacity?: number; // 0 → no darkening, 1 → fully black
 }
 
-const { 
-  title, 
-  subtitle, 
-  backgroundImage = "/uploads/page-header-bg.webp" 
+const {
+  title,
+  subtitle,
+  backgroundImage,
+  overlayOpacity = 0, // default: no darkening
 } = Astro.props;
 ---
 
+<section
+  class="relative py-20 bg-cover bg-center"
+  style={`background-image: ${
+    overlayOpacity > 0
+      ? `linear-gradient(rgba(0,0,0,${overlayOpacity}), rgba(0,0,0,${overlayOpacity})), `
+      : ""
+  }url(${backgroundImage})`}
+>
+<!-- made header darker
 <section 
   class="relative py-20 bg-cover bg-center"
   style={`background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`}
 >
+-->
   <div class="container">
     <div class="max-w-3xl mx-auto text-center text-white">
       <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">{title}</h1>

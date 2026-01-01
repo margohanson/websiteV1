@@ -16,7 +16,7 @@ const footerNavs = [
   {
     title: "About",
     items: [
-      { text: "About Us", href: "/about-us" },
+      { text: "About", href: "/about" },
       { text: "Prices", href: "/prices" },
       { text: "Staff", href: "/staff" },
       { text: "Contact", href: "/contact" },
@@ -78,13 +78,39 @@ if (officeHours) {
 }
 ---
 
-<footer class="bg-gray-900 text-white pt-8 pb-10">
-    
-    <!-- Copyright -->
-    <div class="pt-1 mt-1 text-center text-gray-400 text-sm">
-      <p>&copy; {currentYear} Ariane Mader. All rights reserved.</p>
-      <p class="mt-2">
-        <a href="/privacy-terms-conditions" class="hover:text-primary-300 mr-4">Privacy, Terms & Conditions</a>
-      </p>
+
+
+
+<footer class="bg-gray-900 pt-8 pb-10 relative">
+
+  <!-- Logo on the right -->
+<!-- Logo on the right -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2">
+  <a
+    href="https://www.lvsc.eu/lid/ariane-mader"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="View my professional registration"
+  >
+    <div class="bg-gray-300 p-1.5 rounded-md inline-block hover:bg-gray-200 transition-colors">
+      <img
+        src="/uploads/logo-beroepsregister.png"
+        alt="Registered professional logo"
+        class="h-20 w-auto"
+        loading="lazy"
+      />
+    </div>
+  </a>
+</div>
+
+  <!-- Copyright (keep original centered formatting) -->
+  <div class="pt-1 mt-1 text-center greenBrightFont text-sm">
+    <p>&copy; {currentYear} Ariane Mader. All rights reserved.</p>
+    <p class="mt-2">
+      <a href="/privacy-terms-conditions" class="hover:text-gray-300 mr-4">
+        Privacy, Terms & Conditions
+      </a>
+    </p>
   </div>
+
 </footer>

@@ -167,7 +167,7 @@ See `src/content/config.ts` for the complete schema definitions for all content 
 
 ### Main Pages
 - **Homepage** (`/`): Hero section, service times, about preview, recent events/sermons
-- **About Us** (`/about-us`): Mission, values, history, staff preview
+- **About** (`/about`): Mission, values, history, staff preview
 - **Staff** (`/staff`): Complete staff directory with contact information
 - **Ministries** (`/ministries`): All church ministries with detailed pages
 - **Sermons** (`/sermons`): Sermon archive with audio/video support and filtering

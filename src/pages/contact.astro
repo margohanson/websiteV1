@@ -11,32 +11,64 @@ import Button from "../components/UI/Button.astro";
   <PageHeader 
     title="Contact Me" 
     subtitle="I'd love to hear from you"
-    backgroundImage="/uploads/contact-header-bg.webp"
+    backgroundImage="/uploads/contact-header.jpg"
+    overlayOpacity={0.2}
   />
   
+
+
+
   <!-- Contact Info -->
   <section class="py-16">
     <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
         <!-- Contact Form -->
         <div>
           <h2 class="text-3xl blueFont font-bold mb-6">Get in Touch</h2>
-          <p class="max-w-3xl mx-auto prose prose-lg">
-            If you’re curious about working together, have questions, or want to explore if coaching is right for you, feel free to reach out.<br>
-            I offer a <b>free 30-minute introduction video call</b> so we can get to know each other and see if it’s a good match.<br><br>
-            You can contact me at:<br>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg> 
-            info[AT]arianemader.com<br><br>
-            I look forward to hearing from you!
-          </p>
+
+          <div class="prose prose-lg max-w-none">
+            <p>
+              If you’re curious about working together, have questions, or want to explore if coaching is right for you, feel free to reach out.<br>
+              I offer a <b>free 30-minute introduction video call</b> so we can get to know each other and see if it’s a good match.
+            </p>
+
+            <p>You can contact me at:</p>
+          </div>
+
+          <!-- Email row (kept OUTSIDE prose paragraph) -->
+          <div class="not-prose flex items-center gap-2 mt-2 text-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 greenDarkFont flex-shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+
+            <a
+              href="mailto:info@arianemader.com"
+              class="text-gray-800 hover:text-gray-600 transition-colors"
+            >
+              info<span aria-hidden="true">[at]</span><span class="sr-only">@</span>arianemader.com
+            </a>
+          </div>
+
+          <div class="prose prose-lg max-w-none">
+            <p class="mt-6">I look forward to hearing from you!</p>
+          </div>
         </div>
           <img 
               float: right;
               margin: 0 20px 20px 0;
-              src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop&crop=center" 
-              alt="Worship at our church" 
+              src="/uploads/contact.jpg" 
+              alt="XXX" 
               class="rounded-lg shadow-lg object-cover w-quarter h-quarter"
             />
         <div >

@@ -6,13 +6,12 @@ import { Carousel } from 'webcoreui/astro'
 ---
 
 <BaseLayout
-  title="Staff - Church Name"
+  title="Coaching"
   description="Meet our dedicated church staff and leadership team who serve our congregation with passion and commitment."
 >
   <PageHeader 
-    title="Our Staff" 
-    subtitle="Meet our dedicated leadership team"
-    backgroundImage="/uploads/page-header-bg.webp"
+    title="Coaching & Counselling" 
+    backgroundImage="/uploads/coaching-header.jpg"
   />
   
   <!-- Staff List -->
@@ -29,10 +28,8 @@ import { Carousel } from 'webcoreui/astro'
     <p>
       Clients often come to me with questions like:
 
-      <li class="text-red-500"><div class="text-black">How do I stop procrastinating?</div></li>
-
-      <ul>
-        <li class="text-red-500"><div class="text-black">How do I stop procrastinating?</div></li>
+      <ul class="green-bullets space-y-1 [&>li]:my-0">
+        <li>How do I stop procrastinating?</li>
         <li>How do I manage stress or overwhelm?</li>
         <li>How do I build habits that last?</li>
         <li>Why do I keep repeating the same patterns?</li>
@@ -57,7 +54,7 @@ import { Carousel } from 'webcoreui/astro'
     <div class="max-w-3xl mx-auto prose prose-lg">
     <p>
       My approach is practical, <b>calm, structured, and empathetic</b>. I tailor each session to you, using:
-      <ul>
+      <ul class="green-bullets space-y-1 [&>li]:my-0">
         <li>reflective questions</li>
         <li>structured exercises</li>
         <li>practical tools</li>
@@ -94,66 +91,96 @@ import { Carousel } from 'webcoreui/astro'
 </section>
 
 <!-- Testimonials -->
-<section id="faq" class="py-16 bg-white">
+<section id="testimonials" class="py-16 bg-white">
   <div class="container">
     <div class="text-center mb-8">
-      <h3 class="blueFont">Testimonials</h2>
+      <h2 class="blueFont text-3xl font-bold">Testimonials</h2>
     </div>
-  <Carousel items={3}>
-     <li class="w-100%">
-      <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <div class="mb-4">
-              <p class="text-gray-600">
-                ?
-              </p>
-            </div>
-            <h3 class="text-xl text-center font-bold mb-3">"I", 26?, German</h3>
-          </div>   
-     </li>
-     
-     <li class="w-100%">
-        <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <div class="mb-4">
-              <p class="text-gray-600">
-                Working with Ariane has been a genuinely valuable experience.<br>
-                I started coaching without a clear end goal, but Ariane helped me untangle my thoughts and identify what I actually wanted to work on. From there, she guided me in building a few keystone habits that created space for creativity, brought more structure to my days, and helped me spend my time in ways that felt genuinely satisfying.<br>
-                She has a calm, perceptive way of noticing patterns, asking the right questions, and gently steering you toward more helpful approaches — all without judgement. Our sessions were collaborative and grounded, and over time, we built a personalised toolkit I now use to support both my creative work and my ADHD.<br>
-                We made mind maps, created matrixes and dopamine menus, talked about habit loops, and examined resistance in a way that felt grounded and doable. We also explored rituals, and experimented with small but effective routines. I began setting achievable writing goals — like 15-minute sprints with a coffee reward — and found myself not just getting more done, but actually enjoying the process again.<br>
-                We also looked at the mental health side of things: working through anxiety, tackling negative self-talk, and using visualisation exercises to find more calm when things felt overwhelming.<br>
-                One small but incredibly helpful detail: she took notes during our sessions. That meant I could stay present in the moment, even when my thoughts were jumping around, and still walk away with a clear summary and practical next steps.<br>
-                What I’m taking away now is a more compassionate, practical way of supporting myself — and a set of tools I know I can come back to whenever I need a reset.<br>
-                I’d definitely recommend working with Ariane if you’re looking for thoughtful, grounded support in making real, sustainable change.<br>
-              </p>
-            </div>
-            <h3 class="text-xl text-center font-bold mb-3">"L", 35, British</h3>
-         </div>   
-      </li>
 
-      <li class="w-100%">
-        <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <div class="mb-4">
-              <p class="text-gray-600">
-                The coach taught me about some interesting and useful tools which I was not aware of to help me work with my ADHD traits and my perfectionist nature. Our conversations were always interesting and insightful and I felt comfortable having these conversations with her. The coach was very understanding, supportive and helped me in different ways. I always knew what to expect.<br>
-                The coach used tangible tools which we worked together on to help support certain struggles I was having.<br>
-                I have learnt some great tools from the coach which I will take forward as I continue to work on this. It was also extremely beneficial for me to have someone to talk to who understands, and who has a lot of knowledge of different tools which can benefit an ADHD brain. 
-              </p>
-            </div>
-            <h3 class="text-xl text-center font-bold mb-3">"C", 35, British</h3>
-          </div>   
-      </li>
+    <!-- Narrow the carousel itself to 75% on desktop -->
+    <div class="mx-auto w-full md:w-3/4">
+      <Carousel items={4} itemsPerSlide={1}>
 
-      <li class="w-100%">
-        <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
-            <div class="mb-4">
+        <!-- Testimonial 1 -->
+        <li class="w-full">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-sm leading-snug">
+            <p class="text-gray-600">
+              ?
+            </p>
+            <h3 class="text-xl text-center font-bold mt-6">
+              "I", 26?, German
+            </h3>
+          </div>
+        </li>
+
+        <!-- Testimonial 2 (long + Read more) -->
+        <li class="w-full">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-sm leading-snug">
+            <details class="text-gray-600">
+              <summary class="cursor-pointer select-none text-gray-700 hover:text-gray-900">
+                Working with Ariane has been a genuinely valuable experience…
+                <span class="underline">Read more</span>
+              </summary>
+
+              <!-- tighter paragraph spacing -->
+              <div class="mt-3 space-y-2">
+                <p>
+                  I started coaching without a clear end goal, but Ariane helped me untangle my thoughts and identify what I actually wanted to work on.
+                </p>
+                <p>
+                  She has a calm, perceptive way of noticing patterns, asking the right questions, and gently steering you toward more helpful approaches — all without judgement.
+                </p>
+                <p>
+                  We made mind maps, created matrixes and dopamine menus, talked about habit loops, and examined resistance in a way that felt grounded and doable.
+                </p>
+                <p>
+                  What I’m taking away now is a more compassionate, practical way of supporting myself — and a set of tools I know I can come back to whenever I need a reset.
+                </p>
+              </div>
+            </details>
+
+            <h3 class="text-xl text-center font-bold mt-6">
+              "L", 35, British
+            </h3>
+          </div>
+        </li>
+
+        <!-- Testimonial 3 -->
+        <li class="w-full">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-sm leading-snug">
+            <div class="space-y-2">
               <p class="text-gray-600">
-                ?
+                The coach taught me about useful tools to help me work with my ADHD traits and perfectionism.
+              </p>
+              <p class="text-gray-600">
+                Our conversations were always insightful and I felt comfortable having them.
+              </p>
+              <p class="text-gray-600">
+                I have learnt some great tools which I will take forward.
               </p>
             </div>
-            <h3 class="text-xl text-center font-bold mb-3">"M", 3?, Croatian</h3>
-          </div>   
-     </li>
-      
-  </Carousel>
+
+            <h3 class="text-xl text-center font-bold mt-6">
+              "C", 35, British
+            </h3>
+          </div>
+        </li>
+
+        <!-- Testimonial 4 -->
+        <li class="w-full">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-sm leading-snug">
+            <p class="text-gray-600">
+              ?
+            </p>
+            <h3 class="text-xl text-center font-bold mt-6">
+              "M", 3?, Croatian
+            </h3>
+          </div>
+        </li>
+
+      </Carousel>
+    </div>
+  </div>
 </section>
 
 
@@ -248,7 +275,7 @@ import { Carousel } from 'webcoreui/astro'
           </a>
           
           <a 
-            href="/about-us" 
+            href="/about" 
             class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           >
             Learn More About Me

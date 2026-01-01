@@ -17,7 +17,22 @@
 }
 
 .greenDarkFont {
-   color: #009C75;
+   color: #30B28E;
+}
+
+.nav-link:hover {
+  color: #30B28E;
+}
+
+.greenDarkBg {
+  background-color: rgba(48, 178, 142, 0.08);
+}
+.greenDarkBorder {
+  border-color: rgba(48, 178, 142, 0.35);
+}
+
+.green-bullets li::marker {
+  color: #39D7AC; /* your greenBrightFont */
 }
 
 @layer base {
