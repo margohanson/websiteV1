@@ -35,6 +35,11 @@
   color: #39D7AC; /* your greenBrightFont */
 }
 
+.green-numbers li::marker {
+  color: #30B28E; /* same green as your bullets */
+  font-weight: 600;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;

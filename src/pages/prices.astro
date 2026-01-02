@@ -10,50 +10,68 @@ import Button from "../components/UI/Button.astro";
 >
   <PageHeader 
     title="Prices" 
-    backgroundImage="/uploads/prices-header.jpg"
+    backgroundImage="/uploads/prices-header2.jpg"
     overlayOpacity={0.2}
   />
   
-  <!-- What to Expect -->
-  <section class="py-16">
-    <div class="container">
-     
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="text-center p-6">
-          <h3 class="text-xl font-bold blueFont mb-3">Coaching for Individuals</h3>
-          <p class="text-gray-700">
-            <b>60 minutes — 85€</b><br>
-            Standard coaching session.<br>
-            <br>
-            <b>90 minutes — 115€</b><br>
-            Deep-dive or methodology session (e.g. Ikigai, Logic Levels).<br>
-            <br>
-            <br>
-            <h3 class="text-xl font-bold blueFont mb-3">Discounts</h3>
-            <ul>
-              <li><b>Students or Unemployed:</b> 20%</li>
-              <li><b>Referral:</b> 20€ off your next session for both</li>
-            </ul>
+  <!-- Prices -->
+<section class="py-16">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Individuals -->
+      <div class="p-6">
+        <div class="prose prose-lg prose-max-w-none prose-p:my-2 prose-ul:my-2">
+          <h3 class="blueFont text-center">Coaching for Individuals</h3>
+
+          <p class="text-gray-700 text-center">
+            <strong>60 minutes — 85€ (incl. VAT)</strong><br />
+            Standard coaching session
           </p>
+
+          <p class="text-gray-700 text-center">
+            <strong>90 minutes — 115€ (incl. VAT)</strong><br />
+            Deep-dive or methodology session (e.g. Ikigai, Logic Levels)
+          </p>
+
+          <div class="mt-6 rounded-lg bg-gray-50 border border-gray-200 p-5 text-center">
+            <h4 class="blueFont mt-0 mb-2">Discounts</h4>
+            <p class="text-gray-700">
+              <strong>Students or Unemployed:</strong> 20% discount<br />
+              <strong>Referral:</strong> 20€ off your next session for both
+            </p>
+          </div>
         </div>
-        
-        <div class="text-center p-6">
-          <h3 class="text-xl font-bold blueFont mb-3">Organisations and Companies</h3>
-          <p class="text-gray-700">
-            Individual coaching for organisations starts at: <b>130€ per hour (excl. VAT).</b><br>
-            Pricing of workshops and training depends on depends on format, scope, preparation, and group size.<br>
-            Please <a
+      </div>
+
+      <!-- Organisations -->
+      <div class="p-6">
+        <div class="prose prose-lg prose-max-w-none prose-p:my-2">
+          <h3 class="blueFont text-center">Organisations and Companies</h3>
+
+          <p class="text-gray-700 text-center">
+            Individual coaching for organisations starts at:
+            <strong>130€ per hour (excl. VAT)</strong>.
+          </p>
+
+          <p class="text-gray-700 text-center">
+            Pricing of workshops and training depends on format, scope, preparation, and group size.
+            Please
+            <a
               href="/contact"
               class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
             >
               reach out
-            </a> to discuss your needs.
+            </a>
+            to discuss your needs.
           </p>
         </div>
-        
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- What to Expect -->
   <!--
