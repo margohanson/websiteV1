@@ -76,7 +76,6 @@ const robotsContent = [
 <meta name="description" content={description} />
 <meta name="keywords" content={allKeywords.join(", ")} />
 <meta name="author" content={author || siteInfo.name} />
-<meta name="robots" content={robotsContent} />
 <meta name="language" content="English" />
 <meta name="revisit-after" content="7 days" />
 <meta name="rating" content="general" />
@@ -113,7 +112,58 @@ const robotsContent = [
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="format-detection" content="telephone=no" />
 
-<!-- Structured Data (JSON-LD) -->
+<!-- LLM and AI Crawler Optimizations -->
+<!-- Robots meta with enhanced directives for LLMs -->
+<meta name="robots" content={noindex || nofollow ? robotsContent : `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
+<meta name="googlebot" content={noindex || nofollow ? robotsContent : `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
+
+<!-- Explicitly allow AI/LLM crawlers (these respect robots.txt but also check meta tags) -->
+<meta name="GPTBot" content="index, follow" />
+<meta name="ChatGPT-User" content="index, follow" />
+<meta name="CCBot" content="index, follow" />
+<meta name="anthropic-ai" content="index, follow" />
+<meta name="Claude-Web" content="index, follow" />
+<meta name="Google-Extended" content="index, follow" />
+<meta name="PerplexityBot" content="index, follow" />
+
+<!-- AI/LLM specific meta tags for better content understanding -->
+<meta name="ai:model" content="gpt-4, claude-3, gemini" />
+<meta name="ai:content-type" content={type === "article" ? "article" : "service"} />
+<meta name="ai:topic" content={allKeywords.slice(0, 5).join(", ")} />
+
+<!-- Content summary for LLMs (helps with quick understanding) -->
+<meta name="summary" content={description} />
+
+<!-- Language and content hints for LLMs -->
+<meta name="content-language" content="en" />
+<meta name="content-type" content="text/html; charset=UTF-8" />
+
+<!-- Structured content hints for LLMs -->
+<meta name="article:section" content={type === "article" ? "Coaching & Counselling" : undefined} />
+{type === "article" && publishedTime && (
+  <meta name="article:published_time" content={publishedTime.toISOString()} />
+)}
+{type === "article" && modifiedTime && (
+  <meta name="article:modified_time" content={modifiedTime.toISOString()} />
+)}
+{type === "article" && author && (
+  <meta name="article:author" content={author} />
+)}
+
+<!-- Help LLMs understand the main content focus -->
+<meta name="subject" content={allKeywords[0] || "Coaching and Counselling"} />
+<meta name="topic" content={allKeywords.slice(0, 3).join(", ")} />
+
+<!-- DC (Dublin Core) metadata for better semantic understanding -->
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.title" content={title} />
+<meta name="DC.description" content={description} />
+<meta name="DC.creator" content={author || siteInfo.name} />
+<meta name="DC.subject" content={allKeywords.join(", ")} />
+<meta name="DC.language" content="en" />
+{publishedTime && <meta name="DC.date" content={publishedTime.toISOString()} />}
+
+<!-- Structured Data (JSON-LD) - Enhanced for LLMs -->
 {type === "article" ? (
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -121,6 +171,7 @@ const robotsContent = [
     "headline": title,
     "description": description,
     "image": imageUrl,
+    "keywords": allKeywords.join(", "),
     "author": {
       "@type": "Person",
       "name": author || siteInfo.name,
@@ -139,6 +190,9 @@ const robotsContent = [
       "@type": "WebPage",
       "@id": canonicalURL,
     },
+    "inLanguage": "en",
+    "articleSection": "Coaching & Counselling",
+    "wordCount": description.split(" ").length, // Approximate for LLM understanding
   })} />
 ) : (
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -148,6 +202,7 @@ const robotsContent = [
     "description": description,
     "image": imageUrl,
     "url": canonicalURL,
+    "keywords": allKeywords.join(", "),
     "provider": {
       "@type": "Person",
       "name": siteInfo.name,
@@ -157,6 +212,12 @@ const robotsContent = [
     "areaServed": {
       "@type": "Country",
       "name": "Netherlands",
+    },
+    "inLanguage": "en",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "EUR",
     },
   })} />
 )}
