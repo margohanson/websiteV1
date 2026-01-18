@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHeader from "../../components/Sections/PageHeader.astro";
+import Testimonials from "../../components/Sections/Testimonials.astro";
 import { getLocale, tObj, getLocalizedPath } from "../../i18n/utils";
 
 export function getStaticPaths() {
@@ -76,15 +77,11 @@ const readLess = tObj<any>('common.ui.readLess', locale) as string;
   </section>
 
   <!-- Testimonials Section (keeping the existing carousel from original) -->
-  <section id="testimonials" class="py-16 bg-white">
-    <div class="container">
-      <div class="text-center mb-8">
-        <h2 class="blueFont text-3xl font-bold">{content?.testimonials?.title}</h2>
-      </div>
-      <!-- Testimonials carousel code would go here - keeping simplified for maintainability -->
-      <div class="max-w-3xl mx-auto text-center text-gray-600">
-        <p><em>Testimonials coming soon...</em></p>
-      </div>
-    </div>
-  </section>
+  <!-- Testimonials -->
+  <Testimonials 
+    title={content?.testimonials?.title}
+    testimonials={content?.testimonials?.items}
+    readMoreText={content?.testimonials?.ui?.readMore}
+    showLessText={content?.testimonials?.ui?.showLess}
+  />
 </BaseLayout>

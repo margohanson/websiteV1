@@ -123,7 +123,28 @@
             ]
         },
         "testimonials": {
-            "title": "Testimonials"
+            "title": "Testimonials",
+            "items": [
+                {
+                    "text": "For years I've had the feeling that I'm \"stuck\", knowing what I want to change but unable to find the switch to flip... Ariane's clear and open manner immediately made me feel that I could be completely honest. Ariane helped me to approach my thought patterns from different perspectives and thus to dissolve the first knots. She showed me targeted methods to work on myself. I can now deal with stress and pressure much better and have found a compassionate way of dealing with myself.",
+                    "author": "PhD Student",
+                    "role": "Chemistry"
+                },
+                {
+                    "text": "Working with Ariane was incredibly valuable... I was struggling with focus, negative thoughts, motivation and procrastination - basically, I felt completely stuck personally and in my work. Ariane helped me untangle my thoughts and feelings and understand myself better. I learned how to deal with overwhelming emotions in a nicer way, how to plan my work realistically and stick to it, and how to communicate my needs. I feel much more confident and resilient now.",
+                    "author": "Postdoc",
+                    "role": "Social Sciences"
+                },
+                {
+                    "text": "Ariane creates a space where everything can be said without judgment. She is incredibly sharp in her analysis but always warm in her delivery. I learned so much about my own patterns and how to break them. Highly recommended!",
+                    "author": "Team Lead",
+                    "role": "Tech Start-up"
+                }
+            ],
+            "ui": {
+                "readMore": "Read more",
+                "showLess": "Show less"
+            }
         }
     },
     "workshops": {

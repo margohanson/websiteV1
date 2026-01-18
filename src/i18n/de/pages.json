@@ -123,7 +123,28 @@
             ]
         },
         "testimonials": {
-            "title": "Erfahrungsberichte"
+            "title": "Erfahrungsberichte",
+            "items": [
+                {
+                    "text": "Seit Jahren hatte ich das Gefühl, „festzustecken“, zu wissen, was ich ändern wollte, aber den Schalter nicht zu finden, um es umzulegen... Arianes klare und offene Art gab mir sofort das Gefühl, völlig ehrlich sein zu können. Ariane half mir, meine Denkmuster aus verschiedenen Perspektiven zu betrachten und so die ersten Knoten zu lösen. Sie zeigte mir gezielte Methoden, um an mir selbst zu arbeiten. Ich kann jetzt viel besser mit Stress und Druck umgehen und habe einen mitfühlenden Umgang mit mir selbst gefunden.",
+                    "author": "Doktorandin",
+                    "role": "Chemie"
+                },
+                {
+                    "text": "Die Arbeit mit Ariane war unglaublich wertvoll... Ich hatte Probleme mit Fokus, negativen Gedanken, Motivation und Prokrastination - im Grunde fühlte ich mich persönlich und beruflich völlig festgefahren. Ariane half mir, meine Gedanken und Gefühle zu entwirren und mich selbst besser zu verstehen. Ich lernte, wie ich auf eine nettere Art mit überwältigenden Emotionen umgehen kann, wie ich meine Arbeit realistisch plane und mich daran halte, und wie ich meine Bedürfnisse kommuniziere. Ich fühle mich jetzt viel selbstbewusster und widerstandsfähiger.",
+                    "author": "Postdoc",
+                    "role": "Sozialwissenschaften"
+                },
+                {
+                    "text": "Ariane schafft einen Raum, in dem alles ohne Verurteilung gesagt werden kann. Sie ist unglaublich scharfsinnig in ihrer Analyse, aber immer warmherzig. Ich habe so viel über meine eigenen Muster gelernt und wie ich sie durchbrechen kann. Sehr zu empfehlen!",
+                    "author": "Team Lead",
+                    "role": "Tech Start-up"
+                }
+            ],
+            "ui": {
+                "readMore": "Mehr lesen",
+                "showLess": "Weniger anzeigen"
+            }
         }
     },
     "workshops": {
