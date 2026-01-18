@@ -21,8 +21,13 @@ const speakers = [...new Set(sermons.map(sermon => sermon.data.speaker))];
 ---
 
 <BaseLayout
-  title="Sermons - Church Name"
-  description="Listen to or watch our latest sermons. Explore our sermon archive to grow in your faith and understanding of God's Word."
+  title="Sermons & Messages | Audio & Video Archive"
+  description="Listen to or watch sermons and messages. Explore the archive to find teachings on faith, spiritual growth, and biblical wisdom."
+  image={{
+    url: "/uploads/sermons/unshakeable-faith-1.webp",
+    alt: "Sermons Archive"
+  }}
+  keywords={["sermons", "messages", "audio sermons", "video sermons", "spiritual teachings", "bible study"]}
 >
   <PageHeader 
     title="Sermons" 

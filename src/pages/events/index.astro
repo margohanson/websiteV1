@@ -20,8 +20,13 @@ const pastEvents = allEvents.filter(event => isPastDate(event.data.date))
 ---
 
 <BaseLayout
-  title="Events - Church Name"
-  description="Stay updated with upcoming events and activities at our church. Find information on special services, community gatherings, and more."
+  title="Events & Workshops | Upcoming Activities - Ariane Mader"
+  description="Stay updated with upcoming events, workshops, and activities. Find information on coaching workshops, training sessions, and community events."
+  image={{
+    url: "/uploads/events/community-outreach-day.webp",
+    alt: "Events and Workshops"
+  }}
+  keywords={["events", "workshops", "upcoming events", "training sessions", "coaching events"]}
 >
   <PageHeader 
     title="Events" 

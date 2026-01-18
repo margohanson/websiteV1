@@ -35,10 +35,12 @@ const isFutureEvent = new Date(entry.data.date) > new Date();
 ---
 
 <BaseLayout
-  title={`${entry.data.title} - Events - Church Name`}
+  title={`${entry.data.title} | Events - Ariane Mader`}
   description={entry.data.summary}
   image={{ url: entry.data.image, alt: entry.data.title }}
   type="article"
+  keywords={entry.data.tags || []}
+  publishedTime={entry.data.date}
 >
   <PostLayout
     title={entry.data.title}

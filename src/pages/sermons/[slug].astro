@@ -50,10 +50,13 @@ if (entry.data.series) {
 ---
 
 <BaseLayout
-  title={`${entry.data.title} - Sermons - Church Name`}
+  title={`${entry.data.title} | Sermons - Ariane Mader`}
   description={entry.data.summary || `Listen to "${entry.data.title}" by ${entry.data.speaker}`}
   image={entry.data.image ? { url: entry.data.image, alt: entry.data.title } : undefined}
   type="article"
+  keywords={entry.data.tags || []}
+  author={entry.data.speaker}
+  publishedTime={entry.data.date}
 >
   <PostLayout
     title={entry.data.title}
