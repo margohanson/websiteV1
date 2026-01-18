@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+import { getLocale, tObj, getLocalizedPath } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'de' } },
+  ];
+}
+
+const locale = getLocale(Astro.url.pathname);
+const content = tObj<any>('pages.contact', locale);
+---
+
+<BaseLayout
+  title={content?.meta?.title}
+  description={content?.meta?.description}
+  image={{ url: "/uploads/about-header.jpg", alt: content?.hero?.title }}
+>
+  <PageHeader 
+    title={content?.hero?.title}
+    subtitle={content?.hero?.subtitle}
+    backgroundImage="/uploads/about-header.jpg"
+    overlayOpacity={0.3}
+  />
+
+  <!-- Contact Info -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-3xl blueFont font-bold mb-6">{content?.content?.heading}</h2>
+
+          <div class="prose prose-lg max-w-none">
+            <p set:html={content?.content?.paragraph1} />
+            <p>{content?.content?.emailLabel}</p>
+          </div>
+
+          <!-- Email row -->
+          <div class="not-prose flex items-center gap-2 mt-2 text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 greenDarkFont flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:info@arianemader.com" class="text-gray-800 hover:text-gray-600 transition-colors">
+              info<span aria-hidden="true">[at]</span><span class="sr-only">@</span>arianemader.com
+            </a>
+          </div>
+
+          <div class="prose prose-lg max-w-none">
+            <p class="mt-6">{content?.content?.closing}</p>
+          </div>
+        </div>
+
+        <img src="/uploads/contact1.jpg" alt="Contact image" class="rounded-lg shadow-lg object-cover w-full max-w-sm max-h-[380px] mx-auto" />
+        <div></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

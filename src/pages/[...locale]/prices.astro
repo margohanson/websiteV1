@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+import { getLocale, tObj, getLocalizedPath } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'de' } },
+  ];
+}
+
+const locale = getLocale(Astro.url.pathname);
+const content = tObj<any>('pages.prices', locale);
+---
+
+<BaseLayout
+  title={content?.meta?.title}
+  description={content?.meta?.description}
+  image={{ url: "/uploads/prices-header2.jpg", alt: content?.hero?.title }}
+>
+  <PageHeader 
+    title={content?.hero?.title}
+    backgroundImage="/uploads/prices-header2.jpg"
+    overlayOpacity={0.2}
+  />
+
+  <!-- Prices -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Individuals -->
+        <div class="p-6">
+          <div class="prose prose-lg prose-max-w-none prose-p:my-2 prose-ul:my-2">
+            <h3 class="blueFont text-center">{content?.individuals?.title}</h3>
+            
+            <p class="text-gray-700 text-center">
+              <strong>{content?.individuals?.session60?.price}</strong><br />
+              {content?.individuals?.session60?.description}
+            </p>
+
+            <p class="text-gray-700 text-center">
+              <strong>{content?.individuals?.session90?.price}</strong><br />
+              {content?.individuals?.session90?.description}
+            </p>
+
+            <div class="mt-6 rounded-lg bg-gray-50 border border-gray-200 p-5 text-center">
+              <h4 class="blueFont mt-0 mb-2">{content?.individuals?.discounts?.title}</h4>
+              <p class="text-gray-700" set:html={content?.individuals?.discounts?.studentDiscount + '<br />' + content?.individuals?.discounts?.referralDiscount} />
+            </div>
+          </div>
+        </div>
+
+        <!-- Organisations -->
+        <div class="p-6">
+          <div class="prose prose-lg prose-max-w-none prose-p:my-2">
+            <h3 class="blueFont text-center">{content?.organisations?.title}</h3>
+            <p class="text-gray-700 text-center" set:html={content?.organisations?.paragraph1} />
+            <p class="text-gray-700 text-center" set:html={content?.organisations?.paragraph2} />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

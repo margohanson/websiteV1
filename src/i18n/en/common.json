@@ -1,0 +1,53 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "coaching": "Coaching",
+        "workshops": "Workshops",
+        "prices": "Prices",
+        "contact": "Contact",
+        "items": [
+            {
+                "key": "home",
+                "href": "/"
+            },
+            {
+                "key": "about",
+                "href": "/about"
+            },
+            {
+                "key": "coaching",
+                "href": "/coaching"
+            },
+            {
+                "key": "workshops",
+                "href": "/workshops"
+            },
+            {
+                "key": "prices",
+                "href": "/prices"
+            },
+            {
+                "key": "contact",
+                "href": "/contact"
+            }
+        ]
+    },
+    "ui": {
+        "learnMore": "Learn More",
+        "readMore": "Read more",
+        "readLess": "Read less",
+        "backToAll": "Back to All",
+        "shareThisPost": "Share This Post",
+        "contactMe": "Contact Me"
+    },
+    "footer": {
+        "copyright": "All rights reserved.",
+        "privacyTerms": "Privacy, Terms & Conditions"
+    },
+    "languageSwitcher": {
+        "label": "Language",
+        "en": "English",
+        "de": "Deutsch"
+    }
+}

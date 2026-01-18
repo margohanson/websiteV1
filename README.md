@@ -163,6 +163,55 @@ Content of your sermon goes here...
 
 See `src/content/config.ts` for the complete schema definitions for all content types.
 
+## Internationalization (i18n)
+
+This website supports multiple languages (currently English and German) using Astro's built-in i18n features and a JSON-based translation system.
+
+### Content Structure
+
+Translations are stored in `src/i18n/[lang]/`:
+*   `pages.json`: Main content for all pages (titles, descriptions, section text).
+*   `common.json`: Shared UI strings (navigation, footer, buttons).
+
+### Editing Translated Content
+
+To change text on a page, locate the corresponding JSON file for the language you want to edit:
+1.  **English**: `src/i18n/en/pages.json`
+2.  **German**: `src/i18n/de/pages.json`
+
+The keys in these files are nested by page name (e.g., `"pages.home.hero.title"`).
+
+### Adding a New Language
+
+1.  Create a new folder in `src/i18n/` (e.g., `src/i18n/fr/`).
+2.  Add `pages.json` and `common.json` to the new folder.
+3.  Update the `i18n` configuration in `astro.config.mjs`:
+    ```javascript
+    i18n: {
+      defaultLocale: "en",
+      locales: ["en", "de", "fr"],
+      // ...
+    }
+    ```
+4.  Update `src/i18n/utils.ts` to include the new language in the `languages` object.
+5.  Update the `getStaticPaths` function in the dynamic route files (e.g., `src/pages/[...locale]/index.astro`) to include the new locale.
+
+### Using Translations in Components
+
+Use the helper functions from `src/i18n/utils.ts`:
+```astro
+---
+import { getLocale, t, tObj } from "../../i18n/utils";
+const locale = getLocale(Astro.url.pathname);
+
+// Single string
+const title = t('common.nav.home', locale);
+
+// Object for a whole page
+const content = tObj<any>('pages.home', locale);
+---
+```
+
 ## Key Pages and Features
 
 ### Main Pages

@@ -1,0 +1,81 @@
+{
+    "site": {
+        "title": "Ariane Mader - Coaching & Beratung",
+        "description": "Professionelles Coaching und Beratung für Studierende, Berufseinsteigende und Organisationen. Spezialisiert auf Stressmanagement, Produktivität, exekutive Funktionen und Unterstützung bei Neurodivergenz."
+    },
+    "home": {
+        "title": "Ariane Mader - Coaching & Beratung | Professionelle Unterstützung für Studierende, Berufseinsteigende & Organisationen",
+        "description": "Professionelle Coaching- und Beratungsleistungen für Studierende, Berufseinsteigende und Organisationen. Spezialisiert auf Stressmanagement, Prokrastination, Produktivität, exekutive Funktionen, Gewohnheitsaufbau und Unterstützung bei Neurodivergenz. Online-Sitzungen verfügbar.",
+        "keywords": [
+            "Coaching",
+            "Beratung",
+            "Life Coaching",
+            "Karriere Coaching",
+            "Stressmanagement",
+            "Prokrastination",
+            "Produktivität",
+            "exekutive Funktionen",
+            "ADHS Coaching",
+            "Neurodivergenz",
+            "Workshops",
+            "Organisationsentwicklung"
+        ]
+    },
+    "about": {
+        "title": "Über Ariane Mader - Coach & Beraterin",
+        "description": "Erfahren Sie mehr über Ariane Mader, professionelle Coach und Beraterin mit Schwerpunkt auf Gewohnheiten, Produktivität, Stress und Neurodivergenz.",
+        "keywords": [
+            "Ariane Mader",
+            "Coach",
+            "Beraterin",
+            "ADHS",
+            "Neurodivergenz",
+            "exekutive Funktionen",
+            "Stressmanagement",
+            "Gewohnheiten",
+            "Produktivität"
+        ]
+    },
+    "coaching": {
+        "title": "Coaching & Beratung - Ariane Mader",
+        "description": "Professionelle Coaching- und Beratungsleistungen. Arbeiten Sie an Stress, Gewohnheiten, Karriereentscheidungen und persönlichem Wachstum mit strukturierter, maßgeschneiderter Unterstützung.",
+        "keywords": [
+            "Coaching",
+            "Beratung",
+            "persönliche Entwicklung",
+            "Karriere Coaching",
+            "Stress Coaching",
+            "Gewohnheits-Coaching"
+        ]
+    },
+    "workshops": {
+        "title": "Workshops für Universitäten & Organisationen - Ariane Mader",
+        "description": "Maßgeschneiderte Workshops zu Stressmanagement, Produktivität, Gewohnheitsaufbau und Neurodiversität für Teams, Studierende und Organisationen.",
+        "keywords": [
+            "Workshops",
+            "Training",
+            "Stressmanagement Workshop",
+            "Produktivitäts Workshop",
+            "Teamentwicklung",
+            "Studierenden Workshops"
+        ]
+    },
+    "prices": {
+        "title": "Preise - Ariane Mader Coaching",
+        "description": "Coaching-Preise und Pakete. Einzelcoaching, Organisationspreise und Studierendenrabatte verfügbar.",
+        "keywords": [
+            "Coaching Preise",
+            "Coaching Kosten",
+            "Sitzungspreise"
+        ]
+    },
+    "contact": {
+        "title": "Kontakt - Ariane Mader Coaching",
+        "description": "Nehmen Sie Kontakt auf, um ein Kennenlerngespräch zu vereinbaren oder Fragen zu Coaching und Workshops zu stellen.",
+        "keywords": [
+            "Kontakt",
+            "Coaching buchen",
+            "Termin vereinbaren"
+        ]
+    }
+}

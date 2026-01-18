@@ -3,6 +3,7 @@ import "../assets/styles/global.css";
 import Seo from "../components/UI/Seo.astro";
 import Header from "../components/Global/Header.astro";
 import Footer from "../components/Global/Footer.astro";
+import { getLocale, t, getLocalizedPath, type Locale } from "../i18n/utils";
 
 export interface Props {
   title?: string;
@@ -13,11 +14,19 @@ export interface Props {
   };
   type?: "website" | "article";
   canonicalUrl?: string;
+  keywords?: string[];
 }
 
+// Get locale from URL
+const locale = getLocale(Astro.url.pathname);
+
+// Get default meta from translations
+const defaultTitle = t('meta.site.title', locale);
+const defaultDescription = t('meta.site.description', locale);
+
 const {
-  title = "Ariane Mader - Coaching & Counselling",
-  description = "Professional coaching and counselling for students, young professionals, and organisations. Specializing in stress management, productivity, executive functioning, and neurodivergent support.",
+  title = defaultTitle,
+  description = defaultDescription,
   image = {
     url: "/uploads/home-header.png",
     alt: "Ariane Mader - Coaching & Counselling",
@@ -25,10 +34,25 @@ const {
   type = "website",
   canonicalUrl,
 } = Astro.props;
+
+// Build alternate URLs for hreflang
+const currentPath = Astro.url.pathname;
+const baseUrl = Astro.site?.origin || 'https://arianemader.com';
+
+// Get path without locale prefix for building alternates
+let basePath = currentPath;
+if (currentPath.startsWith('/de/')) {
+  basePath = currentPath.slice(3);
+} else if (currentPath === '/de') {
+  basePath = '/';
+}
+
+const enUrl = `${baseUrl}${basePath === '/' ? '' : basePath}`;
+const deUrl = `${baseUrl}/de${basePath === '/' ? '' : basePath}`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +66,11 @@ const {
       type={type}
       canonicalUrl={canonicalUrl}
     />
+    
+    <!-- Hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="de" href={deUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
     
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

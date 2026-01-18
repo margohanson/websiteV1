@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+import { getLocale, tObj, getLocalizedPath, type Locale } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'de' } },
+  ];
+}
+
+const locale = getLocale(Astro.url.pathname);
+const content = tObj<any>('pages.about', locale);
+---
+
+<BaseLayout
+  title={content?.meta?.title}
+  description={content?.meta?.description}
+  image={{ url: "/uploads/about-header2.jpg", alt: content?.hero?.title }}
+>
+  <PageHeader
+    title={content?.hero?.title}
+    subtitle={content?.hero?.subtitle}
+    backgroundImage="/uploads/about-header2.jpg"
+    overlayOpacity={0.35}
+  />
+
+  <!-- About Me/Ariane -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-6xl mx-auto prose prose-lg prose-max-w-none prose-p:my-3">
+        <p set:html={content?.intro?.paragraph1} />
+        <p set:html={content?.intro?.paragraph2} />
+        <p set:html={content?.intro?.paragraph3} />
+        <p set:html={content?.intro?.paragraph4} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Personal Journey -->
+  <section class="bg-gray-50 py-16 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+    <div class="container">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="prose prose-lg prose-max-w-none prose-p:my-3">
+            <h3 class="blueFont">{content?.personalJourney?.title}</h3>
+            <p>{content?.personalJourney?.paragraph1}</p>
+            <p set:html={content?.personalJourney?.paragraph2} />
+            <p set:html={content?.personalJourney?.paragraph3} />
+            <p set:html={content?.personalJourney?.paragraph4} />
+          </div>
+          <div>
+            <img src="/uploads/me31.jpg" alt="Portrait of Ariane Mader" class="rounded-lg shadow-lg object-cover w-full max-w-sm md:ml-auto" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Coach -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-6xl mx-auto prose prose-lg prose-max-w-none prose-p:my-3">
+        <h3 class="blueFont">{content?.howICoach?.title}</h3>
+        <p set:html={content?.howICoach?.paragraph1} />
+        <p set:html={content?.howICoach?.paragraph2} />
+        <p set:html={content?.howICoach?.paragraph3} />
+        <p set:html={content?.howICoach?.paragraph4} />
+        <p>{content?.howICoach?.paragraph5}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
