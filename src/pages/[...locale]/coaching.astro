@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+import Testimonials from "../../components/Sections/Testimonials.astro";
+import { getLocale, tObj, getLocalizedPath } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'de' } },
+  ];
+}
+
+const locale = getLocale(Astro.url.pathname);
+const content = tObj<any>('pages.coaching', locale);
+const readMore = tObj<any>('common.ui.readMore', locale) as string;
+const readLess = tObj<any>('common.ui.readLess', locale) as string;
+---
+
+<BaseLayout
+  title={content?.meta?.title}
+  description={content?.meta?.description}
+  image={{ url: "/uploads/coaching-header.jpg", alt: content?.hero?.title }}
+>
+  <PageHeader 
+    title={content?.hero?.title}
+    backgroundImage="/uploads/coaching-header.jpg"
+    overlayOpacity={0.15}
+  />
+
+  <!-- What we can work on together -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.whatWeCanWorkOn?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p>{content?.whatWeCanWorkOn?.paragraph1}</p>
+        <p>{content?.whatWeCanWorkOn?.paragraph2}</p>
+        <p>{content?.whatWeCanWorkOn?.paragraph3}</p>
+        <p set:html={content?.whatWeCanWorkOn?.paragraph4} />
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Work -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.howIWork?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p>{content?.howIWork?.paragraph1}</p>
+        <p>{content?.howIWork?.paragraph2}</p>
+        <p set:html={content?.howIWork?.paragraph3} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Coaching Trajectory -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.trajectory?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg prose-p:my-3">
+        <ol class="list-decimal ml-6 space-y-4 green-numbers">
+          {content?.trajectory?.steps?.map((step: { title: string; description: string }) => (
+            <li>
+              <b>{step.title}</b><br />
+              {step.description}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section (keeping the existing carousel from original) -->
+  <!-- Testimonials -->
+  <Testimonials 
+    title={content?.testimonials?.title}
+    testimonials={content?.testimonials?.items}
+    readMoreText={content?.testimonials?.ui?.readMore}
+    showLessText={content?.testimonials?.ui?.showLess}
+  />
+</BaseLayout>

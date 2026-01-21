@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+import { getLocale, tObj, getLocalizedPath } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'de' } },
+  ];
+}
+
+const locale = getLocale(Astro.url.pathname);
+const content = tObj<any>('pages.workshops', locale);
+const contactMe = tObj<any>('common.ui.contactMe', locale) as string;
+---
+
+<BaseLayout
+  title={content?.meta?.title}
+  description={content?.meta?.description}
+  image={{ url: "/uploads/workshops-header.jpg", alt: content?.hero?.title }}
+>
+  <PageHeader 
+    title={content?.hero?.title}
+    subtitle={content?.hero?.subtitle}
+    backgroundImage="/uploads/workshops-header.jpg"
+    overlayOpacity={0.35}
+  />
+
+  <!-- Intro -->
+  <section class="py-16 pb-8 bg-gray-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <p set:html={content?.intro?.paragraph1} />
+        <p set:html={content?.intro?.paragraph2} />
+        <p>{content?.intro?.paragraph3}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Themes and Formats -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="blueFont mt-0">{content?.themes?.title}</h3>
+            <ul class="green-bullets space-y-1 [&>li]:my-0">
+              {content?.themes?.items?.map((item: string) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 class="blueFont mt-0">{content?.formats?.title}</h3>
+            <p>{content?.formats?.description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Process -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.designProcess?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg prose-p:my-3">
+        <ol class="list-decimal ml-6 space-y-4 green-numbers">
+          {content?.designProcess?.steps?.map((step: { title: string; description: string }) => (
+            <li>
+              <strong>{step.title}</strong><br />
+              {step.description}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-4xl mx-auto prose prose-lg prose-p:my-3 text-center">
+        <h3 class="blueFont text-center">{content?.pricing?.title}</h3>
+        <p set:html={content?.pricing?.description} />
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+          <a href={getLocalizedPath("/contact", locale)} class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+            {contactMe}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

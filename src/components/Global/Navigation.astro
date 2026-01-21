@@ -1,16 +1,12 @@
 ---
-// Define the navigation items
-const navItems = [
-  { text: "Home", href: "/" },
-  { text: "About", href: "/about" },
-  { text: "Coaching", href: "/coaching" },
-  { text: "Workshops", href: "/workshops" },
-  { text: "Prices", href: "/prices" },
-  { text: "Contact", href: "/contact" },
-];
+import { getLocale, getNavItems, getLocalizedPath } from '../../i18n/utils';
 
-// Get the current URL path to highlight the active link
+// Get current locale from the page URL
 const currentPath = Astro.url.pathname;
+const locale = getLocale(currentPath);
+
+// Get navigation items for current locale
+const navItems = getNavItems(locale);
 ---
 
 <!-- Desktop Navigation -->
@@ -19,7 +15,7 @@ const currentPath = Astro.url.pathname;
     {
       navItems.map((item) => {
         const isActive = currentPath === item.href || 
-                         (item.href !== "/" && currentPath.startsWith(item.href));
+                         (item.href !== "/" && item.href !== "/de" && currentPath.startsWith(item.href));
         
         return (
           <li>
@@ -65,7 +61,7 @@ const currentPath = Astro.url.pathname;
       {
         navItems.map((item) => {
           const isActive = currentPath === item.href || 
-                           (item.href !== "/" && currentPath.startsWith(item.href));
+                           (item.href !== "/" && item.href !== "/de" && currentPath.startsWith(item.href));
           
           return (
             <a

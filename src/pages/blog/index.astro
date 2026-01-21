@@ -20,8 +20,13 @@ const tags = [...new Set(posts.flatMap(post => post.data.tags))];
 ---
 
 <BaseLayout
-  title="Blog - Church Name"
-  description="Read our latest articles, devotionals, and updates from our church community."
+  title="Blog | Articles on Coaching, Counselling & Personal Development - Ariane Mader"
+  description="Read articles and insights on coaching, counselling, personal development, stress management, productivity, executive functioning, and neurodivergence. Practical tips and professional perspectives."
+  image={{
+    url: "/uploads/blog/building-strong-families.webp",
+    alt: "Blog Articles"
+  }}
+  keywords={["blog", "articles", "coaching articles", "counselling articles", "personal development", "productivity tips", "stress management", "executive functioning"]}
 >
   <PageHeader 
     title="Blog" 

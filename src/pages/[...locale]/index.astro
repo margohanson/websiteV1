@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSection from "../../components/Sections/HeroSection.astro";
+import { getLocale, tObj, getLocalizedPath, type Locale } from "../../i18n/utils";
+
+// Define static paths for both locales
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },  // English at /
+    { params: { locale: 'de' } },        // German at /de
+  ];
+}
+
+// Get locale from URL
+const locale = getLocale(Astro.url.pathname);
+
+// Get all content from JSON
+const content = tObj<any>('pages.home', locale);
+const learnMore = tObj<any>('common.ui.learnMore', locale) as string;
+---
+
+<BaseLayout
+  title={content?.meta?.title}
+  description={content?.meta?.description}
+  image={{
+    url: "/uploads/home-header.png",
+    alt: content?.hero?.title
+  }}
+>
+  <HeroSection 
+    title={content?.hero?.title}
+    subtitle={content?.hero?.subtitle}
+    backgroundImage="/uploads/home-header.png"
+  />
+  
+  <!-- Intro Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="w-full">
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
+        <div class="px-6 md:px-16">
+          <div class="max-w-3xl prose prose-lg">
+            <p set:html={content?.intro?.paragraph1} />
+            <p>{content?.intro?.questionTitle}</p>
+            <ul class="green-bullets space-y-1 [&>li]:my-0">
+              {content?.intro?.questions?.map((q: string) => (
+                <li>{q}</li>
+              ))}
+            </ul>
+            <p set:html={content?.intro?.paragraph2} />
+          </div>
+        </div>
+        <div class="flex items-center justify-center p-6">
+          <img src="/uploads/home-image.jpg" alt="Coaching illustration" class="w-full h-auto object-contain" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Focus Areas -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.focusAreas?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p>
+          {content?.focusAreas?.intro}<br>
+          <ul class="green-bullets space-y-1 [&>li]:my-0">
+            {content?.focusAreas?.items?.map((item: string) => (
+              <li>{item}</li>
+            ))}
+          </ul>   
+          <span set:html={content?.focusAreas?.closing} />
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Individual Coaching -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.individualCoaching?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p>{content?.individualCoaching?.description}</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={getLocalizedPath("/coaching", locale)} class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+            {learnMore}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshops -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.workshops?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p>
+          {content?.workshops?.description}
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href={getLocalizedPath("/workshops", locale)} class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+              {learnMore}
+            </a>
+          </div>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Me -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">{content?.whyMe?.title}</h3>
+      </div>
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p>
+          <span set:html={content?.whyMe?.description} />
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href={getLocalizedPath("/about", locale)} class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+              {learnMore}
+            </a>
+          </div>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

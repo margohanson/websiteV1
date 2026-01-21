@@ -1,0 +1,24 @@
+---
+import { getLocale, getAlternatePath, t, type Locale } from '../../i18n/utils';
+
+// Get current locale from the page URL  
+const currentPath = Astro.url.pathname;
+const locale = getLocale(currentPath);
+const alternatePath = getAlternatePath(currentPath, locale);
+const alternateLocale: Locale = locale === 'en' ? 'de' : 'en';
+---
+
+<div class="language-switcher">
+  <a 
+    href={alternatePath}
+    class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-gray-700 hover:text-[#30B28E] transition-colors rounded-md hover:bg-gray-50"
+    title={t('common.languageSwitcher.label', locale)}
+    aria-label={`Switch to ${t(`common.languageSwitcher.${alternateLocale}`, locale)}`}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+    </svg>
+    <span class="hidden sm:inline">{t(`common.languageSwitcher.${alternateLocale}`, locale)}</span>
+    <span class="sm:hidden">{alternateLocale.toUpperCase()}</span>
+  </a>
+</div>

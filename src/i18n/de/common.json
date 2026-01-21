@@ -1,0 +1,53 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "about": "Über mich",
+        "coaching": "Coaching",
+        "workshops": "Workshops",
+        "prices": "Preise",
+        "contact": "Kontakt",
+        "items": [
+            {
+                "key": "home",
+                "href": "/"
+            },
+            {
+                "key": "about",
+                "href": "/about"
+            },
+            {
+                "key": "coaching",
+                "href": "/coaching"
+            },
+            {
+                "key": "workshops",
+                "href": "/workshops"
+            },
+            {
+                "key": "prices",
+                "href": "/prices"
+            },
+            {
+                "key": "contact",
+                "href": "/contact"
+            }
+        ]
+    },
+    "ui": {
+        "learnMore": "Mehr erfahren",
+        "readMore": "Weiterlesen",
+        "readLess": "Weniger anzeigen",
+        "backToAll": "Zurück zur Übersicht",
+        "shareThisPost": "Beitrag teilen",
+        "contactMe": "Kontaktieren Sie mich"
+    },
+    "footer": {
+        "copyright": "Alle Rechte vorbehalten.",
+        "privacyTerms": "Datenschutz, AGB & Impressum"
+    },
+    "languageSwitcher": {
+        "label": "Sprache",
+        "en": "English",
+        "de": "Deutsch"
+    }
+}

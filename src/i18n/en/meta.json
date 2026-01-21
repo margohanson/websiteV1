@@ -1,0 +1,81 @@
+{
+    "site": {
+        "title": "Ariane Mader - Coaching & Counselling",
+        "description": "Professional coaching and counselling for students, young professionals, and organisations. Specializing in stress management, productivity, executive functioning, and neurodivergent support."
+    },
+    "home": {
+        "title": "Ariane Mader - Coaching & Counselling | Professional Support for Students, Young Professionals & Organisations",
+        "description": "Professional coaching and counselling services for students, young professionals, and organisations. Specializing in stress management, procrastination, productivity, executive functioning, habit building, and neurodivergent support. Online sessions available.",
+        "keywords": [
+            "coaching",
+            "counselling",
+            "life coaching",
+            "career coaching",
+            "stress management",
+            "procrastination",
+            "productivity",
+            "executive functioning",
+            "ADHD coaching",
+            "neurodivergence",
+            "workshops",
+            "organisational development"
+        ]
+    },
+    "about": {
+        "title": "About Ariane Mader - Coach & Counsellor",
+        "description": "Learn about Ariane Mader, a professional coach and counsellor specializing in habits, productivity, stress, and neurodivergence.",
+        "keywords": [
+            "Ariane Mader",
+            "coach",
+            "counsellor",
+            "ADHD",
+            "neurodivergence",
+            "executive functioning",
+            "stress management",
+            "habits",
+            "productivity"
+        ]
+    },
+    "coaching": {
+        "title": "Coaching & Counselling Services - Ariane Mader",
+        "description": "Professional coaching and counselling services. Work on stress, habits, career decisions, and personal growth with structured, tailored support.",
+        "keywords": [
+            "coaching",
+            "counselling",
+            "personal development",
+            "career coaching",
+            "stress coaching",
+            "habit coaching"
+        ]
+    },
+    "workshops": {
+        "title": "Workshops for Universities & Organisations - Ariane Mader",
+        "description": "Tailored workshops on stress management, productivity, habit building, and neurodiversity for teams, students, and organisations.",
+        "keywords": [
+            "workshops",
+            "training",
+            "stress management workshop",
+            "productivity workshop",
+            "team development",
+            "student workshops"
+        ]
+    },
+    "prices": {
+        "title": "Prices - Ariane Mader Coaching",
+        "description": "Coaching session prices and packages. Individual coaching, organisation rates, and student discounts available.",
+        "keywords": [
+            "coaching prices",
+            "coaching rates",
+            "session costs"
+        ]
+    },
+    "contact": {
+        "title": "Contact - Ariane Mader Coaching",
+        "description": "Get in touch to schedule an intake call or ask questions about coaching and workshops.",
+        "keywords": [
+            "contact",
+            "book coaching",
+            "schedule session"
+        ]
+    }
+}

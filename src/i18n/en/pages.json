@@ -1,0 +1,380 @@
+{
+    "home": {
+        "meta": {
+            "title": "Ariane Mader - Coaching & Counselling | Professional Support for Students, Young Professionals & Organisations",
+            "description": "Professional coaching and counselling services for students, young professionals, and organisations. Specializing in stress management, procrastination, productivity, executive functioning, habit building, and neurodivergent support. Online sessions available."
+        },
+        "hero": {
+            "title": "Ariane Mader - Coaching & Counselling",
+            "subtitle": "for Students, Young Professionals, and Organisations"
+        },
+        "intro": {
+            "paragraph1": "Many people come to coaching or counselling when something in life or work feels stuck, unclear, or overwhelming. You may be facing a challenge, a transition, or simply wanting things to feel easier and more aligned.",
+            "questionTitle": "Common questions I help with are:",
+            "questions": [
+                "How do I stop procrastinating or overthinking things?",
+                "How do I build routines that last?",
+                "How do I manage stress or overwhelm?",
+                "What job or career actually fits me?",
+                "How do I break unhelpful patterns?",
+                "How do I find clarity about what I want next?"
+            ],
+            "paragraph2": "I support <b>individuals, students, young professionals,</b> and <b>organisations</b> in creating practical change — in a way that fits their people, their needs, and their context."
+        },
+        "focusAreas": {
+            "title": "My Focus Areas",
+            "intro": "As a coach and counsellor, I work with a wide range of topics. Some areas clients often come to me for include:",
+            "items": [
+                "Stress and overwhelm",
+                "Procrastination and motivation",
+                "Habit building and behaviour change",
+                "Productivity and executive functioning",
+                "Confidence after setbacks",
+                "Career or study direction",
+                "Navigating change or transitions",
+                "Understanding your own brain and needs (incl. neurodivergence)"
+            ],
+            "closing": "And many clients simply come with: <b>\"Something in my life isn't working and I don't know why.\"</b><br>That is more than welcome here."
+        },
+        "individualCoaching": {
+            "title": "Coaching for Individuals",
+            "description": "I offer online coaching for personal and professional questions. Sessions are practical, structured, and tailored to your needs — whether you want short-term clarity, long-term change, or a deep dive into a specific topic."
+        },
+        "workshops": {
+            "title": "Workshops for Universities & Organisations",
+            "description": "I also design and deliver tailored workshops for teams, departments, and student groups on a variety of topics. Formats range from short introductions to in-depth interactive sessions."
+        },
+        "whyMe": {
+            "title": "Why work with me?",
+            "description": "My style is <b>calm, direct, practical, and empathetic.</b><br>I combine an analytical scientific background with creative thinking and deep interest in how people function. My goal is always to help you find what works for you, not apply one system to everyone."
+        }
+    },
+    "about": {
+        "meta": {
+            "title": "About Ariane Mader - Coach & Counsellor | Professional Background & Approach",
+            "description": "Meet Ariane Mader, professional coach and counsellor specializing in habits, stress management, executive functioning, and neurodivergent support. Learn about her background, approach, and personal journey with ADHD."
+        },
+        "hero": {
+            "title": "Hi, I'm Ariane.",
+            "subtitle": "Coach, counsellor, and scientist at heart."
+        },
+        "intro": {
+            "paragraph1": "I believe that incredible change can come through open and honest conversations.",
+            "paragraph2": "After school, I moved abroad to study chemistry and conduct research. While talking to countless interesting people, I realized that I got a lot of energy from <b>helping others think, feel, and move forward more clearly through conversation</b>. Therefore, I decided to pursue a two-year <a href=\"https://www.counselling.nl/en/trainings/coaching-and-counselling-english-year-2/\"><u>Coaching & Counselling education</u></a> and a training as <a href=\"https://devertrouwenspersoon.nl/opleiding/basisopleiding-vertrouwenspersoon/\"><u>Confidential Advisor</u></a> alongside my PhD in crystal growth to learn how to support others professionally.",
+            "paragraph3": "I fell in love with coaching almost immediately. It allows me to combine my analytical thinking with my creativity, while also having a tangible, positive impact. I enjoy helping others disentangle their thoughts and figure out the next step forward together.",
+            "paragraph4": "While working with clients, I noticed that many people came to me with questions around <b>habits, routines, productivity, motivation, and stress</b>. This quickly became a natural focus, and one I genuinely enjoy."
+        },
+        "personalJourney": {
+            "title": "My Personal Journey",
+            "paragraph1": "I was diagnosed with ADHD as an adult.",
+            "paragraph2": "Looking back, it is quite clear I always was neurodivergent, but the procrastination and overwhelm became a lot more severe in university. And when I started my PhD, the bit of external structure university provided fell away too. Starting tasks, especially ones requiring high levels of focus, sometimes felt almost impossible.",
+            "paragraph3": "The past years have been a journey of learning how my brain works, and what systems actually support it. So instead of beating myself up over the methods that supposedly <i>should</i> work (whether for neurotypical or neurodivergent people), I now focus on finding the ways that actually <i>do</i> - for <i>me</i>. I am still learning about me and my needs, but am already at a point I am happy with.",
+            "paragraph4": "This personal experience strongly shapes how I work as a coach: with <b>empathy, realism, and zero judgement</b>. I get how hard things can be, even when everyone else - and sometimes even yourself - doesn't get it."
+        },
+        "howICoach": {
+            "title": "How I Coach",
+            "paragraph1": "People often describe me as <b>calm, grounded, direct, and non-judgemental</b>.",
+            "paragraph2": "In sessions, I aim to create a space that is supportive and honest at the same time. I may challenge you at times, but I will always respect your autonomy. You know your life best — my role is not to advise you, but to help you understand yourself better and find ways forward that <b>truly fit you</b>.",
+            "paragraph3": "While I am a big fan of practical tools and iterative processes, lasting change often requires understanding and challenging deeper patterns and beliefs. Depending on what you are comfortable with and what you desire, our sessions can therefore be very diverse.",
+            "paragraph4": "Ultimately, my goal is that you don't need me anymore, because you've gained <b>clarity, tools that fit you, and the confidence to support yourself going forward</b>.",
+            "paragraph5": "If this resonates with you, I'd be happy to explore working together."
+        }
+    },
+    "coaching": {
+        "meta": {
+            "title": "Coaching & Counselling Services - Ariane Mader",
+            "description": "Professional coaching and counselling services. Work on stress, habits, career decisions, and personal growth with structured, tailored support."
+        },
+        "hero": {
+            "title": "Coaching & Counselling"
+        },
+        "whatWeCanWorkOn": {
+            "title": "What we can work on together",
+            "paragraph1": "Coaching is about you. That means the topic, the pace, and the goals are determined by what you need.",
+            "paragraph2": "Some people come with a specific issue — such as job stress, a difficult decision, a habit they want to change, or a pattern they want to understand.",
+            "paragraph3": "Others come with a diffuse sense that something isn't working — and coaching becomes a space to unpack that.",
+            "paragraph4": "This means you can bring <b>any topic</b> — even if it's not something I list as a specialty. If I ever feel I'm not the right match for your situation, I'll tell you honestly."
+        },
+        "howIWork": {
+            "title": "How I work",
+            "paragraph1": "Each session typically lasts 60 minutes. Sessions are online (via video call), which makes it easier to fit into busy schedules.",
+            "paragraph2": "I blend different approaches depending on what fits you — solution-focused, cognitive, systemic, or behavioural methods. We may use reflection, practical exercises, or structured frameworks.",
+            "paragraph3": "I'm supportive but also direct. I might challenge your assumptions, but never your autonomy: <b>you know your life best — my role is to help you see it more clearly</b>."
+        },
+        "trajectory": {
+            "title": "A Typical Coaching Trajectory",
+            "steps": [
+                {
+                    "title": "Intake",
+                    "description": "A free 20-minute call where we explore what you're looking for and whether there's a match."
+                },
+                {
+                    "title": "First session",
+                    "description": "A deeper dive into your situation, building clarity on goals."
+                },
+                {
+                    "title": "Coaching trajectory",
+                    "description": "Regular sessions (e.g. weekly or bi-weekly), tailored to your process."
+                },
+                {
+                    "title": "Closing session",
+                    "description": "The goal is always independence — that you leave with tools, clarity, and confidence."
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "Testimonials",
+            "items": [
+                {
+                    "text": "For years I've had the feeling that I'm \"stuck\", knowing what I want to change but unable to find the switch to flip... Ariane's clear and open manner immediately made me feel that I could be completely honest. Ariane helped me to approach my thought patterns from different perspectives and thus to dissolve the first knots. She showed me targeted methods to work on myself. I can now deal with stress and pressure much better and have found a compassionate way of dealing with myself.",
+                    "author": "PhD Student",
+                    "role": "Chemistry"
+                },
+                {
+                    "text": "Working with Ariane was incredibly valuable... I was struggling with focus, negative thoughts, motivation and procrastination - basically, I felt completely stuck personally and in my work. Ariane helped me untangle my thoughts and feelings and understand myself better. I learned how to deal with overwhelming emotions in a nicer way, how to plan my work realistically and stick to it, and how to communicate my needs. I feel much more confident and resilient now.",
+                    "author": "Postdoc",
+                    "role": "Social Sciences"
+                },
+                {
+                    "text": "Ariane creates a space where everything can be said without judgment. She is incredibly sharp in her analysis but always warm in her delivery. I learned so much about my own patterns and how to break them. Highly recommended!",
+                    "author": "Team Lead",
+                    "role": "Tech Start-up"
+                }
+            ],
+            "ui": {
+                "readMore": "Read more",
+                "showLess": "Show less"
+            }
+        }
+    },
+    "workshops": {
+        "meta": {
+            "title": "Workshops for Universities & Organisations | Ariane Mader",
+            "description": "Tailored workshops and training sessions for universities, organisations, and teams. Topics include team dynamics, productivity, stress management, habit change, inclusivity, and career clarity."
+        },
+        "hero": {
+            "title": "Workshops",
+            "subtitle": "Tailored to your Organisation or Group"
+        },
+        "intro": {
+            "paragraph1": "I offer interactive workshops for universities, organisations, and teams on a range of topics such as <b>team dynamics, inclusivity, productivity, stress management, and change</b>.",
+            "paragraph2": "The focus of workshops is usually on <b>psychoeducation combined with practical reflection and exercises</b>, so participants leave with new understanding, insights, and concrete next steps they can apply directly in their work, studies, or life. All workshops are <b>designed collaboratively</b> so they fully match your context, needs, and goals.",
+            "paragraph3": "I also welcome collaborations with small teams and early-stage organisations or co-founders, for example around communication, role clarity, and shared values."
+        },
+        "themes": {
+            "title": "Example Workshop Themes",
+            "items": [
+                "Career clarity sessions (e.g. Ikigai-based workshop)",
+                "Team dynamics and communication",
+                "Creating inclusive learning or working environments",
+                "Overcoming procrastination",
+                "Habit change and sustainable routines",
+                "Managing stress and overwhelm"
+            ]
+        },
+        "formats": {
+            "title": "Format Types",
+            "description": "Depending on your goals and context, workshops can take different forms: practical methodology sessions, interactive workshops that combine theory with exercises and reflection, or more theory-focused talks."
+        },
+        "designProcess": {
+            "title": "How Workshops are Designed",
+            "steps": [
+                {
+                    "title": "Initial Conversation",
+                    "description": "After you reach out, we schedule a conversation to discuss your needs, ideas, and context, and see whether we are a good match."
+                },
+                {
+                    "title": "Proposal and Price Estimate",
+                    "description": "Based on our conversation, I prepare a price estimate and, if helpful, a first outline of the workshop or programme."
+                },
+                {
+                    "title": "Alignment and Preparation",
+                    "description": "Once we decide to work together, we align on goals and expectations and I further develop the workshop content. If useful, we can schedule an additional meeting to discuss specifics."
+                },
+                {
+                    "title": "Workshop Delivery",
+                    "description": "During the workshop, I create a safe and inclusive atmosphere and facilitate the session with structure while staying responsive to the group, allowing the programme to adapt slightly to emerging needs."
+                },
+                {
+                    "title": "Reflection and Follow-up",
+                    "description": "After the workshop, we reflect on how it went and what stood out. If useful, we discuss feedback, possible next steps, or follow-up sessions to support further learning or change."
+                }
+            ]
+        },
+        "pricing": {
+            "title": "Pricing",
+            "description": "Pricing depends on the format, scope, group size, and preparation time.<br>Please reach out to discuss your needs."
+        }
+    },
+    "prices": {
+        "meta": {
+            "title": "Coaching & Counselling Prices | Pricing Information - Ariane Mader",
+            "description": "Transparent pricing for coaching and counselling services. Individual sessions: 85€ (60 min) or 115€ (90 min). Student discounts available. Organisational rates start at 130€/hour."
+        },
+        "hero": {
+            "title": "Ariane Mader - Prices"
+        },
+        "individuals": {
+            "title": "Coaching for Individuals",
+            "session60": {
+                "price": "60 minutes — 85€ (incl. VAT)",
+                "description": "Standard coaching session"
+            },
+            "session90": {
+                "price": "90 minutes — 115€ (incl. VAT)",
+                "description": "Deep-dive or methodology session (e.g. Ikigai, Logic Levels)"
+            },
+            "discounts": {
+                "title": "Discounts",
+                "studentDiscount": "<strong>Students or Unemployed:</strong> 20% discount",
+                "referralDiscount": "<strong>Referral:</strong> 20€ off your next session for both"
+            }
+        },
+        "organisations": {
+            "title": "Organisations and Companies",
+            "paragraph1": "Individual coaching for organisations starts at: <strong>130€ per hour (excl. VAT)</strong>.",
+            "paragraph2": "Pricing of workshops and training depends on format, scope, preparation, and group size. Please <a href=\"/contact\" class=\"font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]\">reach out</a> to discuss your needs."
+        }
+    },
+    "contact": {
+        "meta": {
+            "title": "Contact Ariane Mader | Book a Free 30-Minute Introduction Call",
+            "description": "Get in touch with Ariane Mader for coaching and counselling services. Book a free 30-minute introduction video call to see if we're a good fit."
+        },
+        "hero": {
+            "title": "Ariane Mader - Contact Me",
+            "subtitle": "I'd love to hear from you!"
+        },
+        "content": {
+            "heading": "Get in Touch",
+            "paragraph1": "If you are curious about working together, have questions, or want to explore if coaching is right for you, feel free to reach out.<br>I offer a <b>free 30-minute introduction video call</b> so we can get to know each other and see if it's a good match.",
+            "emailLabel": "You can contact me at:",
+            "closing": "I look forward to hearing from you!"
+        }
+    },
+    "privacy": {
+        "meta": {
+            "title": "Terms, Conditions & Privacy Policy | Ariane Mader",
+            "description": "Terms, conditions, and privacy policy for coaching and counselling services provided by Ariane Mader. Information about booking, cancellation, confidentiality, data protection, and client rights."
+        },
+        "hero": {
+            "title": "Terms, Conditions & Privacy",
+            "subtitle": "Ariane Mader – Coaching & Counselling"
+        },
+        "sections": {
+            "s1": {
+                "title": "1. Introduction",
+                "text": "These terms, conditions, and privacy provisions apply to all coaching and counselling services provided by <strong>Ariane Mader</strong> (the “Coach”) and are applicable to all clients (the “Client”). By booking, participating in, or paying for services, the Client agrees to these terms."
+            },
+            "s2": {
+                "title": "2. Professional Framework",
+                "s2_1": {
+                    "title": "2.1 Role and Standards",
+                    "text": "The Coach operates as a sole proprietorship registered in the Netherlands and is a registered member of the <strong><a href=\"https://www.lvsc.eu/\"><u>LVSC (Landelijke Vereniging voor Supervisie en Coaching)</u></a></strong> in the Netherlands, working in accordance with its professional <a href=\"https://www.lvsc.eu/sites/default/files/2024-09/lvsc-gedragscode-2016-english-version.pdf\"><u>Code of Conduct</u></a>."
+                },
+                "s2_2": {
+                    "title": "2.2 Nature of Coaching and Counselling",
+                    "text": "Coaching and counselling are reflective and developmental process. They are <strong>not a substitute for psychotherapy, medical treatment, or crisis intervention</strong>, and are not intended to diagnose, treat, or cure mental health or medical conditions."
+                },
+                "s2_3": {
+                    "title": "2.3 Scope of Services",
+                    "text": "Services may include individual coaching, counselling, and workshops. Sessions are primarily offered <strong>online</strong>. In-person sessions (for example walking sessions) may be agreed upon on a case-by-case basis."
+                },
+                "s2_4": {
+                    "title": "2.4 Client Responsibility",
+                    "text": "Participation is voluntary and at the Client’s own responsibility. The Client remains responsible for their own active participation and progress between sessions, as well as their own physical and psychological boundaries. If support outside the scope of coaching appears necessary, the Coach may suggest referral to another qualified professional."
+                }
+            },
+            "s3": {
+                "title": "3. Booking, Sessions, and Fees",
+                "s3_1": {
+                    "title": "3.1 Booking and Format",
+                    "items": [
+                        "Sessions must be booked in advance through contacting the Coach. Only once both sides have confirmed the booking, whether orally or in writing, is the session reserved.",
+                        "New clients will be asked to complete an intake form and consent form before the first paid session.",
+                        "Session duration is typically <strong>60 minutes</strong>, unless otherwise agreed.",
+                        "Sessions will end at their scheduled time regardless of the Client's arrival time.",
+                        "Periodic evaluations may take place to review goals and progress."
+                    ]
+                },
+                "s3_2": {
+                    "title": "3.2 Fees and Payment",
+                    "items": [
+                        "Fees are listed on the website or agreed on during the initial contact or confirmed in writing.",
+                        "Invoices will be issued within one month after the session and are payable within <strong>14 days</strong> of the invoice date, unless otherwise agreed."
+                    ]
+                },
+                "s3_3": {
+                    "title": "3.3 Online Sessions",
+                    "text": "For online sessions, the Client is responsible for a stable internet connection. Technical issues on the Client’s side do not entitle the Client to refunds."
+                }
+            },
+            "s4": {
+                "title": "4. Cancellation and termination",
+                "items": [
+                    "Cancellations must be made at least <strong>24 hours</strong> before the scheduled session.",
+                    "Late cancellations or no-shows may be charged at the full session rate.",
+                    "Exceptions may be made in emergencies at the Coach’s discretion.",
+                    "Either party may terminate services at any time by written notice via email.",
+                    "The Coach may terminate services if continuation would be unethical or outside the professional scope."
+                ]
+            },
+            "s5": {
+                "title": "5. Confidentiality",
+                "text1": "All information shared during sessions is treated as confidential. Confidentiality may be broken only if:",
+                "items": [
+                    "required by law, or",
+                    "there is a serious risk of harm to the Client or others."
+                ],
+                "text2": "No information will be shared with third parties without explicit consent.",
+                "text3": "Content of sessions will only be discussed with other professional coaches during intervision or supervision in an anonymized way if the client has given explicit consent for this."
+            },
+            "s6": {
+                "title": "6. Complaints",
+                "text1": "If the Client has a complaint, they are encouraged to discuss it directly with the Coach first.",
+                "text2": "If the issue cannot be resolved, a complaint may be submitted through the <strong><a href=\"https://www.lvsc.eu/sites/default/files/2024-10/complaints-procedure-gedragscode-engels-1.pdf\"><u>LVSC complaints procedure</u></a></strong>, in accordance with the professional standards of the association and the Wkkgz."
+            },
+            "s7": {
+                "title": "7. Liability",
+                "text": "The Coach’s liability is limited to the amount paid for the relevant service. The Coach is not liable for indirect damages or consequences resulting from decisions made by the Client."
+            },
+            "s8": {
+                "title": "8. Privacy and data protection",
+                "s8_1": {
+                    "title": "8.1 Data Controller",
+                    "p1": "Ariane Mader is responsible for the processing of personal data.",
+                    "p2": "Email: <a href=\"mailto:info@arianemader.com\" class=\"text-gray-800 hover:text-gray-600 transition-colors\">info<span aria-hidden=\"true\">[at]</span><span class=\"sr-only\">@</span>arianemader.com</a><br>Postal address: <strong>Keurenplein 41 Box C4004, 1069CD Amsterdam</strong>, The Netherlands"
+                },
+                "s8_2": {
+                    "title": "8.2 Personal Data and Purpose",
+                    "items": [
+                        "name and contact details",
+                        "date of birth (if provided)",
+                        "information shared via intake forms, emails, or sessions",
+                        "administrative and invoicing data"
+                    ],
+                    "text": "Personal data is processed for:",
+                    "purposes": [
+                        "communication and contact",
+                        "providing tailored coaching services",
+                        "scheduling and administration",
+                        "invoicing and legal obligations"
+                    ]
+                },
+                "s8_3": {
+                    "title": "8.3 Data Access, Retention, and Rights",
+                    "items": [
+                        "Personal data is accessed only by the Coach.",
+                        "Data is not shared with third parties without consent or legal obligation.",
+                        "Financial data is retained for <strong>seven years</strong>, in accordance with Dutch tax law.",
+                        "Clients may request access, correction, or deletion of their data. Requests will be handled within <strong>one month</strong>."
+                    ]
+                }
+            },
+            "s9": {
+                "title": "9. Variations in Terms, Conditions & Privacy",
+                "text": "The Coach reserves the right to amend these terms, conditions, and privacy provisions to comply with changes in law, professional standards, or practice needs. The Client will be informed of any updates, which will take effect on a mutually agreed-upon date."
+            }
+        }
+    }
+}

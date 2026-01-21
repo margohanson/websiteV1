@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeaderNoPicture from "../../components/Sections/PageHeaderNoPicture.astro";
+import { getLocale, tObj } from "../../i18n/utils";
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'de' } },
+  ];
+}
+
+const locale = getLocale(Astro.url.pathname);
+const content = tObj<any>('pages.privacy', locale);
+---
+
+<BaseLayout
+  title={content?.meta?.title}
+  description={content?.meta?.description}
+  keywords={content?.meta?.keywords || ["terms and conditions", "privacy policy", "data protection", "GDPR", "client rights", "confidentiality", "cancellation policy"]}
+>
+  <PageHeaderNoPicture 
+    title={content?.hero?.title} 
+    subtitle={content?.hero?.subtitle}
+  />
+  
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-6xl mx-auto prose prose-lg prose-max-w-none prose-p:my-2">
+
+        <h2 class="blueFont">{content?.sections?.s1?.title}</h2>
+        <p set:html={content?.sections?.s1?.text} />
+
+        <h2 class="blueFont">{content?.sections?.s2?.title}</h2>
+
+        <h3>{content?.sections?.s2?.s2_1?.title}</h3>
+        <p set:html={content?.sections?.s2?.s2_1?.text} />
+
+        <h3>{content?.sections?.s2?.s2_2?.title}</h3>
+        <p set:html={content?.sections?.s2?.s2_2?.text} />
+
+        <h3>{content?.sections?.s2?.s2_3?.title}</h3>
+        <p set:html={content?.sections?.s2?.s2_3?.text} />
+
+        <h3>{content?.sections?.s2?.s2_4?.title}</h3>
+        <p set:html={content?.sections?.s2?.s2_4?.text} />
+
+        <h2 class="blueFont">{content?.sections?.s3?.title}</h2>
+
+        <h3>{content?.sections?.s3?.s3_1?.title}</h3>
+        <ul class="green-bullets space-y-1 [&>li]:my-0">
+          {content?.sections?.s3?.s3_1?.items?.map((item: string) => (
+            <li set:html={item} />
+          ))}
+        </ul>
+
+        <h3>{content?.sections?.s3?.s3_2?.title}</h3>
+        <ul class="green-bullets space-y-1 [&>li]:my-0">
+          {content?.sections?.s3?.s3_2?.items?.map((item: string) => (
+            <li set:html={item} />
+          ))}
+        </ul>
+
+        <h3>{content?.sections?.s3?.s3_3?.title}</h3>
+        <p set:html={content?.sections?.s3?.s3_3?.text} />
+
+        <h2 class="blueFont">{content?.sections?.s4?.title}</h2>
+        <ul class="green-bullets space-y-1 [&>li]:my-0">
+          {content?.sections?.s4?.items?.map((item: string) => (
+            <li set:html={item} />
+          ))}
+        </ul>
+
+        <h2 class="blueFont">{content?.sections?.s5?.title}</h2>
+        <p set:html={content?.sections?.s5?.text1} />
+        <ul class="green-bullets space-y-1 [&>li]:my-0">
+          {content?.sections?.s5?.items?.map((item: string) => (
+            <li set:html={item} />
+          ))}
+        </ul>
+        <p set:html={content?.sections?.s5?.text2} />
+        <p set:html={content?.sections?.s5?.text3} />
+
+        <h2 class="blueFont">{content?.sections?.s6?.title}</h2>
+        <p set:html={content?.sections?.s6?.text1} />
+        <p set:html={content?.sections?.s6?.text2} />
+
+        <h2 class="blueFont">{content?.sections?.s7?.title}</h2>
+        <p set:html={content?.sections?.s7?.text} />
+
+        <div class="mt-10 pt-6 border-t border-gray-200">
+          <h2 class="blueFont">{content?.sections?.s8?.title}</h2>
+
+          <h3>{content?.sections?.s8?.s8_1?.title}</h3>
+          <p set:html={content?.sections?.s8?.s8_1?.p1} />
+          <p set:html={content?.sections?.s8?.s8_1?.p2} />
+
+          <h3>{content?.sections?.s8?.s8_2?.title}</h3>
+          <ul class="green-bullets space-y-1 [&>li]:my-0">
+            {content?.sections?.s8?.s8_2?.items?.map((item: string) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+
+          <p set:html={content?.sections?.s8?.s8_2?.text} />
+          <ul class="green-bullets space-y-1 [&>li]:my-0">
+            {content?.sections?.s8?.s8_2?.purposes?.map((item: string) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+
+          <h3>{content?.sections?.s8?.s8_3?.title}</h3>
+          <ul class="green-bullets space-y-1 [&>li]:my-0">
+            {content?.sections?.s8?.s8_3?.items?.map((item: string) => (
+              <li set:html={item} />
+            ))}
+          </ul>
+        </div>
+        
+        <div class="mt-10 pt-6 border-t border-gray-200"></div>
+        <h2 class="blueFont">{content?.sections?.s9?.title}</h2>
+        <p set:html={content?.sections?.s9?.text} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
