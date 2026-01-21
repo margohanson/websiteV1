@@ -8,41 +8,79 @@ export interface Props {
   };
   type?: "website" | "article";
   canonicalUrl?: string;
+  keywords?: string[];
+  author?: string;
+  publishedTime?: Date;
+  modifiedTime?: Date;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const {
   title,
   description,
   image = {
-    url: "/uploads/church-default.webp",
-    alt: "Church Name",
+    url: "/uploads/home-header.png",
+    alt: "Ariane Mader - Coaching & Counselling",
   },
   type = "website",
   canonicalUrl,
+  keywords = [],
+  author,
+  publishedTime,
+  modifiedTime,
+  noindex = false,
+  nofollow = false,
 } = Astro.props;
 
 // Get the canonical URL
 const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site);
+const siteUrl = Astro.site?.toString() || "http://www.arianemader.com";
+const imageUrl = new URL(image.url, siteUrl).toString();
 
-// Get Church address and contact info (would come from site config in a real implementation)
-const churchInfo = {
-  name: "Church Name",
-  address: {
-    streetAddress: "123 Main Street",
-    addressLocality: "Anytown",
-    addressRegion: "ST",
-    postalCode: "12345",
-    addressCountry: "US",
-  },
-  telephone: "+1-555-123-4567",
-  email: "info@churchname.org",
-  url: Astro.site?.toString() || "https://example.com",
+// Site information
+const siteInfo = {
+  name: "Ariane Mader",
+  tagline: "Coaching & Counselling for Students, Young Professionals, and Organisations",
+  url: siteUrl,
+  email: "info@arianemader.com",
 };
+
+// Default keywords if none provided
+const defaultKeywords = [
+  "coaching",
+  "counselling",
+  "life coaching",
+  "career coaching",
+  "stress management",
+  "procrastination",
+  "productivity",
+  "executive functioning",
+  "neurodivergence",
+  "ADHD coaching",
+  "workshops",
+  "organisational development",
+];
+const allKeywords = keywords.length > 0 ? keywords : defaultKeywords;
+
+// Robots meta
+const robotsContent = [
+  noindex ? "noindex" : "index",
+  nofollow ? "nofollow" : "follow",
+].join(", ");
 ---
 
-<!-- Basic SEO -->
+<!-- Primary Meta Tags -->
 <title>{title}</title>
+<meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="keywords" content={allKeywords.join(", ")} />
+<meta name="author" content={author || siteInfo.name} />
+<meta name="language" content="English" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
+
+<!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Open Graph / Facebook -->
@@ -50,60 +88,168 @@ const churchInfo = {
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.url, Astro.site)} />
+<meta property="og:image" content={imageUrl} />
 <meta property="og:image:alt" content={image.alt} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content={siteInfo.name} />
+<meta property="og:locale" content="en_US" />
+{author && <meta property="og:author" content={author} />}
+{publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime.toISOString()} />}
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={canonicalURL} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.url, Astro.site)} />
-<meta property="twitter:image:alt" content={image.alt} />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:image:alt" content={image.alt} />
 
-<!-- JSON-LD Schema for Church -->
-<script type="application/ld+json">
-  {
+<!-- Additional SEO Meta Tags -->
+<meta name="theme-color" content="#193472" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+
+<!-- LLM and AI Crawler Optimizations -->
+<!-- Robots meta with enhanced directives for LLMs -->
+<meta name="robots" content={noindex || nofollow ? robotsContent : `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
+<meta name="googlebot" content={noindex || nofollow ? robotsContent : `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
+
+<!-- Explicitly allow AI/LLM crawlers (these respect robots.txt but also check meta tags) -->
+<meta name="GPTBot" content="index, follow" />
+<meta name="ChatGPT-User" content="index, follow" />
+<meta name="CCBot" content="index, follow" />
+<meta name="anthropic-ai" content="index, follow" />
+<meta name="Claude-Web" content="index, follow" />
+<meta name="Google-Extended" content="index, follow" />
+<meta name="PerplexityBot" content="index, follow" />
+
+<!-- AI/LLM specific meta tags for better content understanding -->
+<meta name="ai:model" content="gpt-4, claude-3, gemini" />
+<meta name="ai:content-type" content={type === "article" ? "article" : "service"} />
+<meta name="ai:topic" content={allKeywords.slice(0, 5).join(", ")} />
+
+<!-- Content summary for LLMs (helps with quick understanding) -->
+<meta name="summary" content={description} />
+
+<!-- Language and content hints for LLMs -->
+<meta name="content-language" content="en" />
+<meta name="content-type" content="text/html; charset=UTF-8" />
+
+<!-- Structured content hints for LLMs -->
+<meta name="article:section" content={type === "article" ? "Coaching & Counselling" : undefined} />
+{type === "article" && publishedTime && (
+  <meta name="article:published_time" content={publishedTime.toISOString()} />
+)}
+{type === "article" && modifiedTime && (
+  <meta name="article:modified_time" content={modifiedTime.toISOString()} />
+)}
+{type === "article" && author && (
+  <meta name="article:author" content={author} />
+)}
+
+<!-- Help LLMs understand the main content focus -->
+<meta name="subject" content={allKeywords[0] || "Coaching and Counselling"} />
+<meta name="topic" content={allKeywords.slice(0, 3).join(", ")} />
+
+<!-- DC (Dublin Core) metadata for better semantic understanding -->
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.title" content={title} />
+<meta name="DC.description" content={description} />
+<meta name="DC.creator" content={author || siteInfo.name} />
+<meta name="DC.subject" content={allKeywords.join(", ")} />
+<meta name="DC.language" content="en" />
+{publishedTime && <meta name="DC.date" content={publishedTime.toISOString()} />}
+
+<!-- Structured Data (JSON-LD) - Enhanced for LLMs -->
+{type === "article" ? (
+  <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Church",
-    "name": "${churchInfo.name}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "${churchInfo.address.streetAddress}",
-      "addressLocality": "${churchInfo.address.addressLocality}",
-      "addressRegion": "${churchInfo.address.addressRegion}",
-      "postalCode": "${churchInfo.address.postalCode}",
-      "addressCountry": "${churchInfo.address.addressCountry}"
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "image": imageUrl,
+    "keywords": allKeywords.join(", "),
+    "author": {
+      "@type": "Person",
+      "name": author || siteInfo.name,
     },
-    "telephone": "${churchInfo.telephone}",
-    "email": "${churchInfo.email}",
-    "url": "${churchInfo.url}"
-  }
-</script>
+    "publisher": {
+      "@type": "Organization",
+      "name": siteInfo.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": new URL("/uploads/logo-long.svg", siteUrl).toString(),
+      },
+    },
+    "datePublished": publishedTime?.toISOString(),
+    "dateModified": modifiedTime?.toISOString() || publishedTime?.toISOString(),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalURL,
+    },
+    "inLanguage": "en",
+    "articleSection": "Coaching & Counselling",
+    "wordCount": description.split(" ").length, // Approximate for LLM understanding
+  })} />
+) : (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": siteInfo.name,
+    "description": description,
+    "image": imageUrl,
+    "url": canonicalURL,
+    "keywords": allKeywords.join(", "),
+    "provider": {
+      "@type": "Person",
+      "name": siteInfo.name,
+      "email": siteInfo.email,
+    },
+    "serviceType": "Coaching and Counselling",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Netherlands",
+    },
+    "inLanguage": "en",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "EUR",
+    },
+  })} />
+)}
 
-{
-  type === "article" && (
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "${title}",
-        "image": "${new URL(image.url, Astro.site)}",
-        "description": "${description}",
-        "publisher": {
-          "@type": "Organization",
-          "name": "${churchInfo.name}",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "${new URL("/uploads/logo.png", Astro.site)}"
-          }
-        },
-        "url": "${canonicalURL}",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "${canonicalURL}"
-        }
-      }
-    </script>
-  )
-}
+<!-- Website Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteInfo.name,
+  "description": siteInfo.tagline,
+  "url": siteUrl,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteUrl}/search?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+})} />
+
+<!-- Organization Schema -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteInfo.name,
+  "url": siteUrl,
+  "logo": new URL("/uploads/logo-long.svg", siteUrl).toString(),
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": siteInfo.email,
+    "contactType": "Customer Service",
+  },
+  "sameAs": [],
+})} />
