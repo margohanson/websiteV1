@@ -19,34 +19,84 @@ import { Carousel } from 'webcoreui/astro'
   <!-- <StaffList /> -->
 
 <!-- What we can work on together -->
-<section id="faq" class="py-16 bg-gray-50">
-  <div class="container">
-    <div class="text-center mb-8">
-      <h3 class="blueFont font-[Cambria]">What we can work on together</h3>
-    </div>
+<section id="faq" class="py-12 bg-gray-50">
+  <div class="w-full">
+    <div class="px-6 md:px-16">
+      
+      <!-- Title -->
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">
+          What we can work on together
+        </h3>
+      </div>
 
-    <div class="max-w-3xl mx-auto prose prose-lg">
-    <p>
-      Clients often come to me with questions like:
+      <!-- Intro -->
+      <div class="prose prose-lg max-w-none mb-6">
+        <p>
+          You don’t need a perfect label for your problem. Some people come with a clear question, others just feel that something isn’t working.<br />
+          Below are common themes I work with:
+        </p>
+      </div>
 
-      <ul class="green-bullets space-y-1 [&>li]:my-0">
-        <li>How do I stop procrastinating?</li>
-        <li>How do I manage stress or overwhelm?</li>
-        <li>How do I build habits that last?</li>
-        <li>Why do I keep repeating the same patterns?</li>
-        <li>How do I find clarity about my career or studies?</li>
-        <li>How do I stay motivated when structure disappears?</li>
-      </ul>   
-      I am trained to work broadly across the following areas:<br>
-      <b>Change | Personal life & health | Family & relationships | Career & team | Mourning, trauma & recovery.</b><br>
-      This means you can bring <b>any topic</b> — even if it’s not something I list as a specialty. If I ever feel I’m not the right match for your situation, I’ll tell you honestly.   
-    </p>
+      <!-- 3-column layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
+
+        <!-- Column 1 -->
+        <div>
+          <p class="font-semibold mb-2">
+            Execution, habits & structure
+          </p>
+          <ul class="green-bullets list-disc pl-5 space-y-1 [&>li]:my-0">
+            <li>Procrastination and diffulty starting tasks</li>
+            <li>Feeling overwhelmed and not knowing where to begin</li>
+            <li>Building habtis and routines that actually stick</li>
+            <li>Staying consistent without relying on last-minute pressure</li>
+            <li>Understanding how your brain works</li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <p class="font-semibold mb-2">
+            Clarity & Direction
+          </p>
+          <ul class="green-bullets list-disc pl-5 space-y-1 [&>li]:my-0">
+            <li>Feeling stuck in your studies or career</li>
+            <li>Not knowing what you want or what fits you</li>
+            <li>Identifying your values, interests, and priorities</li>
+            <li>Making decisions with more confidence</li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <p class="font-semibold mb-2">
+            Patterns, Emotions & Inner Dynamics
+          </p>
+          <ul class="green-bullets list-disc pl-5 space-y-1 [&>li]:my-0">
+            <li>Stress, overwhelm, and emotional regulation</li>
+            <li>Perfectionism and high internal pressure</li>
+            <li>Repeating patterns that don’t serve you</li>
+            <li>Self-doubt or feeling disconnected from yourself</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Closing text -->
+      <div class="prose prose-lg max-w-none">
+        <p>
+          Many of these topics are connected. For example, procrastination often links to overwhelm, unclear priorities, or deeper patterns.
+          That’s why we don’t just treat symptoms — we look at the bigger picture.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- How I Work -->
-<section id="faq" class="py-16 bg-white">
+<section id="faq" class="py-12 bg-white">
   <div class="container">
     <div class="text-center mb-8">
       <h3 class="blueFont font-[Cambria]">How I work</h2>
@@ -54,24 +104,22 @@ import { Carousel } from 'webcoreui/astro'
 
     <div class="max-w-3xl mx-auto prose prose-lg">
     <p>
-      My approach is practical, <b>calm, structured, and empathetic</b>. I tailor each session to you, using:
+      My approach is practical, structured, and tailored to you. In sessions, we combine:
       <ul class="green-bullets space-y-1 [&>li]:my-0">
-        <li>reflective questions</li>
-        <li>structured exercises</li>
-        <li>practical tools</li>
-        <li>iterative experiments</li>
+        <li>reflection and honest conversation</li>
+        <li>structured exercises and tools</li>
+        <li>iterative and realistic experiments</li>
         <li>clear goals and (optional) homework</li>
-        <li>methodologies when helpful</li>
-        <li>space for honest conversation</li>
       </ul>   
-      We look beneath the surface when needed — because procrastination, stress, or lack of clarity often connect to deeper patterns. But everything is always at <b>your pace</b>.<br>
-      I’m supportive but also direct. I might challenge your assumptions, but never your autonomy: <b>you know your life best — my role is to help you see it more clearly</b>.
+      We don't just focus on surface-level solutions, but also look at the patterns underneath - at <i>your</i> pace.
+      I am supportive, but also direct. I may challenge your assumptions, but never your autonomy: 
+      </br><b>you know your life best — my role is to help you see it more clearly</b>.
     </div>
   </div>
 </section>
 
 <!-- Coaching Trajectory -->
-<section id="faq" class="py-16 bg-gray-50">
+<section id="faq" class="py-12 bg-gray-50">
   <div class="container">
     <div class="text-center mb-8">
       <h3 class="blueFont font-[Cambria]">A Typical Coaching Trajectory</h2>
@@ -80,11 +128,11 @@ import { Carousel } from 'webcoreui/astro'
     <div class="max-w-3xl mx-auto prose prose-lg green-numbers">
     <p>
       <ol type="1">
-        <li><b>Free 30-minute introduction call</b></br>We meet to see if we’re a good fit and clarify what you want to work on.</br></li>
-        <li><b>Intake session</b></br>We set goals and define a direction.</br></li>
-        <li><b>Coaching sessions (online or walking)</b></br>Each session focuses on what helps you move forward right now. <br>Walking sessions are possible in Almere and Amsterdam upon agreement.</br></li>
-        <li><b>Review after 5 sessions</b></br>We evaluate progress: what’s working, what’s not, and how to continue.</br></li>
-        <li><b>Closing session</b></br>The goal is always independence — that you leave with tools, clarity, and confidence.</br></li>
+        <li><b>Free introduction call (30 min)</b></br>We explore your situation and see if we're a good fit.</br></li>
+        <li><b>Intake session</b></br>We define your goals and direction.</br></li>
+        <li><b>Coaching sessions (online or in-person)</b></br>Each session focuses on what helps you move forward right now. <br>In-person sessions are possible in Almere and Amsterdam upon agreement.</br></li>
+        <li><b>Review after ~5 sessions</b></br>We evaluate progress: what’s working, what’s not, and how to continue.</br></li>
+        <li><b>Closing session</b></br>You leave with clarity, tools, and confidence.</br></li>
       </ol>      
     </p>
     </div>
@@ -92,7 +140,7 @@ import { Carousel } from 'webcoreui/astro'
 </section>
 
 <!-- Testimonials -->
-<section id="testimonials" class="py-16 bg-white">
+<section id="testimonials" class="py-12 bg-white">
   <div class="container">
     <div class="text-center mb-8">
       <h2 class="blueFont text-3xl font-bold">Testimonials</h2>
@@ -334,7 +382,7 @@ import { Carousel } from 'webcoreui/astro'
 
 
 <!-- FAQ Section -->
-  <section id="faq" class="py-16 bg-gray-50">
+  <section id="faq" class="py-12 bg-gray-50">
   <div class="container">
     <div class="text-center mb-8">
       <h3 class="blueFont">Frequently Asked Questions</h2>
@@ -405,7 +453,7 @@ import { Carousel } from 'webcoreui/astro'
 </section>
   
   <!-- Reach Out for More Qs -->
-  <section class="py-16 bg-white">
+  <section class="py-12 bg-white">
     <div class="container">
       <div class="text-center mb-6">
         <h3 class="blueFont">Do you have any more questions?</h3>
