@@ -5,7 +5,8 @@ import Header from "../components/Global/Header.astro";
 import Footer from "../components/Global/Footer.astro";
 
 export interface Props {
-  title?: string;
+  title?: string;        // visible/browser title fallback
+  seoTitle?: string;     // SEO title for <title> and metadata
   description?: string;
   image?: {
     url: string;
@@ -16,15 +17,18 @@ export interface Props {
 }
 
 const {
-  title = "Ariane Mader - Coaching & Counselling",
-  description = "Professional coaching and counselling for students, young professionals, and organisations. Specializing in stress management, productivity, executive functioning, and neurodivergent support.",
+  title = "Ariane Mader | Coaching & Counselling",
+  seoTitle,
+  description = "Coaching and counselling for procrastination, overwhelm, habit change, neurodivergence, and career clarity. Online and in person in Amsterdam and Almere.",
   image = {
-    url: "/uploads/church-default.webp",
-    alt: "Church Name",
+    url: "/uploads/home-header.png",
+    alt: "Ariane Mader - Coaching & Counselling",
   },
   type = "website",
   canonicalUrl,
 } = Astro.props;
+
+const finalSeoTitle = seoTitle || title;
 ---
 
 <!doctype html>
@@ -32,32 +36,34 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
+
     <Seo
-      title={title}
+      title={finalSeoTitle}
       description={description}
       image={image}
       type={type}
       canonicalUrl={canonicalUrl}
     />
-    
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
     <div class="flex flex-col min-h-screen">
       <Header />
-      
       <main class="flex-grow">
         <slot />
       </main>
-      
       <Footer />
     </div>
+    <!-- Cloudflare Web Analytics -->
+     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "aaf511377eee44139f1dae8e48850a70"}'>
+     </script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

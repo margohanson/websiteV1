@@ -5,11 +5,12 @@ import StaffList from "../components/Sections/StaffList.astro";
 ---
 
 <BaseLayout
-  title="Ariane Mader - Temps, Conditions & Privacy"
-  description="Meet Ariane Mader, coach and counsellor specialising in habits, stress, and executive functioning. Practical, structured, and neurodivergent-aware."
+  title="Privacy, Terms & Conditions | Ariane Mader"
+  seoTitle="Privacy Policy & Terms and Conditions | Ariane Mader"
+  description="Read the privacy policy and terms and conditions for coaching, counselling, workshops, payments, cancellations, confidentiality, and data protection."
 >
   <PageHeaderNoPicture 
-    title="Terms, Conditions &amp; Privacy" 
+    title="Privacy, Terms &amp; Conditions" 
     subtitle="Ariane Mader – Coaching &amp; Counselling"
   />
   
@@ -26,6 +27,17 @@ import StaffList from "../components/Sections/StaffList.astro";
         By booking, participating in, or paying for services, the Client agrees to these terms.
       </p>
 
+    <!-- Terms & Conditions Section Header -->
+      <div class="my-12 text-center">
+        <div class="border-t border-gray-300 mb-1"></div>
+
+          <h2 class="text-gray-500 uppercase tracking-wide text-base font-semibold">
+            Terms & Conditions
+          </h2>
+
+        <div class="border-t border-gray-300 mt-6"></div>
+      </div>
+
       <h2 class="blueFont">2. Professional Framework</h2>
 
       <h3>2.1 Role and Standards</h3>
@@ -37,7 +49,7 @@ import StaffList from "../components/Sections/StaffList.astro";
 
       <h3>2.2 Nature of Coaching and Counselling</h3>
       <p>
-        Coaching and counselling are reflective and developmental process. They are
+        Coaching and counselling are reflective and developmental processes. They are
         <strong>not a substitute for psychotherapy, medical treatment, or crisis intervention</strong>,
         and are not intended to diagnose, treat, or cure mental health or medical conditions.
       </p>
@@ -51,7 +63,7 @@ import StaffList from "../components/Sections/StaffList.astro";
 
       <h3>2.4 Client Responsibility</h3>
       <p>
-        Participation is voluntary and at the Client’s own responsibility. The Client remains
+        Participation is voluntary and the Client remains responsible for their own decisions and actions. The Client remains
         responsible for their own active participation and progress between sessions, as well as their own physical and psychological boundaries. If support outside the
         scope of coaching appears necessary, the Coach may suggest referral to another qualified
         professional.
@@ -76,8 +88,7 @@ import StaffList from "../components/Sections/StaffList.astro";
 
       <h3>3.3 Online Sessions</h3>
       <p>
-        For online sessions, the Client is responsible for a stable internet connection.
-        Technical issues on the Client’s side do not entitle the Client to refunds.
+        Both parties are responsible for ensuring a stable connection. In case of significant technical issues, we will make reasonable efforts to find a suitable solution or reschedule.
       </p>
 
       <h2 class="blueFont">4. Cancellation and Termination</h2>
@@ -117,14 +128,36 @@ import StaffList from "../components/Sections/StaffList.astro";
 
       <h2 class="blueFont">7. Liability</h2>
       <p>
-        The Coach’s liability is limited to the amount paid for the relevant service. The Coach is not liable for indirect damages or consequences
-        resulting from decisions made by the Client.
+        The Coach’s liability is limited to the amount paid for the relevant service. The Coach is not liable for indirect damages, including but not limited to loss of income, 
+        stress-related consequences, or decisions made by the Client.
       </p>
 
-      <div class="mt-10 pt-6 border-t border-gray-200">
-        <h2 class="blueFont">8. Privacy and Data Protection</h2>
+      <h2 class="blueFont">8. Force Majeure</h2>
+      <p>
+        The Coach is not liable for failure or delay in fulfilling obligations due to circumstances beyond reasonable control (force majeure), including but not limited to illness, technical failures, or government restrictions.
+        In such cases, sessions will be rescheduled where possible.
+      </p>
 
-        <h3>8.1 Data Controller</h3>
+      <h2 class="blueFont">9. Applicable Law</h2>
+      <p>
+        These terms are governed by Dutch law.
+        Any disputes will be submitted to the competent court in the Netherlands.
+      </p>
+      
+      <!-- Privacy Policy Section Header -->
+      <div class="my-12 text-center">
+        <div class="border-t border-gray-300 mb-1"></div>
+
+          <h2 class="text-gray-500 uppercase tracking-wide text-base font-semibold">
+            Privacy Policy
+          </h2>
+
+        <div class="border-t border-gray-300 mt-6"></div>
+      </div>
+
+        <h2 class="blueFont">10. Privacy and Data Protection</h2>
+
+        <h3>10.1 Data Controller</h3>
         <p>
           Ariane Mader is responsible for the processing of personal data.
         </p>
@@ -139,7 +172,8 @@ import StaffList from "../components/Sections/StaffList.astro";
           <br>Postal address: <strong>Keurenplein 41 Box C4004, 1069CD Amsterdam</strong>, The Netherlands
         </p>
 
-        <h3>8.2 Personal Data and Purpose</h3>
+        <h3>10.2 Personal Data and Purpose</h3>
+        <p>Personal data may include:</p>
         <ul class="green-bullets space-y-1 [&>li]:my-0">
           <li>name and contact details</li>
           <li>date of birth (if provided)</li>
@@ -155,7 +189,15 @@ import StaffList from "../components/Sections/StaffList.astro";
           <li>invoicing and legal obligations</li>
         </ul>
 
-        <h3>8.3 Data Access, Retention, and Rights</h3>
+        <h3>10.3 Legal Basis</h3>
+        <p>Personal data is porcessed on the basis of:</p>
+        <ul class="green-bullets space-y-1 [&>li]:my-0">
+          <li>consent of the Client</li>
+          <li>performance of an agreement</li>
+          <li>compliance with legal obligations</li>
+        </ul>
+
+        <h3>10.4 Data Access, Retention, and Rights</h3>
         <ul class="green-bullets space-y-1 [&>li]:my-0">
           <li>Personal data is accessed only by the Coach.</li>
           <li>Data is not shared with third parties without consent or legal obligation.</li>
@@ -163,12 +205,38 @@ import StaffList from "../components/Sections/StaffList.astro";
           <li>Clients may request access, correction, or deletion of their data. Requests will be handled within <strong>one month</strong>.</li>
         </ul>
 
-      </div>
-      <div class="mt-10 pt-6 border-t border-gray-200"></div>
-      <h2 class="blueFont">9. Varitions in Terms, Conditions & Privacy</h2>
-      <p>
-        The Coach reserves the right to amend these terms, conditions, and privacy provisions to comply with changes in law, professional standards, or practice needs. The Client will be informed of any updates, which will take effect on a mutually agreed-upon date.
-      </p>
+        <h3>10.5 Data Security</h3>
+        <p>
+          Appropriate technical and organisational measures are taken to protect personal data against loss, misuse, or unauthorized access.
+        </p>
+
+        <h3>10.6 Right to Lodge a Complaint</h3>
+        <p>
+          Clients have the right to file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) if they believe their personal data is not handled correctly.
+        </p>
+
+        <h3>10.7 Website and Cookies</h3>
+        <p>
+          The website may use basic analytics tools to understand how visitors use the site and how they arrive here (for example via search engines or external links).
+          This information is used to improve the website and services.
+          Where possible, data is anonymized and not used for marketing purposes.
+          If third-party analytics tools are used, data may be processed by these providers in accordance with their privacy policies.
+          <!--
+          This website uses privacy-friendly analytics to understand how visitors use the site and how they arrive here, 
+          for example via search engines or external links. 
+          This helps improve the website and services. 
+          Where possible, this data is collected without cookies and without identifying individual visitors.
+          For this purpose, this website uses Cloudflare Web Analytics.
+          -->
+        </p>
+
+        <div class="my-12 border-t border-gray-300"></div>
+
+          <h2 class="blueFont">11. Variations in Terms, Conditions & Privacy</h2>
+          <p>
+            The Coach reserves the right to amend these terms, conditions, and privacy provisions to comply with changes in law, professional standards, or practice needs. The Client will be informed of any updates, which will take effect on a mutually agreed-upon date.
+          </p>
+        </div>
     </div>
     </div>
   </div>

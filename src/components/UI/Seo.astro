@@ -8,7 +8,6 @@ export interface Props {
   };
   type?: "website" | "article";
   canonicalUrl?: string;
-  keywords?: string[];
   author?: string;
   publishedTime?: Date;
   modifiedTime?: Date;
@@ -25,7 +24,6 @@ const {
   },
   type = "website",
   canonicalUrl,
-  keywords = [],
   author,
   publishedTime,
   modifiedTime,
@@ -33,223 +31,106 @@ const {
   nofollow = false,
 } = Astro.props;
 
-// Get the canonical URL
-const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site);
-const siteUrl = Astro.site?.toString() || "http://www.arianemader.com";
+// Pick ONE canonical domain and use HTTPS
+const siteUrl = "https://www.arianemader.com";
+const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, siteUrl).toString();
 const imageUrl = new URL(image.url, siteUrl).toString();
 
-// Site information
 const siteInfo = {
   name: "Ariane Mader",
-  tagline: "Coaching & Counselling for Students, Young Professionals, and Organisations",
+  tagline: "Coaching & Counselling for Procrastination, Overwhelm & Career Clarity",
   url: siteUrl,
   email: "info@arianemader.com",
 };
 
-// Default keywords if none provided
-const defaultKeywords = [
-  "coaching",
-  "counselling",
-  "life coaching",
-  "career coaching",
-  "stress management",
-  "procrastination",
-  "productivity",
-  "executive functioning",
-  "neurodivergence",
-  "ADHD coaching",
-  "workshops",
-  "organisational development",
-];
-const allKeywords = keywords.length > 0 ? keywords : defaultKeywords;
-
-// Robots meta
 const robotsContent = [
   noindex ? "noindex" : "index",
   nofollow ? "nofollow" : "follow",
+  "max-image-preview:large",
+  "max-snippet:-1",
+  "max-video-preview:-1",
 ].join(", ");
 ---
 
-<!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="keywords" content={allKeywords.join(", ")} />
 <meta name="author" content={author || siteInfo.name} />
-<meta name="language" content="English" />
-<meta name="revisit-after" content="7 days" />
-<meta name="rating" content="general" />
-
-<!-- Canonical URL -->
+<meta name="robots" content={robotsContent} />
+<meta name="googlebot" content={robotsContent} />
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph -->
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={imageUrl} />
 <meta property="og:image:alt" content={image.alt} />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
 <meta property="og:site_name" content={siteInfo.name} />
 <meta property="og:locale" content="en_US" />
-{author && <meta property="og:author" content={author} />}
-{publishedTime && <meta property="article:published_time" content={publishedTime.toISOString()} />}
-{modifiedTime && <meta property="article:modified_time" content={modifiedTime.toISOString()} />}
 
-<!-- Twitter Card -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content={canonicalURL} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:image:alt" content={image.alt} />
 
-<!-- Additional SEO Meta Tags -->
 <meta name="theme-color" content="#193472" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="format-detection" content="telephone=no" />
 
-<!-- LLM and AI Crawler Optimizations -->
-<!-- Robots meta with enhanced directives for LLMs -->
-<meta name="robots" content={noindex || nofollow ? robotsContent : `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
-<meta name="googlebot" content={noindex || nofollow ? robotsContent : `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
-
-<!-- Explicitly allow AI/LLM crawlers (these respect robots.txt but also check meta tags) -->
-<meta name="GPTBot" content="index, follow" />
-<meta name="ChatGPT-User" content="index, follow" />
-<meta name="CCBot" content="index, follow" />
-<meta name="anthropic-ai" content="index, follow" />
-<meta name="Claude-Web" content="index, follow" />
-<meta name="Google-Extended" content="index, follow" />
-<meta name="PerplexityBot" content="index, follow" />
-
-<!-- AI/LLM specific meta tags for better content understanding -->
-<meta name="ai:model" content="gpt-4, claude-3, gemini" />
-<meta name="ai:content-type" content={type === "article" ? "article" : "service"} />
-<meta name="ai:topic" content={allKeywords.slice(0, 5).join(", ")} />
-
-<!-- Content summary for LLMs (helps with quick understanding) -->
-<meta name="summary" content={description} />
-
-<!-- Language and content hints for LLMs -->
-<meta name="content-language" content="en" />
-<meta name="content-type" content="text/html; charset=UTF-8" />
-
-<!-- Structured content hints for LLMs -->
-<meta name="article:section" content={type === "article" ? "Coaching & Counselling" : undefined} />
 {type === "article" && publishedTime && (
-  <meta name="article:published_time" content={publishedTime.toISOString()} />
+  <meta property="article:published_time" content={publishedTime.toISOString()} />
 )}
 {type === "article" && modifiedTime && (
-  <meta name="article:modified_time" content={modifiedTime.toISOString()} />
-)}
-{type === "article" && author && (
-  <meta name="article:author" content={author} />
+  <meta property="article:modified_time" content={modifiedTime.toISOString()} />
 )}
 
-<!-- Help LLMs understand the main content focus -->
-<meta name="subject" content={allKeywords[0] || "Coaching and Counselling"} />
-<meta name="topic" content={allKeywords.slice(0, 3).join(", ")} />
-
-<!-- DC (Dublin Core) metadata for better semantic understanding -->
-<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-<meta name="DC.title" content={title} />
-<meta name="DC.description" content={description} />
-<meta name="DC.creator" content={author || siteInfo.name} />
-<meta name="DC.subject" content={allKeywords.join(", ")} />
-<meta name="DC.language" content="en" />
-{publishedTime && <meta name="DC.date" content={publishedTime.toISOString()} />}
-
-<!-- Structured Data (JSON-LD) - Enhanced for LLMs -->
-{type === "article" ? (
-  <script type="application/ld+json" set:html={JSON.stringify({
+<!-- WebSite schema -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": title,
-    "description": description,
-    "image": imageUrl,
-    "keywords": allKeywords.join(", "),
-    "author": {
-      "@type": "Person",
-      "name": author || siteInfo.name,
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": siteInfo.name,
-      "logo": {
-        "@type": "ImageObject",
-        "url": new URL("/uploads/logo-long.svg", siteUrl).toString(),
-      },
-    },
-    "datePublished": publishedTime?.toISOString(),
-    "dateModified": modifiedTime?.toISOString() || publishedTime?.toISOString(),
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": canonicalURL,
-    },
-    "inLanguage": "en",
-    "articleSection": "Coaching & Counselling",
-    "wordCount": description.split(" ").length, // Approximate for LLM understanding
-  })} />
-) : (
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "WebSite",
     "name": siteInfo.name,
+    "url": siteInfo.url,
+    "description": siteInfo.tagline,
+    "inLanguage": "en",
+  })}
+/>
+
+<!-- Person schema -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": siteInfo.name,
+    "url": siteInfo.url,
+    "email": siteInfo.email,
+    "jobTitle": "Coach and Counsellor",
+  })}
+/>
+
+<!-- Service schema -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": title,
     "description": description,
-    "image": imageUrl,
-    "url": canonicalURL,
-    "keywords": allKeywords.join(", "),
+    "serviceType": "Coaching and Counselling",
     "provider": {
       "@type": "Person",
       "name": siteInfo.name,
       "email": siteInfo.email,
     },
-    "serviceType": "Coaching and Counselling",
     "areaServed": {
       "@type": "Country",
       "name": "Netherlands",
     },
-    "inLanguage": "en",
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "EUR",
-    },
-  })} />
-)}
-
-<!-- Website Schema -->
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": siteInfo.name,
-  "description": siteInfo.tagline,
-  "url": siteUrl,
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${siteUrl}/search?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
-})} />
-
-<!-- Organization Schema -->
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": siteInfo.name,
-  "url": siteUrl,
-  "logo": new URL("/uploads/logo-long.svg", siteUrl).toString(),
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": siteInfo.email,
-    "contactType": "Customer Service",
-  },
-  "sameAs": [],
-})} />
+    "availableLanguage": ["en"],
+    "url": canonicalURL,
+  })}
+/>
