@@ -1,0 +1,219 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSection from "../../components/Sections/HeroSection.astro";
+import EventList from "../../components/Sections/EventList.astro";
+import SermonList from "../../components/Sections/SermonList.astro";
+import Button from "../../components/UI/Button.astro";
+---
+
+<BaseLayout
+  title="Ariane Mader | Coaching & Counselling"
+  seoTitle="Ariane Mader | Coaching bei Prokrastination, Überforderung & Klarheit"
+  seoDescription="Coaching und Counselling bei Prokrastination, Überforderung, Gewohnheiten, Neurodivergenz und beruflicher Orientierung. Online sowie in Amsterdam und Almere."
+  canonicalUrl="https://www.arianemader.com/de/
+  lang="de"
+>
+  <HeroSection 
+  title="Coaching & Counselling"
+  description="X"
+  subtitle="Für Studierende, Berufstätige und Organisationen"
+  backgroundImage="/uploads/home-header.png"
+/>
+
+
+<section id="intro-message" class="py-8 bg-white">
+  <div class="w-full">
+    <div class="px-6 md:px-20 lg:px-40">
+      <div class="mb-3">
+        <h4 class="blueFont font-[Cambria]">
+          Du weißt, was du tun solltest — aber du bekommst es einfach nicht umgesetzt.
+        </h4>
+      </div>
+
+      <div class="prose prose-lg max-w-none">
+        <p>
+          Ich unterstütze dich dabei, eine Arbeitsweise zu entwickeln, die <b>wirklich zu deinem Gehirn passt</b>, sodass du Dinge umsetzen kannst — <b>ohne dauerhaften Stress, Schuldgefühle oder Last-Minute-Panik</b>.
+          <a
+            href="/contact"
+            class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
+          >Buche</a>
+          ein kostenloses Erstgespräch.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem -->
+<section id="problem" class="py-8 bg-gray-50">
+  <div class="w-full px-6 md:px-20 lg:px-40">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
+      
+      <!-- Text -->
+      <div class="max-w-3xl prose prose-lg">
+        <p>
+          <b>Kommt dir das bekannt vor?</b>
+        </p>
+
+        <ul class="green-bullets space-y-1 [&>li]:my-0">
+          <li>Du schiebst Dinge auf, obwohl sie dir wichtig sind</li>
+          <li>Du fängst erst in letzter Minute an und bist wieder total gestresst</li>
+          <li>Du machst Pläne, setzt sie aber nicht um</li>
+          <li>Du fühlst dich überfordert und weißt nicht, wo du anfangen sollst</li>
+          <li>Du hast schon versucht, <i>„einfach disziplinierter zu sein“</i> — aber es funktioniert nicht</li>
+        </ul>
+
+        <p>
+          Und darunter liegt oft dieser Gedanke: <b>„Ich weiß doch, was ich tun muss … warum mache ich es dann nicht einfach?“</b><br />
+          Es kann sich anfühlen, als würdest du dein Potenzial verschwenden und unnötig viel Stress erleben.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="flex items-center justify-center">
+        <img
+          src="/uploads/home-image.jpg"
+          alt="Coaching Atmosphäre"
+          class="w-full h-auto object-contain rounded-xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="solution" class="py-8 bg-white">
+  <div class="w-full">
+    <div class="px-6 md:px-20 lg:px-40">
+      <div class="flex flex-col md:flex-row gap-16 items-center">
+
+        <!-- Text -->
+        <div class="max-w-none prose prose-lg flex-1">
+          <p>
+            <b>So muss es nicht bleiben.</b><br />
+            Die meisten Ratschläge gehen davon aus, dass für alle die gleichen Methoden funktionieren. Aber das tun sie nicht.<br />
+            Stattdessen finden wir gemeinsam heraus, was für <i>dich</i> funktioniert. Damit du:
+            <span class="greenDarkFont">leichter anfangen kannst</span>,
+            <span class="greenDarkFont">konstanter dranbleibst</span>,
+            <span class="greenDarkFont">Routinen entwickelst, die wirklich halten</span>,
+            <span class="greenDarkFont">mit deinem Gehirn arbeitest statt dagegen</span>
+            und
+            <span class="greenDarkFont">dich weniger überfordert und wieder mehr im Griff fühlst.</span>
+          </p>
+
+          <p class="mb-3">
+            <b>Im Coaching arbeiten wir gemeinsam daran:</b>
+          </p>
+
+          <ul class="green-bullets my-3 space-y-1 [&>li]:my-0">
+            <li>herauszufinden, was dich aktuell blockiert (inklusive Widerständen)</li>
+            <li>kleine, realistische Veränderungen zu testen</li>
+            <li>anzupassen, was funktioniert — und was nicht</li>
+            <li>ein System zu entwickeln, das zu deinem Gehirn, deinem Leben und deinen Zielen passt</li>
+          </ul>
+
+          <p class="mt-3">
+            <b>Nicht noch mehr Druck, sondern ausprobieren und verstehen, was für dich funktioniert.</b>
+            Wir kombinieren praktische Tools (Gewohnheiten, Struktur) mit tiefergehender Arbeit (Muster, Überzeugungen, Werte) für
+            <span class="greenDarkFont font-semibold">nachhaltige Veränderung</span>.
+          </p>
+
+          <p>
+            Wenn du dich hier wiedererkennst, können wir uns das gemeinsam anschauen.
+            <a
+              href="/contact"
+              class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
+            >Buche</a>
+            ein kostenloses Erstgespräch und wir schauen, ob es passt.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="flex-shrink-0">
+          <img
+            src="/uploads/plant2.jpg"
+            alt="Ruhige Coaching Atmosphäre"
+            class="w-56 md:w-64 lg:w-72 h-auto rounded-xl"
+          />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coaching -->
+<section id="coaching" class="py-12 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h3 class="blueFont font-[Cambria]">Coaching für Einzelpersonen</h3>
+    </div>
+
+    <div class="max-w-3xl mx-auto prose prose-lg">
+      <p>
+        Ich biete Online- und Präsenz-Coaching für persönliche und berufliche Themen an. Die Sessions sind praktisch, strukturiert und individuell auf dich zugeschnitten — egal ob du kurzfristig Klarheit suchst, langfristig etwas verändern möchtest oder ein konkretes Thema vertiefen willst.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="/coaching" 
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        >
+          Mehr erfahren
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Workshops -->
+<section id="workshops" class="py-12 bg-white">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h3 class="blueFont font-[Cambria]">Workshops für Universitäten & Organisationen</h3>
+    </div>
+
+    <div class="max-w-3xl mx-auto prose prose-lg">
+      <p>
+        Ich konzipiere und begleite interaktive Workshops für Teams, Organisationen und Studierendengruppen zu verschiedenen Themen. Die Formate reichen von kurzen Impulsen bis hin zu intensiven, interaktiven Sessions.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="/workshops" 
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        >
+          Mehr erfahren
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-12 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h3 class="blueFont font-[Cambria]">Warum mit mir arbeiten?</h3>
+    </div>
+
+    <div class="max-w-3xl mx-auto prose prose-lg">
+      <p>
+        Mein Stil ist <b>ruhig, direkt, praktisch und empathisch.</b><br>
+        Ich verbinde analytisches, wissenschaftliches Denken mit Kreativität und einem tiefen Interesse daran, wie Menschen funktionieren.
+        Ich arbeite nicht mit einem System für alle, sondern helfe dir herauszufinden, was wirklich für <i>dich</i> funktioniert.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="/about" 
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        >
+          Mehr erfahren
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

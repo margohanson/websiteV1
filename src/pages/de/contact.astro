@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+---
+
+<BaseLayout
+  title="Kontakt | Ariane Mader"
+  seoTitle="Kontakt | Kostenloses Erstgespräch buchen"
+  description="Nimm Kontakt mit Ariane Mader auf, stelle Fragen oder buche ein kostenloses 30-minütiges Erstgespräch für Coaching oder Counselling."
+  lang="de"
+>
+  <PageHeader 
+    title="Kontakt" 
+    subtitle="Ich freue mich, von dir zu hören!"
+    backgroundImage="/uploads/about-header.jpg"
+    overlayOpacity={0.3}
+  />
+
+  <!-- Contact Info -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-3xl blueFont font-bold mb-6">Melde dich gern</h2>
+
+          <div class="prose prose-lg max-w-none">
+            <p>
+              Wenn du neugierig auf eine Zusammenarbeit bist, Fragen hast oder herausfinden möchtest, ob Coaching das Richtige für dich ist, dann schreib mir gern.<br>
+              Ich biete ein <b>kostenloses 30-minütiges Erstgespräch per Video</b> an. Darin klären wir, was dich gerade beschäftigt, schauen, was hilfreich sein könnte, und ob wir gut zusammenpassen.
+            </p>
+
+            <p>Du kannst mich hier erreichen:</p>
+          </div>
+
+          <!-- Email row -->
+          <div class="not-prose flex items-center gap-2 mt-2 text-lg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 greenDarkFont flex-shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+
+            <a
+              href="mailto:info@arianemader.com"
+              class="text-gray-800 hover:text-gray-600 transition-colors"
+            >
+              info<span aria-hidden="true">[at]</span><span class="sr-only">@</span>arianemader.com
+            </a>
+          </div>
+
+          <div class="prose prose-lg max-w-none">
+            <p class="mt-6">Ich freue mich auf deine Nachricht!</p>
+          </div>
+        </div>
+
+        <img 
+          src="/uploads/contact1.jpg" 
+          alt="Kontaktbild"
+          class="rounded-lg shadow-lg object-cover w-full max-w-sm max-h-[380px] mx-auto"
+        />
+        <div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

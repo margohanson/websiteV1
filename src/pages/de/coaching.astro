@@ -1,0 +1,653 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+import StaffList from "../../components/Sections/StaffList.astro";
+import { Carousel } from 'webcoreui/astro'
+---
+
+<BaseLayout
+  title="Coaching | Ariane Mader"
+  seoTitle="Coaching & Counselling | Prokrastination, Überforderung, Gewohnheiten & Klarheit"
+  description="Praktisches, reflektiertes Coaching und Counselling bei Prokrastination, Überforderung, Gewohnheiten, Neurodivergenz sowie Studien- oder Berufsorientierung."
+  lang="de"
+>
+  <PageHeader 
+    title="Coaching & Counselling" 
+    backgroundImage="/uploads/coaching-header.jpg"
+    overlayOpacity={0.15}
+  />
+  
+  <!-- Staff List -->
+  <!-- <StaffList /> -->
+
+<!-- What we can work on together -->
+<section id="faq" class="py-12 bg-gray-50">
+  <div class="w-full">
+    <div class="px-6 md:px-16">
+      
+      <!-- Title -->
+      <div class="text-center mb-8">
+        <h3 class="blueFont font-[Cambria]">
+          Woran wir gemeinsam arbeiten können
+        </h3>
+      </div>
+
+      <!-- Intro -->
+      <div class="prose prose-lg max-w-none mb-6">
+        <p>
+          Du brauchst keine perfekte Bezeichnung für dein Problem. Manche Menschen kommen mit einer klaren Frage, andere spüren einfach, dass etwas gerade nicht gut funktioniert.
+          Hier sind einige Themen, bei denen ich häufig unterstütze:
+        </p>
+      </div>
+
+      <!-- 3-column layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-6">
+
+        <!-- Column 1 -->
+        <div>
+          <p class="font-semibold text-lg mb-2">
+            Umsetzung, Gewohnheiten & Struktur
+          </p>
+          <ul class="green-bullets list-disc pl-5 space-y-2 text-lg leading-relaxed [&>li]:my-0">
+            <li>Prokrastination und Schwierigkeiten, Aufgaben anzufangen</li>
+            <li>Überforderung und nicht wissen, wo du beginnen sollst</li>
+            <li>Gewohnheiten und Routinen aufbauen, die wirklich halten</li>
+            <li>Dranbleiben, ohne dich nur auf Last-Minute-Druck zu verlassen</li>
+            <li>Verstehen, wie dein Gehirn funktioniert</li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <p class="font-semibold text-lg mb-2">
+            Klarheit & Orientierung
+          </p>
+          <ul class="green-bullets list-disc pl-5 space-y-2 text-lg leading-relaxed [&>li]:my-0">
+            <li>Dich im Studium oder Beruf festgefahren fühlen</li>
+            <li>Nicht wissen, was du willst oder was zu dir passt</li>
+            <li>Deine Werte, Interessen und Prioritäten erkennen</li>
+            <li>Entscheidungen mit mehr Sicherheit treffen</li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <p class="font-semibold text-lg mb-2">
+            Muster, Emotionen & innere Dynamiken
+          </p>
+          <ul class="green-bullets list-disc pl-5 space-y-2 text-lg leading-relaxed [&>li]:my-0">
+            <li>Stress, Überforderung und Emotionsregulation</li>
+            <li>Perfektionismus und hoher innerer Druck</li>
+            <li>Sich wiederholende Muster, die dir nicht guttun</li>
+            <li>Selbstzweifel oder das Gefühl, den Kontakt zu dir selbst verloren zu haben</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Closing text -->
+      <div class="prose prose-lg max-w-none">
+        <p>
+          Viele dieser Themen hängen miteinander zusammen. Prokrastination ist zum Beispiel oft mit Überforderung, unklaren Prioritäten oder tieferliegenden Mustern verbunden.
+          Deshalb arbeiten wir nicht nur an den Symptomen — sondern schauen auf das größere Ganze.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How I Work -->
+<section id="faq" class="py-12 bg-white">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h3 class="blueFont font-[Cambria]">Wie ich arbeite</h3>
+    </div>
+
+    <div class="max-w-3xl mx-auto prose prose-lg">
+      <p>
+        Mein Ansatz ist praktisch, strukturiert und auf dich zugeschnitten. In den Sessions kombinieren wir:
+      </p>
+      <ul class="green-bullets space-y-1 [&>li]:my-0">
+        <li>Reflexion und ehrliche Gespräche</li>
+        <li>strukturierte Übungen und praktische Tools</li>
+        <li>iterative und realistische Experimente</li>
+        <li>klare Ziele und optional kleine Aufgaben zwischen den Sessions</li>
+      </ul>   
+      <p>
+        Wir konzentrieren uns nicht nur auf schnelle Oberflächenlösungen, sondern schauen auch auf die Muster darunter — in <i>deinem</i> Tempo.
+        Ich bin unterstützend, aber auch direkt. Ich hinterfrage manchmal Annahmen, aber nie deine Autonomie:
+        <br /><b>Du kennst dein Leben am besten — meine Aufgabe ist es, dir zu helfen, es klarer zu sehen.</b>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Coaching Trajectory -->
+<section id="faq" class="py-12 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h3 class="blueFont font-[Cambria]">Ein typischer Coaching-Prozess</h3>
+    </div>
+
+    <div class="max-w-3xl mx-auto prose prose-lg green-numbers">
+      <ol type="1">
+        <li><b>Kostenloses Erstgespräch (30 Min.)</b><br />Wir schauen uns deine Situation an und prüfen, ob wir gut zusammenpassen.<br /></li>
+        <li><b>Intake-Session</b><br />Wir klären dein Anliegen, deine Ziele und die Richtung.<br /></li>
+        <li><b>Coaching-Sessions (online oder vor Ort)</b><br />Jede Session konzentriert sich auf das, was dir gerade konkret weiterhilft. <br />Präsenztermine sind nach Absprache in Almere und Amsterdam möglich.<br /></li>
+        <li><b>Zwischenstand nach ca. 5 Sessions</b><br />Wir schauen gemeinsam, was funktioniert, was nicht und wie es weitergehen soll.<br /></li>
+        <li><b>Abschluss-Session</b><br />Du gehst mit mehr Klarheit, passenden Tools und Vertrauen in dich selbst aus dem Prozess.<br /></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+
+<section id="testimonials" class="py-12 bg-white">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h2 class="blueFont text-3xl font-bold">Stimmen von Klient:innen</h2>
+    </div>
+
+    <div class="mx-auto w-full md:w-3/4">
+      <div class="relative">
+        <button
+          type="button"
+          id="t-prev"
+          class="hidden md:inline-flex absolute -left-14 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full border-2 border-[#193472] bg-white text-[#193472] shadow-md hover:bg-[#193472] hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Vorheriges Testimonial"
+        >
+          ❮
+        </button>
+
+        <button
+          type="button"
+          id="t-next"
+          class="hidden md:inline-flex absolute -right-14 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full border-2 border-[#193472] bg-white text-[#193472] shadow-md hover:bg-[#193472] hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Nächstes Testimonial"
+        >
+          ❯
+        </button>
+
+        <ul
+          id="t-track"
+          class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-6 pb-2 [-ms-overflow-style:none] [scrollbar-width:none]"
+          aria-label="Testimonials Slider"
+        >
+          <style>
+            #t-track::-webkit-scrollbar { display: none; }
+          </style>
+
+          <!-- Slide 1 -->
+          <li class="w-full flex-shrink-0 snap-start">
+            <div class="testimonial-box bg-gray-50 p-8 rounded-lg shadow-sm max-w-full flex flex-col h-full">
+              <div class="testimonial-content-wrapper flex-1 overflow-hidden">
+                <div class="testimonial-text space-y-2">
+                  <p class="text-gray-600">
+                    Ich habe über einen längeren Zeitraum mit Ariane im Coaching gearbeitet, und es hat mir enorm geholfen. Sie ist sehr einfühlsam und vertrauenswürdig, hört aufmerksam zu und begleitet einen mit durchdachten, gut gesetzten Fragen auf den eigenen Weg. Sie schafft eine angenehme Atmosphäre, in der ich mich leicht öffnen konnte.
+                  </p>
+                  <p class="text-gray-600">
+                    In einer Zeit, in der ich mich sehr festgefahren und verloren fühlte, hat sie mir geholfen, wieder mehr Struktur und Routinen in meinen Alltag zu bringen. Außerdem hat sie mich dabei unterstützt herauszufinden, was mir im Leben wichtig ist und meine eigenen Bedürfnisse bewusster wahrzunehmen.
+                  </p>
+                  <p class="text-gray-600">
+                    Ich würde Ariane auf jeden Fall weiterempfehlen und jederzeit wieder zu ihr zurückkehren, wenn ich das Gefühl hätte, mit Problemen alleine nicht weiterzukommen oder wenn ich jemanden brauche, der die Dinge aus einer anderen Perspektive betrachtet.
+                  </p>
+                  <p class="text-sm text-gray-400 mt-1">
+                    (Ursprünglich auf Deutsch geschrieben)
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-footer pt-6 mt-6">
+                <div class="flex items-center justify-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[#193472] flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-center font-bold">
+                    Studentin, 20er
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Slide 2 -->
+          <li class="w-full flex-shrink-0 snap-start">
+            <div class="testimonial-box bg-gray-50 p-8 rounded-lg shadow-sm max-w-full flex flex-col h-full">
+              <div class="testimonial-content-wrapper flex-1 overflow-hidden">
+                <div class="testimonial-text space-y-2">
+                  <p class="text-gray-600">
+                    Die Zusammenarbeit mit Ariane war für mich wirklich sehr wertvoll.
+                  </p>
+                  <p class="text-gray-600">
+                    Ich bin ohne klares Endziel ins Coaching gestartet, aber Ariane hat mir geholfen, meine Gedanken zu sortieren und herauszufinden, woran ich eigentlich arbeiten wollte. Von dort aus hat sie mich dabei begleitet, einige Schlüsselgewohnheiten aufzubauen, die mehr Raum für Kreativität geschaffen, mehr Struktur in meinen Alltag gebracht und mir geholfen haben, meine Zeit auf eine Weise zu nutzen, die sich wirklich stimmig angefühlt hat.
+                  </p>
+                  <p class="text-gray-600">
+                    Sie hat eine ruhige, aufmerksame Art, Muster zu erkennen, die richtigen Fragen zu stellen und einen sanft in hilfreichere Richtungen zu lenken — ganz ohne Urteil. Unsere Sessions waren kollaborativ und geerdet, und mit der Zeit haben wir eine persönliche Toolbox aufgebaut, die mich heute sowohl in meiner kreativen Arbeit als auch im Umgang mit meinem ADHS unterstützt.
+                  </p>
+
+                  <details class="text-gray-600 mt-2">
+                    <div class="space-y-2 mt-2">
+                      <p>
+                        Wir haben Mindmaps erstellt, mit Matrizen und Dopamin-Menüs gearbeitet, über Gewohnheitsschleifen gesprochen und Widerstände auf eine Weise untersucht, die sich machbar und konkret angefühlt hat. Wir haben auch Rituale angeschaut und mit kleinen, aber wirksamen Routinen experimentiert. Ich habe begonnen, mir erreichbare Schreibziele zu setzen — zum Beispiel 15-Minuten-Sprints mit einer Kaffeepause als Belohnung — und gemerkt, dass ich nicht nur produktiver wurde, sondern den Prozess wieder genießen konnte.
+                      </p>
+                      <p>
+                        Wir haben uns auch die mentale Seite angeschaut: Ängste bearbeiten, negative Selbstgespräche hinterfragen und mit Visualisierungsübungen mehr Ruhe finden, wenn alles zu viel wurde.
+                      </p>
+                      <p>
+                        Ein kleines Detail, das unglaublich hilfreich war: Sie hat während unserer Sessions Notizen gemacht. Dadurch konnte ich im Moment präsent bleiben, selbst wenn meine Gedanken in alle Richtungen sprangen, und trotzdem mit einer klaren Zusammenfassung und konkreten nächsten Schritten aus dem Gespräch gehen.
+                      </p>
+                      <p>
+                        Was ich heute mitnehme, ist eine mitfühlendere und praktischere Art, mich selbst zu unterstützen — und ein Set an Werkzeugen, auf das ich immer wieder zurückgreifen kann, wenn ich einen Reset brauche.
+                      </p>
+                    </div>
+
+                    <summary class="mt-2 cursor-pointer select-none inline-block font-medium underline text-[#193472] hover:!text-[#30B28E] transition-colors">
+                      <span class="t-more">[...] Mehr lesen</span>
+                      <span class="t-less">Weniger anzeigen</span>
+                    </summary>
+                  </details>
+
+                  <p class="text-gray-600 font-medium mt-3">
+                    Ich würde die Arbeit mit Ariane auf jeden Fall empfehlen, wenn du auf der Suche nach einer durchdachten, geerdeten Begleitung bist, um echte und nachhaltige Veränderung zu schaffen.
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-footer pt-6 mt-6">
+                <div class="flex items-center justify-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[#193472] flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-center font-bold">
+                    Kreative Berufstätige mit ADHS, 30er
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Slide 3 -->
+          <li class="w-full flex-shrink-0 snap-start">
+            <div class="testimonial-box bg-gray-50 p-8 rounded-lg shadow-sm max-w-full flex flex-col h-full">
+              <div class="testimonial-content-wrapper flex-1 overflow-hidden">
+                <div class="testimonial-text space-y-2">
+                  <p class="text-gray-600">
+                    Der Coach hat mir hilfreiche Werkzeuge gezeigt, mit denen ich besser mit meinen ADHS-Eigenschaften und meinem Perfektionismus umgehen kann.
+                  </p>
+                  <p class="text-gray-600">
+                    Unsere Gespräche waren immer aufschlussreich und ich habe mich dabei wohlgefühlt.
+                  </p>
+                  <p class="text-gray-600">
+                    Ich habe viele gute Tools gelernt, die ich weiterhin für mich nutzen werde.
+                  </p>
+                </div>
+              </div>
+
+              <div class="testimonial-footer pt-6 mt-6">
+                <div class="flex items-center justify-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[#193472] flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-center font-bold">
+                    Neurodivergente Berufstätige, 30er
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Slide 4 -->
+          <li class="w-full flex-shrink-0 snap-start">
+            <div class="testimonial-box bg-gray-50 p-8 rounded-lg shadow-sm max-w-full flex flex-col h-full">
+              <div class="testimonial-content-wrapper flex-1 overflow-hidden">
+                <div class="testimonial-text space-y-2">
+                  <p class="text-gray-600">?</p>
+                </div>
+              </div>
+
+              <div class="testimonial-footer pt-6 mt-6">
+                <div class="flex items-center justify-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[#193472] flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl text-center font-bold">
+                    Klient:in, 30er
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div id="t-dots" class="mt-6 flex items-center justify-center gap-2" aria-label="Testimonial pagination"></div>
+
+        <style>
+          details .t-less { display: none; }
+          details[open] .t-more { display: none; }
+          details[open] .t-less { display: inline; }
+
+          details > summary::-webkit-details-marker { display: none; }
+          details > summary { list-style: none; }
+        </style>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.getElementById("t-track");
+      const prevBtn = document.getElementById("t-prev");
+      const nextBtn = document.getElementById("t-next");
+      const dotsWrap = document.getElementById("t-dots");
+
+      if (!track || !prevBtn || !nextBtn || !dotsWrap) return;
+
+      const slides = Array.from(track.querySelectorAll("li"));
+      const total = slides.length;
+      let index = 0;
+
+      const buildDots = () => {
+        dotsWrap.innerHTML = "";
+        slides.forEach((_, i) => {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className =
+            "h-2.5 w-2.5 rounded-full transition-colors " +
+            (i === index ? "bg-[#193472]" : "bg-gray-300 hover:bg-gray-400");
+          b.setAttribute("aria-label", `Gehe zu Testimonial ${i + 1} von ${total}`);
+          b.addEventListener("click", () => goTo(i));
+          dotsWrap.appendChild(b);
+        });
+      };
+
+      const updateDisabled = () => {
+        prevBtn.disabled = index <= 0;
+        nextBtn.disabled = index >= total - 1;
+
+        const dotButtons = Array.from(dotsWrap.querySelectorAll("button"));
+        dotButtons.forEach((b, i) => {
+          b.className =
+            "h-2.5 w-2.5 rounded-full transition-colors " +
+            (i === index ? "bg-[#193472]" : "bg-gray-300 hover:bg-gray-400");
+        });
+      };
+
+      const goTo = (i) => {
+        index = Math.max(0, Math.min(total - 1, i));
+        slides[index].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+        updateDisabled();
+      };
+
+      prevBtn.addEventListener("click", () => goTo(index - 1));
+      nextBtn.addEventListener("click", () => goTo(index + 1));
+
+      let scrollTimeout;
+      track.addEventListener("scroll", () => {
+        window.clearTimeout(scrollTimeout);
+        scrollTimeout = window.setTimeout(() => {
+          const trackLeft = track.getBoundingClientRect().left;
+          let best = 0;
+          let bestDist = Infinity;
+
+          slides.forEach((li, i) => {
+            const rect = li.getBoundingClientRect();
+            const dist = Math.abs(rect.left - trackLeft);
+            if (dist < bestDist) {
+              bestDist = dist;
+              best = i;
+            }
+          });
+
+          index = best;
+          updateDisabled();
+        }, 80);
+      });
+
+      const setUniformHeights = () => {
+        const testimonialBoxes = document.querySelectorAll("#testimonials .testimonial-box");
+        if (!testimonialBoxes.length) return;
+
+        testimonialBoxes.forEach((box) => {
+          box.style.height = "auto";
+        });
+
+        let maxHeight = 0;
+        testimonialBoxes.forEach((box) => {
+          const height = box.offsetHeight;
+          if (height > maxHeight) maxHeight = height;
+        });
+
+        testimonialBoxes.forEach((box) => {
+          box.style.height = `${maxHeight}px`;
+        });
+      };
+
+      const detailsBlocks = document.querySelectorAll("#testimonials details");
+
+      detailsBlocks.forEach((details) => {
+        details.addEventListener("toggle", () => {
+          const testimonialBoxes = document.querySelectorAll("#testimonials .testimonial-box");
+          const anyOpen = Array.from(detailsBlocks).some((d) => d.open);
+
+          if (anyOpen) {
+            testimonialBoxes.forEach((box) => {
+              box.style.height = "auto";
+            });
+          } else {
+            setUniformHeights();
+          }
+        });
+      });
+
+      buildDots();
+      updateDisabled();
+      setTimeout(setUniformHeights, 100);
+
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+
+        resizeTimeout = setTimeout(() => {
+          const anyOpen = Array.from(detailsBlocks).some((d) => d.open);
+          if (!anyOpen) {
+            setUniformHeights();
+          }
+        }, 250);
+      });
+    });
+  </script>
+
+  <style>
+    #testimonials .testimonial-box {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #testimonials p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      text-align: center;
+    }
+
+    .testimonial-content-wrapper {
+      position: relative;
+      min-height: 0;
+      flex: 1 1 auto;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .testimonial-text {
+      flex: 0 1 auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .testimonial-footer {
+      flex-shrink: 0;
+      margin-top: auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid #d1d5db;
+    }
+  </style>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-12 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h3 class="blueFont">Häufige Fragen</h3>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-4">
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Was ist der Unterschied zwischen Coaching und Counselling?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Coaching richtet den Blick stärker auf Gegenwart und Zukunft: Wie kannst du weiterkommen und nachhaltige Veränderung schaffen? Counselling schaut mehr auf die Vergangenheit und darauf, wie sie dich heute beeinflusst. In der Praxis brauchen die meisten Menschen eine Mischung aus beidem.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Kann ich auch mit einem Thema zu dir kommen, das hier nicht aufgelistet ist?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Ja. Ich bin dafür ausgebildet, mit einer breiten Vielfalt an Themen zu arbeiten. Und wenn ich einmal das Gefühl habe, dass ich nicht die richtige Person für dein Anliegen bin, sage ich dir das ehrlich.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Was ist, wenn ich noch gar nicht genau weiß, woran ich arbeiten möchte?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Das ist völlig in Ordnung und sehr häufig. Wir können die ersten Sessions genau dafür nutzen, besser zu verstehen, was gerade los ist und was du verändern möchtest. Klarheit entsteht oft erst im Prozess.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Muss ich neurodivergent sein, um mit dir zu arbeiten?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Nein. Viele der Themen, mit denen ich arbeite – zum Beispiel Prokrastination, Überforderung oder Schwierigkeiten mit Struktur – kommen sowohl bei neurodivergenten als auch bei neurotypischen Menschen vor. Wenn du <i>neurodivergent bist</i> (mit oder ohne Diagnose), ist mein Ansatz jedoch besonders darauf ausgerichtet, mit deinem Gehirn zu arbeiten statt dagegen.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Was ist, wenn ich schon vieles ausprobiert habe und nichts geholfen hat?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Genau dann kann Coaching besonders hilfreich sein. Oft fehlt nicht die Anstrengung, sondern die bisherigen Ansätze haben einfach nicht zu dir gepasst. Statt allgemeine Strategien überzustülpen, schauen wir gemeinsam, probieren aus und passen an, bis wir etwas finden, das <i>wirklich</i> für dich funktioniert.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Kann ich mit dir arbeiten, wenn ich gleichzeitig in Therapie bin?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Ja — das machen viele Klient:innen. Es kann sehr hilfreich sein, aus verschiedenen Richtungen Unterstützung zu bekommen. Wir achten einfach darauf, dass sich die Prozesse gut ergänzen.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Wie lange dauert ein Coaching-Prozess?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Das hängt von deinem Anliegen und deinen Zielen ab. Manche Menschen kommen für ein paar fokussierte Sessions, mit anderen arbeite ich über mehrere Monate hinweg. Wir reflektieren regelmäßig, was hilfreich ist, und passen den Prozess entsprechend an.
+          </p>
+        </details>
+
+        <details class="group bg-white p-6 rounded-lg shadow-sm">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <h3 class="text-xl font-bold">Wie sind deine Verfügbarkeiten?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200 group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+          </summary>
+          <p class="mt-4 text-gray-700">
+            Das variiert, deshalb ist es am besten, wenn du dich einfach meldest. Dann schauen wir gemeinsam, was zeitlich gut passt.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</section>
+  
+<!-- Reach Out for More Qs -->
+<section class="py-12 bg-white">
+  <div class="container">
+    <div class="text-center mb-6">
+      <h3 class="blueFont">Hast du noch Fragen?</h3>
+    </div>
+    <div class="max-w-4xl mx-auto text-center prose prose-lg">
+      <p class="text-xl text-gray-600 mb-8">
+        Melde dich gern — ich beantworte deine Fragen sehr gern.
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="/contact" 
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-[#193472] rounded-md shadow-sm hover:bg-[#142a5e] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        >
+          Kontakt aufnehmen
+        </a>
+        
+        <a 
+          href="/about" 
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+        >
+          Mehr über mich
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+</BaseLayout>

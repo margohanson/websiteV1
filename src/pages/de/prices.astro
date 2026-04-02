@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHeader from "../../components/Sections/PageHeader.astro";
+import Button from "../../components/UI/Button.astro";
+---
+
+<BaseLayout
+  title="Preise | Ariane Mader"
+  seoTitle="Preise | Coaching, Counselling & Workshops"
+  description="Preise für Einzelcoaching, Counselling und Workshops mit Ariane Mader. Online sowie vor Ort in Amsterdam und Almere."
+  lang="de"
+>
+  <PageHeader 
+    title="Preise" 
+    backgroundImage="/uploads/prices-header2.jpg"
+    overlayOpacity={0.2}
+  />
+  
+  <!-- Prices -->
+<section class="py-16 bg-white">
+  <div class="w-full">
+    <div class="px-6 md:px-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Individuals -->
+        <div class="p-4">
+          <div class="prose prose-lg max-w-none prose-p:my-2">
+            <h3 class="blueFont text-center">Coaching für Einzelpersonen</h3>
+
+            <p class="text-gray-700 text-center">
+              <strong>60 Minuten — 85€ (inkl. MwSt.)</strong><br />
+              Standard-Coaching-Session
+            </p>
+
+            <p class="text-gray-700 text-center">
+              <strong>90 Minuten — 115€ (inkl. MwSt.)</strong><br />
+              Tiefere Session oder Methodensession (z. B. Ikigai, Logic Levels)
+            </p>
+          </div>
+        </div>
+
+        <!-- Discounts -->
+        <div class="p-4">
+          <div class="relative">
+            <div class="absolute inset-0 -top-5 rounded-lg border border-gray-200"></div>
+
+            <div class="relative prose prose-lg max-w-none text-center px-5 pt-0 pb-6">
+              <h3 class="blueFont text-center mt-0 mb-3">
+                Ermäßigungen
+              </h3>
+
+              <p class="text-gray-700 my-0">
+                <strong>Online-Sessions:</strong> 10€ weniger<br />
+                <strong>Studierende oder arbeitslos:</strong> 20% Rabatt<br />
+                <strong>Empfehlung:</strong> beide erhalten 20€ Rabatt auf die nächste Session
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organisations -->
+        <div class="p-4">
+          <div class="prose prose-lg max-w-none prose-p:my-2">
+            <h3 class="blueFont text-center">Organisationen und Unternehmen</h3>
+
+            <p class="text-gray-700 text-center">
+              Einzelcoaching: ab <strong>130€ / Stunde (exkl. MwSt.)</strong>.
+            </p>
+
+            <p class="text-gray-700 text-center">
+              Workshops und Trainings: individuelle Preisgestaltung je nach Format und Umfang.
+              Bitte
+              <a
+                href="/contact"
+                class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
+              >melde dich</a>
+              , um eure Bedürfnisse zu besprechen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full-width centered bottom text -->
+      <div class="mt-12">
+        <div class="prose prose-lg max-w-none text-center">
+          <p>
+            Sessions sind online sowie vor Ort (Almere oder Amsterdam) möglich.<br />
+            Die Anzahl der Sitzungen ist flexibel. Manche Menschen kommen für ein paar gezielte Sessions, andere arbeiten über einen längeren Zeitraum mit mir.
+          </p>
+
+          <p>
+            Wenn du neugierig auf Coaching bist, Fragen hast oder herausfinden möchtest, ob das zu dir passt, dann
+            <a
+              href="/contact"
+              class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
+            >melde dich gern</a>.<br />
+            Der einfachste Einstieg ist ein kostenloses 30-minütiges Erstgespräch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

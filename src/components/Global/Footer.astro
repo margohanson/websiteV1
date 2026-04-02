@@ -1,6 +1,10 @@
 ---
 // Current year for copyright
 const currentYear = new Date().getFullYear();
+
+const currentPath = Astro.url.pathname;
+const isGerman = currentPath === "/de" || currentPath.startsWith("/de/");
+const privacyHref = isGerman ? "/de/privacy-terms-conditions" : "/privacy-terms-conditions";
 ---
 
 <footer class="bg-[#0d1830] pt-8 pb-10 relative">
@@ -9,12 +13,12 @@ const currentYear = new Date().getFullYear();
       href="https://www.lvsc.eu/lid/ariane-mader"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="View my professional registration"
+      aria-label={isGerman ? "Berufliche Registrierung ansehen" : "View my professional registration"}
     >
       <div class="bg-gray-300 p-1.5 rounded-md inline-block hover:bg-gray-200 transition-colors">
         <img
           src="/uploads/logo-beroepsregister.png"
-          alt="Registered professional logo"
+          alt={isGerman ? "Logo des Berufsregisters" : "Registered professional logo"}
           class="h-20 w-auto"
           loading="lazy"
         />
@@ -23,10 +27,12 @@ const currentYear = new Date().getFullYear();
   </div>
 
   <div class="pt-1 mt-1 text-center greenBrightFont text-sm">
-    <p>&copy; {currentYear} Ariane Mader. All rights reserved.</p>
+    <p>
+      &copy; {currentYear} Ariane Mader. {isGerman ? "Alle Rechte vorbehalten." : "All rights reserved."}
+    </p>
     <p class="mt-2">
-      <a href="/privacy-terms-conditions" class="hover:text-gray-300 mr-4">
-        Privacy, Terms & Conditions
+      <a href={privacyHref} class="hover:text-gray-300 mr-4">
+        {isGerman ? "Datenschutz, AGB & Bedingungen" : "Privacy, Terms & Conditions"}
       </a>
     </p>
   </div>

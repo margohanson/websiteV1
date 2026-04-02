@@ -13,6 +13,7 @@ export interface Props {
   modifiedTime?: Date;
   noindex?: boolean;
   nofollow?: boolean;
+  lang?: "en" | "de";
 }
 
 const {
@@ -29,16 +30,35 @@ const {
   modifiedTime,
   noindex = false,
   nofollow = false,
+  lang = "en",
 } = Astro.props;
 
-// Pick ONE canonical domain and use HTTPS
 const siteUrl = "https://www.arianemader.com";
-const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, siteUrl).toString();
+const currentPath = Astro.url.pathname;
+
+// Canonical URL
+const canonicalURL = canonicalUrl || new URL(currentPath, siteUrl).toString();
 const imageUrl = new URL(image.url, siteUrl).toString();
+
+// Matching EN/DE paths for hreflang
+const englishPath = currentPath.startsWith("/de")
+  ? currentPath.replace(/^\/de/, "") || "/"
+  : currentPath;
+
+const germanPath = currentPath.startsWith("/de")
+  ? currentPath
+  : `/de${currentPath === "/" ? "" : currentPath}`;
+
+const englishUrl = new URL(englishPath, siteUrl).toString();
+const germanUrl = new URL(germanPath, siteUrl).toString();
+const defaultUrl = new URL("/", siteUrl).toString();
 
 const siteInfo = {
   name: "Ariane Mader",
-  tagline: "Coaching & Counselling for Procrastination, Overwhelm & Career Clarity",
+  tagline:
+    lang === "de"
+      ? "Coaching & Beratung bei Prokrastination, Überforderung und beruflicher Orientierung"
+      : "Coaching & Counselling for Procrastination, Overwhelm & Career Clarity",
   url: siteUrl,
   email: "info@arianemader.com",
 };
@@ -50,6 +70,10 @@ const robotsContent = [
   "max-snippet:-1",
   "max-video-preview:-1",
 ].join(", ");
+
+const ogLocale = lang === "de" ? "de_DE" : "en_US";
+const alternateOgLocale = lang === "de" ? "en_US" : "de_DE";
+const schemaLanguage = lang;
 ---
 
 <title>{title}</title>
@@ -59,6 +83,11 @@ const robotsContent = [
 <meta name="googlebot" content={robotsContent} />
 <link rel="canonical" href={canonicalURL} />
 
+<!-- hreflang -->
+<link rel="alternate" hreflang="en" href={englishUrl} />
+<link rel="alternate" hreflang="de" href={germanUrl} />
+<link rel="alternate" hreflang="x-default" href={defaultUrl} />
+
 <!-- Open Graph -->
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalURL} />
@@ -67,7 +96,8 @@ const robotsContent = [
 <meta property="og:image" content={imageUrl} />
 <meta property="og:image:alt" content={image.alt} />
 <meta property="og:site_name" content={siteInfo.name} />
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:locale:alternate" content={alternateOgLocale} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -86,7 +116,6 @@ const robotsContent = [
   <meta property="article:modified_time" content={modifiedTime.toISOString()} />
 )}
 
-<!-- WebSite schema -->
 <script
   type="application/ld+json"
   set:html={JSON.stringify({
@@ -95,11 +124,10 @@ const robotsContent = [
     "name": siteInfo.name,
     "url": siteInfo.url,
     "description": siteInfo.tagline,
-    "inLanguage": "en",
+    "inLanguage": schemaLanguage,
   })}
 />
 
-<!-- Person schema -->
 <script
   type="application/ld+json"
   set:html={JSON.stringify({
@@ -108,11 +136,10 @@ const robotsContent = [
     "name": siteInfo.name,
     "url": siteInfo.url,
     "email": siteInfo.email,
-    "jobTitle": "Coach and Counsellor",
+    "jobTitle": lang === "de" ? "Coach und Beraterin" : "Coach and Counsellor",
   })}
 />
 
-<!-- Service schema -->
 <script
   type="application/ld+json"
   set:html={JSON.stringify({
@@ -120,7 +147,7 @@ const robotsContent = [
     "@type": "Service",
     "name": title,
     "description": description,
-    "serviceType": "Coaching and Counselling",
+    "serviceType": lang === "de" ? "Coaching und Beratung" : "Coaching and Counselling",
     "provider": {
       "@type": "Person",
       "name": siteInfo.name,
@@ -130,7 +157,7 @@ const robotsContent = [
       "@type": "Country",
       "name": "Netherlands",
     },
-    "availableLanguage": ["en"],
+    "availableLanguage": ["en", "de"],
     "url": canonicalURL,
   })}
 />
