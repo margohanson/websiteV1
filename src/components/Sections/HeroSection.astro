@@ -28,12 +28,15 @@ const showAnyCta = showPrimary || showSecondary;
 ---
 
 <section
-  class="relative min-h-[50vh] flex items-center bg-cover pt-30"
-  style={`background-image: url(${backgroundImage}); background-position: right 20%;`}
+  class="hero-section relative min-h-[50vh] flex items-center bg-cover pt-30"
+  style={`background-image: url(${backgroundImage});`}
 >
   <div class="container">
     <div class="max-w-3xl text-white">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">{title}</h1>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+        Coaching & <br class="md:hidden" />
+        Counselling
+      </h1>
       <p class="text-xl md:text-2xl mb-8">{subtitle}</p>
 
       {showAnyCta && (
@@ -59,3 +62,15 @@ const showAnyCta = showPrimary || showSecondary;
     </div>
   </div>
 </section>
+
+<style>
+  .hero-section {
+    background-position: 72% center;
+  }
+
+  @media (min-width: 768px) {
+    .hero-section {
+      background-position: right 20%;
+    }
+  }
+</style>

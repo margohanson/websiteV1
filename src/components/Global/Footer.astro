@@ -8,7 +8,8 @@ const privacyHref = isGerman ? "/de/privacy-terms-conditions" : "/privacy-terms-
 ---
 
 <footer class="bg-[#0d1830] pt-8 pb-10 relative">
-  <div class="absolute right-4 top-1/2 -translate-y-1/2">
+  <!-- Desktop logo -->
+  <div class="hidden md:block absolute right-4 top-1/2 -translate-y-1/2">
     <a
       href="https://www.lvsc.eu/lid/ariane-mader"
       target="_blank"
@@ -26,12 +27,31 @@ const privacyHref = isGerman ? "/de/privacy-terms-conditions" : "/privacy-terms-
     </a>
   </div>
 
-  <div class="pt-1 mt-1 text-center greenBrightFont text-sm">
+  <!-- Mobile logo -->
+  <div class="md:hidden flex justify-center mb-6">
+    <a
+      href="https://www.lvsc.eu/lid/ariane-mader"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={isGerman ? "Berufliche Registrierung ansehen" : "View my professional registration"}
+    >
+      <div class="bg-gray-300 p-1.5 rounded-md inline-block hover:bg-gray-200 transition-colors">
+        <img
+          src="/uploads/logo-beroepsregister.png"
+          alt={isGerman ? "Logo des Berufsregisters" : "Registered professional logo"}
+          class="h-16 w-auto"
+          loading="lazy"
+        />
+      </div>
+    </a>
+  </div>
+
+  <div class="pt-1 mt-1 text-center greenBrightFont text-sm px-6 md:px-24">
     <p>
       &copy; {currentYear} Ariane Mader. {isGerman ? "Alle Rechte vorbehalten." : "All rights reserved."}
     </p>
     <p class="mt-2">
-      <a href={privacyHref} class="hover:text-gray-300 mr-4">
+      <a href={privacyHref} class="hover:text-gray-300">
         {isGerman ? "Datenschutz, AGB & Bedingungen" : "Privacy, Terms & Conditions"}
       </a>
     </p>
