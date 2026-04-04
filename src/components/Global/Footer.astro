@@ -5,6 +5,7 @@ const currentYear = new Date().getFullYear();
 const currentPath = Astro.url.pathname;
 const isGerman = currentPath === "/de" || currentPath.startsWith("/de/");
 const privacyHref = isGerman ? "/de/privacy-terms-conditions" : "/privacy-terms-conditions";
+const detailsHref = isGerman ? "/de/business-details" : "/business-details";
 ---
 
 <footer class="bg-[#0d1830] pt-8 pb-10 relative">
@@ -53,6 +54,9 @@ const privacyHref = isGerman ? "/de/privacy-terms-conditions" : "/privacy-terms-
     <p class="mt-2">
       <a href={privacyHref} class="hover:text-gray-300">
         {isGerman ? "Datenschutz, AGB & Bedingungen" : "Privacy, Terms & Conditions"}
+      </a> | 
+      <a href={detailsHref} class="hover:text-gray-300">
+        {isGerman ? "Impressum" : "Business Details"}
       </a>
     </p>
   </div>
