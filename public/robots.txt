@@ -1,11 +1,4 @@
 User-agent: *
 Allow: /
 
-# Optional: block SEO scraping tools
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
 Sitemap: https://arianemader.com/sitemap-index.xml
