@@ -8,14 +8,14 @@ import Button from "../components/UI/Button.astro";
 
 <BaseLayout
   title="Ariane Mader | Coaching & Counselling"
-  seoTitle="Ariane Mader | Coaching & Counselling for Procrastination, Overwhelm & Clarity"
-  seoDescription="Coaching and counselling for procrastination, overwhelm, habit change, neurodivergence, and career clarity. Online and in person in Amsterdam and Almere."
+  seoTitle="ADHD, Procrastination & Stress Coaching | Ariane Mader | Amsterdam, Almere & Online"
+  seoDescription="Coaching and counselling for ADHD, neurodivergence, procrastination, overwhelm, stress management, habits, routines, and career clarity. Online coaching and in-person sessions in Amsterdam and Almere, the Netherlands."
   canonicalUrl="https://www.arianemader.com/"
   lang="en"
 >
   <HeroSection 
   title="Coaching & Counselling"
-  subtitle="For Students, Professionals, and Organizations"
+  subtitle="For Procrastination, Overwhelm & Building Routines That Stick"
   backgroundImage="/uploads/home-header.png"
 />
 
@@ -29,9 +29,16 @@ import Button from "../components/UI/Button.astro";
         </h4>
       </div>
 
-      <div class="prose prose-lg max-w-none">
+      <div class="prose prose-lg max-w-none [&>p]:my-2">
         <p>
-          I help you build a way of working that <b>actually fits your brain</b>, so you can follow through <b>without constant stress, guilt, or last-minute panic</b>.
+          I help you build a way of working that <b>actually fits your brain</b>, so you can follow through without constant stress, guilt, or last-minute panic.
+        </p>
+        <p>
+          I specialize in coaching and counselling for <b>procrastination, overwhelm, stress management, habits, routines, and executive functioning challenges</b>. If traditional productivity advice hasn’t worked for you — or if you’re neurodivergent (e.g. ADHD) — we will figure out what does.
+          Whether you want to finally hand in an essay on time, exercise regularly, or stay on top of everyday tasks, we work towards <b>practical, lasting change</b>.</br>
+        </p>
+        <p>
+          Sessions are available online and in person in Amsterdam and Almere.
           <a
             href="/contact"
             class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
@@ -63,7 +70,7 @@ import Button from "../components/UI/Button.astro";
 
           <p>
             And underneath it all, there’s this thought: <b>“I know what to do… so why can’t I just do it?”</b><br />
-            It can feel like you’re wasting your potential and creating unnecessary stress for yourself.
+            It can feel like you are wasting your potential and creating unnecessary stress for yourself.
           </p>
         </div>
 
@@ -90,15 +97,23 @@ import Button from "../components/UI/Button.astro";
           <p>
             <b>It does not have to stay this way.</b><br />
             Most advice assumes that the same methods work for everyone. But they don’t.<br />
-            Instead, we figure out what works for <i>you</i>. So you can:
+            Instead, we figure out what works for <i>you</i>. So you can 
             <span class="greenDarkFont">start tasks more easily</span>,
             <span class="greenDarkFont">follow through more consistently</span>,
             <span class="greenDarkFont">build routines that actually stick</span>,
-            <span class="greenDarkFont">work <i>with</i> your brain instead of against it</span>,
             and
-            <span class="greenDarkFont">feel less overwhelmed and more in control again.</span>
+            <span class="greenDarkFont">feel more in control again.</span>
           </p>
-
+          
+          <p class="mb-3">
+            <b>We might work on things like:</b>
+          </p>
+            <ul class="green-bullets my-3 space-y-1 [&>li]:my-0">
+            <li>starting and finishing a thesis, portfolio, or work project without getting stuck in avoidance</li>
+            <li>building routines for planning, admin, meals, sleep, or exercise that actually fit your life</li>
+            <li>managing overwhelm, stress, and resistance before things pile up</li>
+            </ul>
+          
           <p class="mb-3">
             <b>Through coaching and counselling, we:</b>
           </p>
@@ -111,7 +126,6 @@ import Button from "../components/UI/Button.astro";
           </ul>
 
           <p class="mt-3">
-            <b>Not trying harder, but experimenting and learning what works for <i>you</i>.</b>
             We will work with a mix of practical tools (habits, structure) and deeper work (patterns, beliefs, values) for
             <span class="greenDarkFont font-semibold">sustainable change</span>.
           </p>
@@ -127,7 +141,7 @@ import Button from "../components/UI/Button.astro";
         </div>
 
                 <!-- Image -->
-        <div class="flex-shrink-0">
+        <div class="hidden md:flex flex-shrink-0">
           <img
             src="/uploads/plant2.jpg"
             alt="Coaching atmosphere"
@@ -149,7 +163,7 @@ import Button from "../components/UI/Button.astro";
 
     <div class="max-w-3xl mx-auto prose prose-lg">
     <p>
-      I offer online and in-person coaching for personal and professional questions. Sessions are practical, structured, and tailored to your needs — whether you want short-term clarity, long-term change, or a deep dive into a specific topic.
+      I offer online and in-person coaching in Almere and Amsterdam for personal and professional challenges. Sessions are practical, structured, and tailored to your needs — whether you want short-term clarity, long-term change, or a deep dive into a specific topic.
     </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a 
@@ -167,12 +181,13 @@ import Button from "../components/UI/Button.astro";
 <section id="workshops" class="py-12 bg-white">
   <div class="container">
     <div class="text-center mb-8">
-      <h3 class="blueFont font-[Cambria]">Workshops for Universities & Organisations</h2>
+      <h3 class="blueFont font-[Cambria]">Workshops for Universities & Organisations</h3>
     </div>
 
     <div class="max-w-3xl mx-auto prose prose-lg">
     <p>
       I also design and deliver tailored workshops for teams, departments, and student groups on a variety of topics. Formats range from short introductions to in-depth interactive sessions.
+    </p>
       <div class="flex flex-wrap justify-center gap-4">
           <a 
             href="/workshops" 
@@ -181,7 +196,6 @@ import Button from "../components/UI/Button.astro";
             Learn More
           </a>
       </div>
-    </p>
     </div>
   </div>
 </section>
@@ -190,7 +204,7 @@ import Button from "../components/UI/Button.astro";
 <section id="about" class="py-12 bg-gray-50">
   <div class="container">
     <div class="text-center mb-8">
-      <h3 class="blueFont font-[Cambria]">Why work with me?</h2>
+      <h3 class="blueFont font-[Cambria]">Why work with me?</h3>
     </div>
 
     <div class="max-w-3xl mx-auto prose prose-lg">
@@ -198,6 +212,7 @@ import Button from "../components/UI/Button.astro";
       My style is <b>calm, direct, practical, and empathetic.</b><br>
       I combine an analytical, scientific background with creative thinking and deep interest in how people function. 
       I don’t apply one system to everyone, but help you find what actually works for <i>you</i>.
+    </p>
       <div class="flex flex-wrap justify-center gap-4">
           <a 
             href="/about" 
@@ -206,7 +221,6 @@ import Button from "../components/UI/Button.astro";
             Learn More
           </a>
       </div>
-    </p>
     </div>
   </div>
 </section>

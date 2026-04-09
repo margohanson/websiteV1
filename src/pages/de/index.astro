@@ -8,14 +8,14 @@ import Button from "../../components/UI/Button.astro";
 
 <BaseLayout
   title="Ariane Mader | Coaching & Counselling"
-  seoTitle="Ariane Mader | Coaching bei Prokrastination, Überforderung & Klarheit"
-  seoDescription="Coaching und Counselling bei Prokrastination, Überforderung, Gewohnheiten, Neurodivergenz und beruflicher Orientierung. Online sowie in Amsterdam und Almere."
+  seoTitle="ADHS, Prokrastination & Stress Coaching | Ariane Mader | Amsterdam, Almere & Online"
+  seoDescription="Coaching und Counselling bei ADHS, Neurodivergenz, Prokrastination, Überforderung, Stress, Gewohnheiten und Routinen. Online Coaching sowie in Amsterdam und Almere."
   canonicalUrl="https://arianemader.com/de/"
   lang="de"
 >
   <HeroSection 
   title="Coaching & Counselling"
-  subtitle="Für Studierende, Berufstätige und Organisationen"
+  subtitle="Für Prokrastination, Überforderung & Routinen, die wirklich funktionieren"
   backgroundImage="/uploads/home-header.png"
 />
 
@@ -29,9 +29,18 @@ import Button from "../../components/UI/Button.astro";
         </h4>
       </div>
 
-      <div class="prose prose-lg max-w-none">
+      <div class="prose prose-lg max-w-none [&>p]:my-2">
         <p>
-          Ich unterstütze dich dabei, eine Arbeitsweise zu entwickeln, die <b>wirklich zu deinem Gehirn passt</b>. Sodass du Dinge umsetzen kannst, <b>ohne dauerhaften Stress, Schuldgefühle oder Last-Minute-Panik</b>.
+           Ich unterstütze dich dabei, eine Arbeitsweise zu entwickeln, die <b>wirklich zu deinem Gehirn passt</b>, sodass du Dinge umsetzen kannst, <b>ohne dauerhaften Stress, Schuldgefühle oder Last-Minute-Panik</b>.
+        </p>
+
+        <p>
+          Ich bin spezialisiert auf Coaching und Counselling bei <b>Prokrastination, Überforderung, Stressmanagement, Gewohnheiten, Routinen und Herausforderungen im Bereich Exekutivfunktionen</b>. Wenn klassische Produktivitätsansätze für dich nicht funktionieren, oder du neurodivergent bist (z. B. ADHS), finden wir gemeinsam heraus, was für dich funktioniert.
+          Egal ob du endlich eine Hausarbeit rechtzeitig abgeben möchtest, regelmäßig Sport machen willst oder deinen Alltag besser strukturieren möchtest — wir arbeiten an <b>praktischer, nachhaltiger Veränderung</b>.
+        </p>
+
+        <p>
+          Sessions sind online sowie vor Ort in Amsterdam und Almere möglich.
           <a
             href="/contact"
             class="font-medium underline transition-colors text-[#193472] hover:!text-[#30B28E]"
@@ -39,6 +48,7 @@ import Button from "../../components/UI/Button.astro";
           ein kostenloses Erstgespräch.
         </p>
       </div>
+
     </div>
   </div>
 </section>
@@ -95,10 +105,19 @@ import Button from "../../components/UI/Button.astro";
             <span class="greenDarkFont">leichter anfangen kannst</span>,
             <span class="greenDarkFont">konstanter dranbleibst</span>,
             <span class="greenDarkFont">Routinen entwickelst, die langfristig funktionieren</span>,
-            <span class="greenDarkFont">einen Weg findest, der zu dir und deinem Gehirn passt</span>
             und
             <span class="greenDarkFont">dich weniger überfordert fühlst.</span>
           </p>
+
+          <p class="mb-3">
+             <b>Zum Beispiel könnten wir an den folgenden Themen arbeiten:</b>
+          </p>
+
+          <ul class="green-bullets my-3 space-y-1 [&>li]:my-0">
+            <li>eine Hausarbeit, ein Portfolio oder ein Projekt beginnen und abschließen, ohne dich in Vermeidung zu verlieren</li>
+            <li>Routinen für Planung, Organisation, Alltag oder Bewegung entwickeln, die wirklich zu deinem Leben passen</li>
+            <li>Überforderung, Stress und innere Widerstände besser regulieren, bevor sich alles aufstaut</li>
+          </ul>
 
           <p class="mb-3">
             <b>Im Coaching arbeiten wir gemeinsam daran:</b>
@@ -112,7 +131,6 @@ import Button from "../../components/UI/Button.astro";
           </ul>
 
           <p class="mt-3">
-            <b>Nicht noch mehr Anstrengung, sondern ausprobieren und verstehen, was für dich funktioniert.</b>
             Wir kombinieren praktische Tools (Gewohnheiten, Struktur) mit tiefergehender Arbeit (Muster, Überzeugungen, Werte) für
             <span class="greenDarkFont font-semibold">nachhaltige Veränderung</span>.
           </p>
@@ -128,7 +146,7 @@ import Button from "../../components/UI/Button.astro";
         </div>
 
         <!-- Image -->
-        <div class="flex-shrink-0">
+        <div class="hidden md:flex flex-shrink-0">
           <img
             src="/uploads/plant2.jpg"
             alt="Ruhige Coaching Atmosphäre"
