@@ -21,7 +21,7 @@ const {
   description,
   image = {
     url: "/uploads/home-header.png",
-    alt: "Ariane Mader - Coaching & Counselling",
+    alt: "Ariane Mader, ADHD & Procrastination Coach",
   },
   type = "website",
   canonicalUrl,
@@ -37,7 +37,9 @@ const siteUrl = "https://www.arianemader.com";
 const currentPath = Astro.url.pathname;
 
 // Canonical URL
-const canonicalURL = canonicalUrl || new URL(currentPath, siteUrl).toString();
+const canonicalURL =
+  canonicalUrl || new URL(currentPath, siteUrl).toString();
+
 const imageUrl = new URL(image.url, siteUrl).toString();
 
 // Matching EN/DE paths for hreflang
@@ -51,14 +53,16 @@ const germanPath = currentPath.startsWith("/de")
 
 const englishUrl = new URL(englishPath, siteUrl).toString();
 const germanUrl = new URL(germanPath, siteUrl).toString();
-const defaultUrl = new URL("/", siteUrl).toString();
+
+// English version acts as x-default
+const defaultUrl = englishUrl;
 
 const siteInfo = {
   name: "Ariane Mader",
   tagline:
     lang === "de"
-      ? "Coaching & Beratung bei Prokrastination, Überforderung und beruflicher Orientierung"
-      : "Coaching & Counselling for Procrastination, Overwhelm & Career Clarity",
+      ? "ADHS- und Prokrastinationscoaching in Almere, Amsterdam und online"
+      : "ADHD & Procrastination Coaching in Amsterdam, Almere & Online",
   url: siteUrl,
   email: "info@arianemader.com",
 };
@@ -73,14 +77,27 @@ const robotsContent = [
 
 const ogLocale = lang === "de" ? "de_DE" : "en_US";
 const alternateOgLocale = lang === "de" ? "en_US" : "de_DE";
-const schemaLanguage = lang;
+
+const schemaLanguage = lang === "de" ? "de" : "en";
+
+const personJobTitle =
+  lang === "de"
+    ? "ADHS- & Prokrastinationscoach"
+    : "ADHD & Procrastination Coach";
+
+const serviceType =
+  lang === "de"
+    ? "ADHS- & Prokrastinationscoaching"
+    : "ADHD and Procrastination Coaching";
 ---
 
 <title>{title}</title>
+
 <meta name="description" content={description} />
 <meta name="author" content={author || siteInfo.name} />
 <meta name="robots" content={robotsContent} />
 <meta name="googlebot" content={robotsContent} />
+
 <link rel="canonical" href={canonicalURL} />
 
 <!-- hreflang -->
@@ -110,54 +127,77 @@ const schemaLanguage = lang;
 <meta name="format-detection" content="telephone=no" />
 
 {type === "article" && publishedTime && (
-  <meta property="article:published_time" content={publishedTime.toISOString()} />
-)}
-{type === "article" && modifiedTime && (
-  <meta property="article:modified_time" content={modifiedTime.toISOString()} />
+  <meta
+    property="article:published_time"
+    content={publishedTime.toISOString()}
+  />
 )}
 
+{type === "article" && modifiedTime && (
+  <meta
+    property="article:modified_time"
+    content={modifiedTime.toISOString()}
+  />
+)}
+
+<!-- WebSite structured data -->
 <script
   type="application/ld+json"
   set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": siteInfo.name,
-    "url": siteInfo.url,
-    "description": siteInfo.tagline,
-    "inLanguage": schemaLanguage,
+    name: siteInfo.name,
+    url: siteInfo.url,
+    description: siteInfo.tagline,
+    inLanguage: schemaLanguage,
   })}
 />
 
+<!-- Person structured data -->
 <script
   type="application/ld+json"
   set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": siteInfo.name,
-    "url": siteInfo.url,
-    "email": siteInfo.email,
-    "jobTitle": lang === "de" ? "Coach und Beraterin" : "Coach and Counsellor",
+    name: siteInfo.name,
+    url: siteInfo.url,
+    email: siteInfo.email,
+    jobTitle: personJobTitle,
   })}
 />
 
+<!-- Service structured data -->
 <script
   type="application/ld+json"
   set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": title,
-    "description": description,
-    "serviceType": lang === "de" ? "Coaching und Beratung" : "Coaching and Counselling",
-    "provider": {
+    name: title,
+    description: description,
+    serviceType: serviceType,
+    provider: {
       "@type": "Person",
-      "name": siteInfo.name,
-      "email": siteInfo.email,
+      name: siteInfo.name,
+      url: siteInfo.url,
+      email: siteInfo.email,
+      jobTitle: personJobTitle,
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Netherlands",
-    },
-    "availableLanguage": ["en", "de"],
-    "url": canonicalURL,
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Amsterdam",
+      },
+      {
+        "@type": "City",
+        name: "Almere",
+      },
+      {
+        "@type": "Country",
+        name: "Netherlands",
+      },
+    ],
+    availableLanguage: ["en", "de"],
+    url: canonicalURL,
   })}
 />
+```

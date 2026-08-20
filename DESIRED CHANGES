@@ -12,3 +12,76 @@ Long term ToDo:
 Future maybe: 
 - add map for locations in Amsterdam and Almere that are possible
 - add a flowchart for landing page, coaching trajectory
+
+
+Google explicitly says internal anchor text helps people and Google understand the page you're linking to.
+So instead of:
+Learn More
+
+I'd use:
+About me
+
+then:
+Learn about individual coaching
+
+and:
+Explore workshops
+
+Now Google receives meaningful internal linking signals.
+
+
+for SEO
+change to H2 and adjust formatting
+remove alternate stuff
+from seoDescriptionto just description
+
+
+
+
+
+4. Your hreflang system is clever, but has one potential problem
+
+This works beautifully for pages that exist in both languages.
+
+For:
+
+/about/
+
+it generates:
+
+EN → /about/
+DE → /de/about/
+
+Excellent.
+
+For:
+
+/de/about/
+
+it generates the same reciprocal pair.
+
+Also excellent.
+
+But here's the problem
+
+It assumes every English page has a German equivalent and vice versa.
+
+Suppose you later create:
+
+/blog/best-adhd-planning-apps/
+
+but don't translate it.
+
+Your code will nevertheless output:
+
+<link rel="alternate"
+      hreflang="de"
+      href="https://www.arianemader.com/de/blog/best-adhd-planning-apps/" />
+
+even if that page doesn't exist.
+
+That's bad.
+
+For your current website, because you have corresponding EN/DE versions of your main pages, this is probably fine.
+
+But when we create the content/blog section we discussed, I'd change this architecture so alternate URLs are explicitly supplied when a translation actually exists.
