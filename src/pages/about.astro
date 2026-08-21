@@ -6,8 +6,8 @@ import StaffList from "../components/Sections/StaffList.astro";
 
 <BaseLayout
   title="About | Ariane Mader"
-  seoTitle="About Ariane Mader | Coach, Counsellor & Scientist at Heart"
-  description="Learn more about Ariane Mader’s approach to coaching and counselling, shaped by research, creativity, and lived experience with ADHD."
+  seoTitle="About Ariane Mader | ADHD & Procrastination Coach"
+  description="Meet Ariane Mader, an ADHD & procrastination coach with lived ADHD experience, coaching and counselling training, and a PhD in chemistry."
   canonicalUrl="https://www.arianemader.com/about"
   lang="en"
   alternateEn="https://www.arianemader.com/about"
@@ -16,31 +16,82 @@ import StaffList from "../components/Sections/StaffList.astro";
 >
   <PageHeader
     title="Hi, I'm Ariane."
-    subtitle="Coach, counsellor, and scientist at heart."
+    subtitle="ADHD & Procrastination Coach, counsellor, and scientist at heart."
     backgroundImage="/uploads/about-header2.jpg"
     overlayOpacity={0.35}
   />
 
+  <!-- Background & Training quick overview -->
+<section class="py-6 bg-gray-50">
+  <div class="container">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5 text-center flex flex-col justify-center">
+          <p class="font-[Cambria] font-bold text-lg mb-1">PhD in Chemistry</p>
+          <p class="my-0 text-gray-700">
+            Background in scientific research
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5 text-center flex flex-col justify-center">
+          <p class="font-[Cambria] font-bold text-lg mb-1">Coaching & Counselling</p>
+          <p class="my-0 text-gray-700">
+            Two-year training · 
+            <a
+              href="https://www.counselling.nl/en/"
+              class="underline text-[#193472] hover:!text-[#30B28E]"
+            >
+              Academie voor Coaching en Counselling
+            </a>
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5 text-center flex flex-col justify-center">
+          <p class="font-[Cambria] font-bold text-lg mb-1">Confidential Advisor</p>
+          <p class="my-0 text-gray-700">
+            Professional training at </br>
+            <a
+              href="https://devertrouwenspersoon.nl/"
+              class="underline text-[#193472] hover:!text-[#30B28E]"
+            >
+              De Vertrouwenspersoon
+            </a>
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white p-5 text-center flex flex-col justify-center">
+          <p class="font-[Cambria] font-bold text-lg mb-1">Languages</p>
+          <p class="my-0 text-gray-700">
+            Coaching in English & German<br />
+            Conversational Dutch
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
   <!-- About Me/Ariane -->
-  <section class="py-12 bg-white">
+  <section class="pt-0 pb-8 bg-gray-50">
     <div class="container">
       <div class="max-w-6xl mx-auto prose prose-lg prose-max-w-none prose-p:my-3">
         <p>
-          I believe that meaningful change often starts with honest, thoughtful conversation, and with understanding how you actually work.
-        </p>
-
-        <p>
-          I originally moved abroad to study chemistry and work in research. Along the way, I noticed that I was drawn to conversations
-          where I could <b>help others think more clearly, understand themselves better, and move forward</b>.
+          I’m originally from Germany and moved abroad to study chemistry. I went on to conduct scientific research and complete a PhD in chemistry.
+          Along the way, I realized that some of the work I cared about most happened not in the lab, but in conversations:
+          <b>helping people untangle a problem</b>, <b>understand themselves better</b>, and <b>find a way forward</b>.
           That led me to complete a two-year
           <a href="https://www.counselling.nl/en/trainings/coaching-and-counselling-english-year-2/"><u>Coaching & Counselling training</u></a>
-          alongside my PhD, as well as a training as 
+          alongside my PhD, followed by training as a 
           <a href="https://devertrouwenspersoon.nl/opleiding/basisopleiding-vertrouwenspersoon/"><u>Confidential Advisor</u></a>.
         </p>
 
         <p>
-          I quickly realized that this is the work I truly care about. Coaching allows me to combine analytical thinking with creativity,
-          and to support real, tangible change.
+          Coaching allows me to combine analytical thinking with creativity, curiosity, and a genuine interest in how people work.
+          I work with people from a wide range of international backgrounds, coach in English and German, and also speak Dutch.
         </p>
         <!--I have now been coaching for three years; professional register LVSC?-->
       </div>
@@ -48,33 +99,36 @@ import StaffList from "../components/Sections/StaffList.astro";
   </section>
 
   <!-- Full-bleed Personal Journey block (background reaches page edges even inside a container layout) -->
-  <section class="bg-gray-50 py-12 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+  <section class="bg-white py-8 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
     <div class="container">
       <div class="max-w-6xl mx-auto">
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="prose prose-lg prose-max-w-none prose-p:my-3">
-              <h3 class="blueFont">My Personal Journey</h3>
+              <h2 class="blueFont font-[Cambria] text-2xl font-bold !mt-0 !mb-3">My Personal Journey</h2>
               <p>I was diagnosed with ADHD as an adult.</p>
               <p>
-                Looking back now, it seems clear I was always neurodivergent. But especially during university and my PhD, when a lot of external structure and pressure fell away, the struggle became very visible: 
-                I had great difficulty starting certain tasks, was procrastinating a lot, and constantly stressed despite good results.
-                From the outside, things looked fine. But internally, it was exhausting.
+                Looking back, I can recognize many of the patterns much earlier in my life. 
+                But especially during university and my PhD, when much of the external structure and pressure fell away, my struggle became difficult to ignore. 
+                I had a hard time starting certain tasks, procrastinated a lot, and often relied on stress and last-minute pressure to get things done. 
+                Because I performed well, things looked fine from the outside.
+                But internally, it was exhausting.
               </p>
               <p>
-                What changed for me was not trying harder, but applying my experimental skills to myself, learning how my brain actually works, and building habits and systems that support it.
-                That process is still ongoing, but it has already fundamentally changed how I approach work and life.
+                <b>What changed was not trying harder.</b> 
+                I started treating my struggles more like an experiment: noticing patterns, trying different approaches, and gradually learning what helped me get started, follow through, and feel less stressed and frustrated.
+                That learning process is still ongoing, but it has already fundamentally changed how I approach my work and everyday life.
               </p>
               <p>
-                My experience also strongly influences how I coach: with <b>empathy</b>, <b>realism</b>, and <b>zero judgement</b>. I get how hard things can be,
-                even when it seems like they shouldn't.
+                It also strongly influences the way I coach: with empathy, realism, and curiosity rather than judgement. 
+                I know how frustrating it can be when something feels much harder than you think it should.
               </p>
             </div>
 
             <div>
               <img
                 src="/uploads/me31.jpg"
-                alt="Ariane Mader, ADHD & Procrastination Coach"
+                alt="Portrait of Ariane Mader, ADHD & Procrastination Coach"
                 class="rounded-lg shadow-lg object-cover w-full max-w-sm md:ml-auto"
               />
             </div>
@@ -85,20 +139,28 @@ import StaffList from "../components/Sections/StaffList.astro";
   </section>
 
   <!-- How I Coach -->
-  <section class="py-12 bg-white">
+  <section class="py-8 bg-gray-50">
     <div class="container">
       <div class="max-w-6xl mx-auto prose prose-lg prose-max-w-none prose-p:my-3">
-        <h3 class="blueFont">How I Coach</h3>
-        <p>People often describe me as <b>calm</b>, <b>grounded</b>, <b>direct</b>, and <b>non-judgemental</b>.</p>
+        <h2 class="blueFont font-[Cambria] text-2xl font-bold !mt-0 !mb-3">How I Coach</h2>
+        <p>People often describe me as calm, grounded, direct, and non-judgemental.</p>
         <p>
           In sessions, I aim to create a space that is supportive and honest at the same time. I may challenge you at times, but I will always respect your autonomy.
-          You know your life best — my role is not to advise you, but to help you understand yourself better and find ways forward that <span class="greenDarkFont">truly fit you</span>.
+          You know your life best. My role is not to tell you what you should do, but to help you understand what is getting in your way and find <span class="greenDarkFont">approaches that genuinely work for you</span>.
         </p>
         <p>
-          I combine practical tools with deeper reflection, because lasting change often requires deeper understanding and challenging the patterns and beliefs underneath.
+          I don't expect one method to work for everyone. 
+          We pay attention to what is happening, try things, and adjust. 
+          <b>Every attempt gives us information. 
+          An approach that does not work simply brings us closer to one that does.</b>
         </p>
         <p>
-          My goal is that you leave with <b>clarity</b>, <b>tools that fit you</b>, and the <b>confidence to support yourself</b>.
+          Sometimes we work with practical tools such as planning, prioritizing, habits, and ways to lower the threshold for getting started.
+          At other times, what is keeping you stuck may not be your planning system. 
+          So we may look more closely at patterns, beliefs, expectations, perfectionism, fear, or other things that keep getting in your way.
+        </p>
+        <p>
+          My goal is that over time, you <b>understand yourself better</b>, have <b>practical tools</b> you can actually use, and feel more <b>confident supporting yourself</b>.
         </p>
         <p>If this resonates with you, I’d be happy to explore working together.  <a
             href="/contact"
@@ -108,4 +170,5 @@ import StaffList from "../components/Sections/StaffList.astro";
       </div>
     </div>
   </section>
+
 </BaseLayout>
