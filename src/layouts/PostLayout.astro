@@ -1,7 +1,4 @@
 ---
-export const layout = "../layouts/BaseLayout.astro";
-
-import PageHeader from "../components/Sections/PageHeader.astro";
 import { formatDate } from "../utils/dateUtils";
 
 export interface Props {
@@ -27,77 +24,155 @@ const {
   type = "blog",
 } = Astro.props;
 
-const seoType = "article";
-
-let pageTitle = title;
-if (type === "sermon") {
-  pageTitle = `Sermon: ${title}`;
-} else if (type === "event") {
-  pageTitle = `Event: ${title}`;
-} else if (type === "ministry") {
-  pageTitle = `${title} Ministry`;
-}
-
 const formattedDate = date ? formatDate(date) : null;
 ---
 
-<!-- SEO props diteruskan oleh BaseLayout -->
-<!-- Header & Footer hanya dipanggil sekali oleh BaseLayout -->
-<PageHeader title={title} />
+<!-- Blog post header -->
+<section class="pt-12 pb-6 bg-gray-50">
+  <div class="container">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="blueFont text-3xl md:text-4xl font-bold mb-4">
+        {title}
+      </h1>
 
-<main class="container py-8">
+      {description && (
+        <p class="text-lg text-gray-600 mb-0">
+          {description}
+        </p>
+      )}
+    </div>
+  </div>
+</section>
+
+
+<!-- Blog post -->
+<main class="container pt-6 pb-8">
   <div class="mx-auto max-w-3xl">
 
+    <!-- Image -->
     {image && (
       <div class="mb-8 overflow-hidden rounded-lg">
         <img
           src={image.url}
           alt={image.alt}
           class="object-cover w-full h-64 md:h-96"
-          widths={[320, 640, 1024]}
-          format="webp"
-          loading="lazy" />
+          loading="lazy"
+        />
       </div>
     )}
 
+
+    <!-- Metadata -->
     <div class="mb-8">
+
       {(date || author) && (
         <div class="flex flex-wrap items-center mb-4 text-sm text-gray-600">
+
           {formattedDate && (
             <span class="mr-4 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
               </svg>
+
               {formattedDate}
             </span>
           )}
+
           {author && (
             <span class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
               </svg>
+
               {author}
             </span>
           )}
+
         </div>
       )}
 
+
+      <!-- Tags -->
       {tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mb-4">
           {tags.map((tag) => (
-            <span class="px-3 py-1 text-xs font-medium text-primary-700 bg-primary-100 rounded-full">
+            <span class="blog-tag px-3 py-1 text-xs font-medium rounded-full">
               {tag}
             </span>
           ))}
         </div>
       )}
+
     </div>
 
-    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-gray-900 prose-a:text-primary-600 hover:prose-a:text-primary-700">
+
+    <!-- Article content -->
+    <article
+      class="blog-content prose prose-lg max-w-none
+             prose-headings:text-[#193472]
+             prose-h1:text-3xl
+             prose-h2:text-2xl
+             prose-h3:text-xl
+             prose-h4:text-lg
+             prose-p:text-gray-700
+             prose-li:text-gray-700
+             prose-strong:text-gray-900
+             prose-a:text-[#193472]
+             hover:prose-a:text-[#30B28E]"
+    >
       <slot />
     </article>
 
   </div>
 </main>
+
+
+<style>
+  /*
+     Blog tags:
+     light green background + your signature dark green
+  */
+  .blog-tag {
+    color: #30B28E;
+    background-color: #e5f7f2;
+    border: 1px solid rgba(48, 178, 142, 0.22);
+  }
+
+  /*
+     Blog bullet points:
+     explicitly override the default Tailwind Typography marker color
+  */
+  .blog-content :global(ul > li::marker) {
+    color: #7dd3ba !important;
+  }
+
+  /*
+     Numbered lists:
+     use your signature dark green
+  */
+  .blog-content :global(ol > li::marker) {
+    color: #30B28E !important;
+  }
+</style>

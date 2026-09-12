@@ -2,7 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroSection from "../components/Sections/HeroSection.astro";
 import EventList from "../components/Sections/EventList.astro";
-import SermonList from "../components/Sections/SermonList.astro";
 import Button from "../components/UI/Button.astro";
 ---
 
@@ -14,8 +13,10 @@ import Button from "../components/UI/Button.astro";
   lang="en"
   xDefault="https://www.arianemader.com/"
 >
-  <HeroSection 
+<HeroSection
   title="ADHD & Procrastination Coaching"
+  mobileTitleLine1="ADHD & Procrastination"
+  mobileTitleLine2="Coaching"
   subtitle="Amsterdam • Almere • Online  |  English • German"
   backgroundImage="/uploads/home-header.png"
 />
@@ -109,10 +110,9 @@ import Button from "../components/UI/Button.astro";
           </h2>
             <p>
               Most productivity advice assumes that once you know what to do, you should be able to make yourself do it.
-              But knowing and doing are not the same thing.
             </p>
             <p>
-              People differ in how easily they can get started, prioritize, switch between tasks, stay focused, organize themselves and follow through — skills often grouped under the term <i>executive functioning</i>.
+              But people differ in how easily they can get started, prioritize, switch between tasks, stay focused, organize themselves and follow through — skills often grouped under the term <i>executive functioning</i>.
               So if you’ve tried harder, made better plans, downloaded more apps, and still ended up stuck, adding even more pressure probably isn’t the answer.
             </p>
             <p>
@@ -145,7 +145,7 @@ import Button from "../components/UI/Button.astro";
                 <li>build practical ways of working that fit your life and your natural patterns</li>
               </ul>
             <p>
-              Sometimes we'll work with practical tools like routines, planning or habit design. Sometimes we'll explore deeper patterns, beliefs or expectations that stand in your way.
+              Sometimes we'll work with practical tools for routines, planning or habit design. Sometimes we'll explore deeper patterns, beliefs or expectations that stand in your way.
               Over time, you build a way of working you can actually keep using when coaching ends.
             </p>
         
@@ -175,7 +175,7 @@ import Button from "../components/UI/Button.astro";
           <h2 class="blueFont font-[Cambria] text-2xl font-bold !mt-0 !mb-3">We might work on things like:</h2>
 
           <ul class="green-bullets my-3 space-y-1 [&>li]:my-0">
-            <li>Starting and finishing big projects — a thesis, PhD, portfolio, creative project or work you've been putting off</li>
+            <li>Starting and finishing big projects — a thesis, PhD, portfolio, creative project or work</li>
             <li>Building routines that actually stick — study, workouts, chores, or self-care</li>
             <li>Making progress on long term goals that keep getting postponed</li>
             <li>Changing stubborn habits you’ve tried to break many times</li>
@@ -241,7 +241,7 @@ import Button from "../components/UI/Button.astro";
         <div class="testimonial-preview corner-frame relative px-7 pt-6 pb-3 text-center">
           <p class="text-gray-700 text-lg font-medium leading-relaxed my-0">
             “At a time when I felt very stuck and lost, she helped me bring more structure and routines back into my everyday life. 
-            She also supported me in figuring out what is important to me in life and in becoming more aware of my own needs. ”
+            She also supported me in figuring out what is important to me in life and in becoming more aware of my own needs.”
             <button
               type="button"
               class="testimonial-open ml-1 inline font-medium underline text-[#193472] hover:!text-[#30B28E] transition-colors"
@@ -639,7 +639,7 @@ import Button from "../components/UI/Button.astro";
 
     <div class="max-w-3xl mx-auto prose prose-lg">
     <p>
-      I also design and deliver tailored workshops for universities and organisations on topics including neurodiversity, productivity, habits, and wellbeing. Formats range from short introductions over plenary talks to in-depth interactive sessions.
+      I design and deliver tailored formats for universities and organisations on topics including neurodiversity, productivity, habits, and wellbeing. From short introductions over plenary talks to in-depth interactive sessions.
     </p>
       <div class="flex flex-wrap justify-center gap-4">
           <a 

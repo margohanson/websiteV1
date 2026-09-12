@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PostLayout from "../../../layouts/PostLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog-de", ({ data }) => {
+    return import.meta.env.PROD ? !data.draft : true;
+  });
+
+  return posts.map((entry) => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: {
+      entry,
+    },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const allPosts = await getCollection("blog-de", ({ data }) => {
+  return import.meta.env.PROD ? !data.draft : true;
+});
+
+const currentTags = entry.data.tags || [];
+
+const relatedPosts = allPosts
+  .filter((post) => {
+    if (post.slug === entry.slug) return false;
+
+    return post.data.tags.some((tag) =>
+      currentTags.includes(tag)
+    );
+  })
+  .sort((a, b) => {
+    const aMatches = a.data.tags.filter((tag) =>
+      currentTags.includes(tag)
+    ).length;
+
+    const bMatches = b.data.tags.filter((tag) =>
+      currentTags.includes(tag)
+    ).length;
+
+    return bMatches - aMatches;
+  })
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title={`${entry.data.title} | Ariane Mader`}
+  seoTitle={`${entry.data.title} | Ariane Mader`}
+  seoDescription={entry.data.description}
+  image={entry.data.image}
+  type="article"
+  author={entry.data.author}
+  publishedTime={entry.data.pubDate}
+  modifiedTime={entry.data.pubDate}
+  lang="de"
+>
+  <PostLayout
+    title={entry.data.title}
+    description={entry.data.description}
+    image={entry.data.image}
+    date={entry.data.pubDate}
+    author={entry.data.author}
+    tags={entry.data.tags}
+    type="blog"
+  >
+    <article
+      class="prose prose-lg max-w-none
+             prose-headings:text-gray-900
+             prose-h2:blueFont
+             prose-p:text-gray-700
+             prose-li:text-gray-700
+             prose-a:text-[#193472]
+             hover:prose-a:text-[#30B28E]"
+    >
+      <Content />
+    </article>
+
+    {
+      relatedPosts.length > 0 && (
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <h2 class="blueFont text-2xl font-bold mb-6">
+            Ähnliche Artikel
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedPosts.map((post) => (
+              <a
+                href={`/de/blog/${post.slug}`}
+                class="block border border-gray-200 rounded-lg p-5 hover:border-[#30B28E] transition-colors"
+              >
+                <h3 class="font-bold mb-2">
+                  {post.data.title}
+                </h3>
+
+                <p class="text-gray-600 text-sm">
+                  {post.data.description}
+                </p>
+
+                <p class="greenDarkFont text-sm font-medium mt-3">
+                  Weiterlesen →
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      )
+    }
+
+    <div class="mt-10">
+      <a
+        href="/de/blog"
+        class="inline-flex items-center font-medium text-[#193472] hover:!text-[#30B28E] transition-colors"
+      >
+        ← Zurück zu allen Artikeln
+      </a>
+    </div>
+  </PostLayout>
+</BaseLayout>
