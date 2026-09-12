@@ -1,19 +1,5 @@
 import { defineCollection, z } from 'astro:content';
 
-const staffCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    name: z.string(),
-    title: z.string(),
-    image: z.string().startsWith('/uploads/staff/'),
-    email: z.string().email().optional(),
-    phone: z.string().optional(),
-    bio: z.string().optional(),
-    order: z.number().default(0),
-    draft: z.boolean().default(false),
-  }),
-});
-
 const eventsCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -31,37 +17,6 @@ const eventsCollection = defineCollection({
   }),
 });
 
-const sermonsCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    slug: z.string().optional(),
-    date: z.date(),
-    speaker: z.string(),
-    series: z.string().optional(),
-    scripture: z.string().optional(),
-    audioUrl: z.string().url().optional(),
-    videoUrl: z.string().url().optional(),
-    image: z.string().startsWith('/uploads/sermons/').optional(),
-    summary: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    draft: z.boolean().default(false),
-  }),
-});
-
-const ministriesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    name: z.string(),
-    logo: z.string().startsWith('/uploads/ministries/').optional(),
-    summary: z.string(),
-    coordinator: z.string().optional(),
-    contact: z.string().optional(),
-    schedule: z.string().optional(),
-    order: z.number().optional(),
-    draft: z.boolean().default(false),
-  }),
-});
 
 // English blog
 const blogCollection = defineCollection({
@@ -107,10 +62,7 @@ const siteInfoCollection = defineCollection({
 });
 
 export const collections = {
-  staff: staffCollection,
   events: eventsCollection,
-  sermons: sermonsCollection,
-  ministries: ministriesCollection,
   blog: blogCollection,
   'blog-de': blogDeCollection,
   siteInfo: siteInfoCollection,

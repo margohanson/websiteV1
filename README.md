@@ -26,10 +26,7 @@ Demo URL: [https://maucariapacom-church-starter.pages.dev](https://maucariapacom
 maucariapacom-church-starter/
 ├── public/
 │   ├── uploads/          # Images directories (staff, events, sermons, etc.)
-│   │   ├── staff/        # Staff profile images
 │   │   ├── events/       # Event images
-│   │   ├── sermons/      # Sermon thumbnail images
-│   │   ├── ministries/   # Ministry logo images
 │   │   └── blog/         # Blog post images
 │   ├── favicon.svg
 │   ├── robots.txt
@@ -42,10 +39,7 @@ maucariapacom-church-starter/
 │   │   └── UI/           # UI components (Button, Card, SEO)
 │   ├── content/          # Astro Content Collections
 │   │   ├── config.ts     # Collection schemas
-│   │   ├── staff/        # Staff member profiles
 │   │   ├── events/       # Church events
-│   │   ├── sermons/      # Sermon content
-│   │   ├── ministries/   # Ministry descriptions
 │   │   ├── blog/         # Blog posts
 │   │   └── siteInfo/     # Site configuration content
 │   ├── layouts/          # Page layouts
@@ -168,9 +162,6 @@ See `src/content/config.ts` for the complete schema definitions for all content 
 ### Main Pages
 - **Homepage** (`/`): Hero section, service times, about preview, recent events/sermons
 - **About** (`/about`): Mission, values, history, staff preview
-- **Staff** (`/staff`): Complete staff directory with contact information
-- **Ministries** (`/ministries`): All church ministries with detailed pages
-- **Sermons** (`/sermons`): Sermon archive with audio/video support and filtering
 - **Events** (`/events`): Upcoming and past events with registration support
 - **Blog** (`/blog`): Church blog with filtering and search
 - **I'm New** (`/im-new`): First-time visitor information
@@ -215,10 +206,7 @@ The template includes a built-in church SVG icon that's used throughout the site
 ### Images
 
 Images are organized in the `/public/uploads/` directory:
-- `/uploads/staff/` - Staff profile images
 - `/uploads/events/` - Event images
-- `/uploads/sermons/` - Sermon thumbnails
-- `/uploads/ministries/` - Ministry logos
 - `/uploads/blog/` - Blog post images
 
 The template includes fallback handling for missing images and uses external Unsplash images for some sections.
