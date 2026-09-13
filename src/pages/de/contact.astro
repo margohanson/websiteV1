@@ -15,29 +15,31 @@ import PageHeader from "../../components/Sections/PageHeader.astro";
 >
   <PageHeader 
     title="Kontakt" 
-    subtitle="Ich freue mich, von dir zu hören!"
     backgroundImage="/uploads/about-header.jpg"
     overlayOpacity={0.3}
   />
 
   <!-- Contact Info -->
-  <section class="py-16">
+  <section class="py-8">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-center">
-        <!-- Contact Form -->
+
+        <!-- Contact Text -->
         <div>
-          <h2 class="text-3xl blueFont font-bold mb-6">Melde dich gern</h2>
 
+          <!-- Get in touch -->
           <div class="prose prose-lg max-w-none">
-            <p>
-              Wenn du neugierig auf eine Zusammenarbeit bist, Fragen hast oder herausfinden möchtest, ob Coaching das Richtige für dich ist, dann schreibe mir gern.<br>
-              Ich biete ein <b>kostenloses 30-minütiges Erstgespräch per Video</b> an. Darin klären wir, was dich gerade beschäftigt, schauen, was hilfreich sein könnte, und ob wir gut zueinander passen.
-            </p>
+            <h2 class="text-3xl blueFont font-bold !mt-2 mb-3">
+              Melde dich gern
+            </h2>
 
-            <p>Du erreichst mich unter:</p>
+            <p class="mb-4">
+              Wenn du Fragen hast, mehr über Coaching wissen oder einen ersten Termin vereinbaren möchtest, freue ich mich, von dir zu hören.<br>
+              Du erreichst mich unter:
+            </p>
           </div>
 
-          <!-- Email row -->
+          <!-- Email -->
           <div class="not-prose flex items-center gap-2 mt-2 text-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,24 +58,48 @@ import PageHeader from "../../components/Sections/PageHeader.astro";
 
             <a
               href="mailto:info@arianemader.com"
-              class="text-gray-800 hover:text-gray-600 transition-colors"
+              class="text-gray-800 hover:text-[#30B28E] transition-colors"
             >
               info<span aria-hidden="true">[at]</span><span class="sr-only">@</span>arianemader.com
             </a>
           </div>
 
+          <!-- Location -->
           <div class="prose prose-lg max-w-none">
-            <p class="mt-6">Ich freue mich auf deine Nachricht!</p>
+            <p class="mt-4 mb-5">
+              Ich biete Coaching online sowie vor Ort in <b>Amsterdam</b> und <b>Almere</b> an.
+            </p>
           </div>
+
+          <!-- Free intro call -->
+          <div class="prose prose-lg max-w-none">
+            <h2 class="text-3xl blueFont font-bold !mt-5 mb-3">
+              Kostenloses 30‑minütiges Kennenlerngespräch
+            </h2>
+
+            <p>
+              Im (Video-)Erstgespräch klären wir, was du dir vom Coaching erhoffst, wie ein möglicher Prozess aussehen könnte und ob wir gut zueinander passen. 
+              Du kannst alles fragen, was dir hilft, ein gutes Gefühl für mich und die Zusammenarbeit zu bekommen.
+            </p>
+          </div>
+
+          <!-- Personal sign-off -->
+          <p
+            class="mt-5 mb-0 greenDarkFont text-xl md:text-2xl"
+            style="font-family: 'Bradley Hand', 'Segoe Print', cursive;"
+          >
+            Ich freue mich auf deine Nachricht!
+          </p>
+
         </div>
 
+        <!-- Contact Image -->
         <img 
           src="/uploads/contact1.jpg" 
-          alt="Kontaktbild"
+          alt="Contact image"
           class="rounded-lg shadow-lg object-cover w-full max-w-sm max-h-[380px] mx-auto"
         />
-        <div>
-        </div>
+
       </div>
     </div>
   </section>
